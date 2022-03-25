@@ -636,7 +636,7 @@ class BalanceChargeInput {
             }
             catch (err) {
                 this.chargeBalanceInputForm.reset();
-                alert(err);
+                alert(err.message);
             }
             this.updateCurrentBalance();
             this.target.dispatchEvent(new CustomEvent('coinCharged'));
@@ -788,7 +788,7 @@ class ProductCatalogTable {
                     this.toggleEditBtn(tableRow);
                 }
                 catch (err) {
-                    alert(err);
+                    alert(err.message);
                 }
             }
         };
@@ -826,7 +826,8 @@ class ProductCatalogTable {
   `;
     }
     tableBodyTemplate() {
-        return this.productCatalog.productList
+        return this.productCatalog
+            .getProductList()
             .map((product) => this.tableRowTemplate(product))
             .join('');
     }
@@ -852,7 +853,7 @@ class ProductCatalogTable {
     deleteProduct(tableRow) {
         if (window.confirm('진짜 지우실건가요?')) {
             tableRow.remove();
-            this.productCatalog.deleteProductByName(tableRow.id);
+            this.productCatalog.deleteProduct(tableRow.id);
         }
     }
     saveEditedProductState(tableRow) {
@@ -864,16 +865,17 @@ class ProductCatalogTable {
                 .valueAsNumber,
         };
         if (this.isSavable(productState)) {
-            this.productCatalog.productList[productState.index].setName(productState.name);
-            this.productCatalog.productList[productState.index].setPrice(productState.price);
-            this.productCatalog.productList[productState.index].setQuantity(productState.quantity);
+            this.productCatalog.getProductList()[productState.index].setName(productState.name);
+            this.productCatalog.getProductList()[productState.index].setPrice(productState.price);
+            this.productCatalog.getProductList()[productState.index].setQuantity(productState.quantity);
         }
     }
     isSavable(productState) {
         try {
-            this.productCatalog.productList[productState.index].validateName(productState.name);
-            this.productCatalog.productList[productState.index].validatePrice(productState.price);
-            this.productCatalog.productList[productState.index].validateQuantity(productState.quantity);
+            this.productCatalog.getProductList()[productState.index].validateName(productState.name);
+            this.productCatalog.getProductList()[productState.index].validatePrice(productState.price);
+            this.productCatalog
+                .getProductList()[productState.index].validateQuantity(productState.quantity);
             return true;
         }
         catch (err) {
@@ -924,7 +926,7 @@ class ProductInformationInput {
                 this.target.dispatchEvent(new CustomEvent('productAdded'));
             }
             catch (err) {
-                alert(err);
+                alert(err.message);
             }
             this.productInformationForm.reset();
         };
@@ -980,13 +982,13 @@ class CoinVault {
     constructor() {
         this.coinsQuantity = Object.assign({}, _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_INIT_QUANTITY);
     }
+    getCoins() {
+        return this.coinsQuantity;
+    }
     addCoins(coins) {
         [...Object.entries(coins)].forEach(([key, value]) => {
             this.coinsQuantity[key] += value;
         });
-    }
-    getCoins() {
-        return this.coinsQuantity;
     }
     getBalance() {
         return [...Object.entries(this.coinsQuantity)].reduce((previous, [key, value]) => previous + _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_PRICE_TABLE[key] * value, 0);
@@ -1007,7 +1009,6 @@ class CoinVault {
         if (money % _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_CONDITION.UNIT_PRICE !== 0) {
             throw new Error('상평통보는 안 받습니다. 10원단위로 넣어주세요!');
         }
-        return;
     }
     generateRandomCoins(money) {
         let balance = money;
@@ -1053,6 +1054,15 @@ class Product {
             throw err;
         }
     }
+    getName() {
+        return this.name;
+    }
+    getPrice() {
+        return this.price;
+    }
+    getQuantity() {
+        return this.quantity;
+    }
     setName(name) {
         this.name = name;
     }
@@ -1066,7 +1076,6 @@ class Product {
         if (name.length > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_NAME_LENGTH) {
             throw new Error('10글자 미만의 이름을 넣어주세요~');
         }
-        return;
     }
     validatePrice(price) {
         if (price < _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MIN_PRICE || price > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_PRICE) {
@@ -1075,13 +1084,11 @@ class Product {
         if (price % _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.UNIT_PRICE !== 0) {
             throw new Error('10원단위로 돈을 넣어주세요~');
         }
-        return;
     }
     validateQuantity(quantity) {
         if (quantity > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_QUANTITY) {
             throw new Error('상품수량은 최대 20개까지만 가능합니다~');
         }
-        return;
     }
     validateAllProp(name, price, quantity) {
         try {
@@ -1092,15 +1099,6 @@ class Product {
         catch (err) {
             throw err;
         }
-    }
-    getName() {
-        return this.name;
-    }
-    getPrice() {
-        return this.price;
-    }
-    getQuantity() {
-        return this.quantity;
     }
     getAllProperties() {
         return { name: this.name, price: this.price, quantity: this.quantity };
@@ -1126,6 +1124,9 @@ class ProductCatalog {
     constructor() {
         this.productList = [];
     }
+    getProductList() {
+        return this.productList;
+    }
     addProduct(name, price, quantity) {
         const productIndex = this.findExistingProductIndex(name);
         if (productIndex !== -1) {
@@ -1138,16 +1139,16 @@ class ProductCatalog {
         return this.productList.findIndex((product) => product.getName() === name);
     }
     accumulateQuantity(productIndex, quantity) {
-        const target = this.productList[productIndex];
+        const targetProduct = this.productList[productIndex];
         try {
-            target.validateQuantity(target.getQuantity() + quantity);
-            target.setQuantity(target.getQuantity() + quantity);
+            targetProduct.validateQuantity(targetProduct.getQuantity() + quantity);
+            targetProduct.setQuantity(targetProduct.getQuantity() + quantity);
         }
         catch (err) {
             throw err;
         }
     }
-    deleteProductByName(name) {
+    deleteProduct(name) {
         this.productList = this.productList.filter((product) => product.getName() !== name);
     }
 }
