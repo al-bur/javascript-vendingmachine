@@ -651,13 +651,13 @@ class BalanceChargeInput {
     }
     template(balance) {
         return `
-          <form id = 'charge-balance-input-container'>
-            <label id ='charge-balance-input-label' for="charge-balance-input">자판기가 보유할 금액을 입력해주세요</label>
-              <input id="charge-balance-input" type="text" placeholder="금액" class = 'input'></input>
-              <button id='charge-balance-submit-btn' type="submit" class ='submit-button button'>충전</button>
-              <div id = 'current-balance-container'>현재보유금액 : <span id="current-balance">${balance}</span>원</div>
-          </form id = >
-      `;
+      <form id="charge-balance-input-container">
+        <label id="charge-balance-input-label" for="charge-balance-input">자판기가 보유할 금액을 입력해주세요</label>
+        <input id="charge-balance-input" class="input" type="text" placeholder="금액" />
+        <button id="charge-balance-submit-btn" class="submit-button button" type="submit">충전</button>
+        <div id="current-balance-container">현재보유금액 : <span id="current-balance">${balance}</span>원</div>
+      </form>
+    `;
     }
     selectDom() {
         this.chargeBalanceInputForm = document.querySelector('#charge-balance-input-container');
@@ -688,25 +688,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 class CoinVaultTable {
     constructor(props) {
-        this.render = () => {
-            this.target.insertAdjacentHTML('beforeend', this.template(this.coinVault.getCoins()));
-            this.selectDom();
-        };
         this.updateCoinVaultTableTemplate = () => {
-            this.coin500Quantity.textContent = `${this.coinVault.getCoins().coin500}`;
-            this.coin100Quantity.textContent = `${this.coinVault.getCoins().coin100}`;
-            this.coin50Quantity.textContent = `${this.coinVault.getCoins().coin50}`;
-            this.coin10Quantity.textContent = `${this.coinVault.getCoins().coin10}`;
+            const { coin500, coin100, coin50, coin10 } = this.coinVault.getCoins();
+            this.coin500Quantity.textContent = `${coin500}`;
+            this.coin100Quantity.textContent = `${coin100}`;
+            this.coin50Quantity.textContent = `${coin50}`;
+            this.coin10Quantity.textContent = `${coin10}`;
         };
         this.target = props.target;
         this.coinVault = props.coinVault;
         this.target.addEventListener('coinCharged', this.updateCoinVaultTableTemplate);
     }
+    render() {
+        this.target.insertAdjacentHTML('beforeend', this.template(this.coinVault.getCoins()));
+        this.selectDom();
+    }
     template(coinsQuantity) {
         return `
-      <div class = 'table-container'>
+      <div class="table-container">
         <h2>자판기가 보유한 동전</h2>
-        <table id= 'coin-vault-table'>
+        <table id="coin-vault-table">
           <thead>
             <tr>
               <th>동전</th>
@@ -770,13 +771,17 @@ class ProductCatalogTable {
         };
         this.handleProductStateManage = (e) => {
             if (e.target.classList.contains('edit-button')) {
-                this.renderEditProduct(e.target.parentNode.parentNode);
+                const tableRow = e.target.closest('tr');
+                this.renderEditProduct(tableRow);
+                return;
             }
             if (e.target.classList.contains('delete-button')) {
-                this.deleteProduct(e.target.parentNode.parentNode);
+                const tableRow = e.target.closest('tr');
+                this.deleteProduct(tableRow);
+                return;
             }
             if (e.target.classList.contains('confirm-button')) {
-                const tableRow = e.target.parentNode.parentNode;
+                const tableRow = e.target.closest('tr');
                 try {
                     this.saveEditedProductState(tableRow);
                     this.confirmEditProduct(tableRow);
@@ -790,8 +795,9 @@ class ProductCatalogTable {
         this.renderEditProduct = (tableRow) => {
             const productRowItems = tableRow.querySelectorAll('.product-prop');
             productRowItems.forEach((tableDatum) => {
-                const productSpanElement = tableDatum.firstChild;
-                tableDatum.replaceChild(this.createProductInputElement(tableDatum), productSpanElement);
+                const productSpanElement = tableDatum.querySelector('span');
+                const content = productSpanElement.textContent;
+                tableDatum.replaceChild(this.createProductInputElement(tableDatum, content), productSpanElement);
             });
             this.toggleEditBtn(tableRow);
         };
@@ -804,9 +810,9 @@ class ProductCatalogTable {
     }
     template() {
         return `
-    <div class='table-container'>
+    <div class="table-container">
       <h2>상품 현황</h2>
-      <table id='product-table'>
+      <table id="product-table">
         <thead>
           <tr>
             <th>상품명</th>
@@ -814,7 +820,7 @@ class ProductCatalogTable {
             <th>수량</th>
           </tr>
         </thead>
-        <tbody id ='product-table-body'>${this.tableBodyTemplate()}</tbody>
+        <tbody id="product-table-body">${this.tableBodyTemplate()}</tbody>
       </table>
     </div>
   `;
@@ -825,22 +831,22 @@ class ProductCatalogTable {
             .join('');
     }
     tableRowTemplate(product) {
-        return `<tr id = '${product.getName()}'>
-  <td class='product-name product-prop'><span>${product.getName()}</span></td>
-  <td class='product-price product-prop'><span>${product.getPrice()}</span></td>
-  <td class='product-quantity product-prop'><span>${product.getQuantity()}</span></td>
-  <td class='edit-button-container'>
-    <button class='edit-button button' type='button'>수정</button>
-    <button class='delete-button button' type='button'>삭제</button>
-    <button class='confirm-button button hide' type='button'>확인</button>
-  </td>
-</tr>`;
+        return `<tr id="${product.getName()}">
+      <td class="product-name product-prop"><span>${product.getName()}</span></td>
+      <td class="product-price product-prop"><span>${product.getPrice()}</span></td>
+      <td class="product-quantity product-prop"><span>${product.getQuantity()}</span></td>
+      <td class="edit-button-container">
+        <button class="edit-button button" type="button">수정</button>
+        <button class="delete-button button" type="button">삭제</button>
+        <button class="confirm-button button hide" type="button">확인</button>
+      </td>
+    </tr>`;
     }
-    createProductInputElement(tableDatum) {
+    createProductInputElement(tableDatum, content) {
         const productInputElement = document.createElement('input');
         productInputElement.setAttribute('type', `${tableDatum.classList.contains('product-name') ? 'text' : 'number'}`);
-        productInputElement.className += 'product-input';
-        productInputElement.value = `${tableDatum.firstChild.textContent}`;
+        productInputElement.classList.add('product-input');
+        productInputElement.value = content;
         return productInputElement;
     }
     deleteProduct(tableRow) {
@@ -852,10 +858,9 @@ class ProductCatalogTable {
     saveEditedProductState(tableRow) {
         const productState = {
             index: this.productCatalog.findExistingProductIndex(tableRow.id),
-            name: tableRow.querySelector('.product-name').firstChild.value,
-            price: tableRow.querySelector('.product-price').firstChild
-                .valueAsNumber,
-            quantity: tableRow.querySelector('.product-quantity').firstChild
+            name: tableRow.querySelector('.product-name input').value,
+            price: tableRow.querySelector('.product-price input').valueAsNumber,
+            quantity: tableRow.querySelector('.product-quantity input')
                 .valueAsNumber,
         };
         if (this.isSavable(productState)) {
@@ -877,15 +882,16 @@ class ProductCatalogTable {
     }
     confirmEditProduct(tableRow) {
         const productProp = tableRow.querySelectorAll('.product-prop');
-        [...productProp].forEach((tableDatum) => {
-            const productInputElement = tableDatum.firstChild;
-            tableDatum.replaceChild(this.createProductSpanElement(tableDatum), productInputElement);
+        productProp.forEach((tableDatum) => {
+            const productInputElement = tableDatum.querySelector('input');
+            const editedValue = productInputElement.value;
+            tableDatum.replaceChild(this.createProductSpanElement(editedValue), productInputElement);
         });
         tableRow.id = `${tableRow.querySelector('.product-name').textContent}`;
     }
-    createProductSpanElement(tableDatum) {
+    createProductSpanElement(editedValue) {
         const productSpanElement = document.createElement('span');
-        productSpanElement.insertAdjacentHTML('beforeend', `${tableDatum.firstChild.value}`);
+        productSpanElement.innerText = editedValue;
         return productSpanElement;
     }
     toggleEditBtn(tableRow) {
@@ -932,13 +938,13 @@ class ProductInformationInput {
     }
     template() {
         return `
-        <form id="product-information-input">
-            <label id ='product-input-label' for="product-information-input">추가할 상품 정보를 입력해주세요</label>
-            <input id='product-name-input' type="text" placeholder="상품명" class = 'input'></input>
-            <input id='product-price-input' type="number" placeholder="가격" class = 'input'></input>
-            <input id='product-quantity-input' type="number" placeholder="수량" class = 'input'></input>
-            <button id = 'product-information-submit-btn' type="submit" class='submit-button button'>추가</button>
-          </form>
+      <form id="product-information-input">
+        <label id="product-input-label" for="product-information-input">추가할 상품 정보를 입력해주세요</label>
+        <input id="product-name-input" type="text" placeholder="상품명" class="input" />
+        <input id="product-price-input" type="number" placeholder="가격" class="input" />
+        <input id="product-quantity-input" type="number" placeholder="수량" class="input" />
+        <button id="product-information-submit-btn" type="submit" class="submit-button button">추가</button>
+      </form>
     `;
     }
     selectDom() {
@@ -966,13 +972,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "CoinVault": () => (/* binding */ CoinVault)
 /* harmony export */ });
-/* harmony import */ var _utils_domain_const__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/domain.const */ "./src/utils/domain.const.ts");
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
 /* harmony import */ var _utils_domain_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/domain.utils */ "./src/utils/domain.utils.ts");
 
 
 class CoinVault {
     constructor() {
-        this.coinsQuantity = Object.assign({}, _utils_domain_const__WEBPACK_IMPORTED_MODULE_0__.COINS_INIT_QUANTITY);
+        this.coinsQuantity = Object.assign({}, _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_INIT_QUANTITY);
     }
     addCoins(coins) {
         [...Object.entries(coins)].forEach(([key, value]) => {
@@ -983,7 +989,7 @@ class CoinVault {
         return this.coinsQuantity;
     }
     getBalance() {
-        return [...Object.entries(this.coinsQuantity)].reduce((previous, [key, value]) => previous + _utils_domain_const__WEBPACK_IMPORTED_MODULE_0__.COINS_PRICE_TABLE[key] * value, 0);
+        return [...Object.entries(this.coinsQuantity)].reduce((previous, [key, value]) => previous + _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_PRICE_TABLE[key] * value, 0);
     }
     chargeMoney(money) {
         try {
@@ -995,20 +1001,20 @@ class CoinVault {
         }
     }
     validateMoney(money) {
-        if (money + this.getBalance() > _utils_domain_const__WEBPACK_IMPORTED_MODULE_0__.COIN_VAULT_CONDITION.MAX_BALANCE) {
+        if (money + this.getBalance() > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_VAULT_CONDITION.MAX_BALANCE) {
             throw new Error('돈통이 가득찼어요! 100,000원 까지만 보관 가능합니다.');
         }
-        if (money % _utils_domain_const__WEBPACK_IMPORTED_MODULE_0__.COIN_CONDITION.UNIT_PRICE !== 0) {
+        if (money % _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_CONDITION.UNIT_PRICE !== 0) {
             throw new Error('상평통보는 안 받습니다. 10원단위로 넣어주세요!');
         }
         return;
     }
     generateRandomCoins(money) {
         let balance = money;
-        const generatedCoins = Object.assign({}, _utils_domain_const__WEBPACK_IMPORTED_MODULE_0__.COINS_INIT_QUANTITY);
-        [...Object.entries(_utils_domain_const__WEBPACK_IMPORTED_MODULE_0__.COINS_PRICE_TABLE)].forEach(([key, price]) => {
+        const generatedCoins = Object.assign({}, _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_INIT_QUANTITY);
+        [...Object.entries(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_PRICE_TABLE)].forEach(([key, price]) => {
             const maxQuotient = balance / price;
-            if (price === _utils_domain_const__WEBPACK_IMPORTED_MODULE_0__.CHEAPEST_COIN) {
+            if (price === _utils_constants__WEBPACK_IMPORTED_MODULE_0__.CHEAPEST_COIN) {
                 generatedCoins[key] = maxQuotient;
                 return;
             }
@@ -1033,7 +1039,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Product": () => (/* binding */ Product)
 /* harmony export */ });
-/* harmony import */ var _utils_domain_const__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/domain.const */ "./src/utils/domain.const.ts");
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
 
 class Product {
     constructor(name, price, quantity) {
@@ -1057,22 +1063,22 @@ class Product {
         this.quantity = quantity;
     }
     validateName(name) {
-        if (name.length > _utils_domain_const__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_NAME_LENGTH) {
+        if (name.length > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_NAME_LENGTH) {
             throw new Error('10글자 미만의 이름을 넣어주세요~');
         }
         return;
     }
     validatePrice(price) {
-        if (price < _utils_domain_const__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MIN_PRICE || price > _utils_domain_const__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_PRICE) {
+        if (price < _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MIN_PRICE || price > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_PRICE) {
             throw new Error('100원 이상, 10,000원 이하의 돈을 넣어주세요~');
         }
-        if (price % _utils_domain_const__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.UNIT_PRICE !== 0) {
+        if (price % _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.UNIT_PRICE !== 0) {
             throw new Error('10원단위로 돈을 넣어주세요~');
         }
         return;
     }
     validateQuantity(quantity) {
-        if (quantity > _utils_domain_const__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_QUANTITY) {
+        if (quantity > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_QUANTITY) {
             throw new Error('상품수량은 최대 20개까지만 가능합니다~');
         }
         return;
@@ -1149,33 +1155,31 @@ class ProductCatalog {
 
 /***/ }),
 
-/***/ "./src/utils/domain.const.ts":
-/*!***********************************!*\
-  !*** ./src/utils/domain.const.ts ***!
-  \***********************************/
+/***/ "./src/utils/constants.ts":
+/*!********************************!*\
+  !*** ./src/utils/constants.ts ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PRODUCT_CONDITION": () => (/* binding */ PRODUCT_CONDITION),
-/* harmony export */   "COIN_VAULT_CONDITION": () => (/* binding */ COIN_VAULT_CONDITION),
-/* harmony export */   "COIN_CONDITION": () => (/* binding */ COIN_CONDITION),
-/* harmony export */   "COINS_PRICE_TABLE": () => (/* binding */ COINS_PRICE_TABLE),
 /* harmony export */   "CHEAPEST_COIN": () => (/* binding */ CHEAPEST_COIN),
-/* harmony export */   "COINS_INIT_QUANTITY": () => (/* binding */ COINS_INIT_QUANTITY)
+/* harmony export */   "COIN_CONDITION": () => (/* binding */ COIN_CONDITION),
+/* harmony export */   "COINS_INIT_QUANTITY": () => (/* binding */ COINS_INIT_QUANTITY),
+/* harmony export */   "COINS_PRICE_TABLE": () => (/* binding */ COINS_PRICE_TABLE),
+/* harmony export */   "COIN_VAULT_CONDITION": () => (/* binding */ COIN_VAULT_CONDITION),
+/* harmony export */   "URL_PATH": () => (/* binding */ URL_PATH),
+/* harmony export */   "PRODUCT_CONDITION": () => (/* binding */ PRODUCT_CONDITION)
 /* harmony export */ });
-const PRODUCT_CONDITION = {
-    MAX_NAME_LENGTH: 10,
-    MIN_PRICE: 100,
-    MAX_PRICE: 10000,
-    UNIT_PRICE: 10,
-    MAX_QUANTITY: 20,
-};
-const COIN_VAULT_CONDITION = {
-    MAX_BALANCE: 100000,
-};
+const CHEAPEST_COIN = 10;
 const COIN_CONDITION = {
     UNIT_PRICE: 10,
+};
+const COINS_INIT_QUANTITY = {
+    coin500: 0,
+    coin100: 0,
+    coin50: 0,
+    coin10: 0,
 };
 const COINS_PRICE_TABLE = {
     coin500: 500,
@@ -1183,12 +1187,20 @@ const COINS_PRICE_TABLE = {
     coin50: 50,
     coin10: 10,
 };
-const CHEAPEST_COIN = 10;
-const COINS_INIT_QUANTITY = {
-    coin500: 0,
-    coin100: 0,
-    coin50: 0,
-    coin10: 0,
+const COIN_VAULT_CONDITION = {
+    MAX_BALANCE: 100000,
+};
+const URL_PATH = {
+    HOME: '/',
+    PRODUCT_MANAGE: '/productManage',
+    BALANCE_CHAREGE: '/balanceCharge',
+};
+const PRODUCT_CONDITION = {
+    MAX_NAME_LENGTH: 10,
+    MIN_PRICE: 100,
+    MAX_PRICE: 10000,
+    UNIT_PRICE: 10,
+    MAX_QUANTITY: 20,
 };
 
 
@@ -1233,11 +1245,11 @@ class BalanceChargeView {
         this.contentsContainer = document.querySelector('#contents-container');
     }
     init() {
+        this.contentsContainer.textContent = ``;
         this.props = {
             target: this.contentsContainer,
             coinVault: this.coinVault,
         };
-        this.contentsContainer.textContent = ``;
         this.balanceChargeInput = new _component_BalanceChargeInput__WEBPACK_IMPORTED_MODULE_0__.BalanceChargeInput(this.props);
         this.coinVaultTable = new _component_CoinVaultTable__WEBPACK_IMPORTED_MODULE_1__.CoinVaultTable(this.props);
     }
@@ -1262,51 +1274,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _ProductManageView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductManageView */ "./src/view/ProductManageView.ts");
 /* harmony import */ var _BalanceChargeView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BalanceChargeView */ "./src/view/BalanceChargeView.ts");
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
+
 
 
 class NavView {
     constructor() {
         this.handlePopstate = (savedData) => {
-            if (savedData.state.path === '/') {
+            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.HOME) {
                 this.renderHome();
+                return;
             }
-            if (savedData.state.path === '/productManage') {
+            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.PRODUCT_MANAGE) {
                 this.productManageView.init();
                 this.productManageView.renderAll();
+                return;
             }
-            if (savedData.state.path === '/balanceCharge') {
+            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.BALANCE_CHAREGE) {
                 this.balanceChargeView.init();
                 this.balanceChargeView.renderAll();
+                return;
             }
         };
         this.handleShowProductManageTab = () => {
             this.productManageView.init();
             this.productManageView.renderAll();
-            const path = '/productManage';
+            const path = _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.PRODUCT_MANAGE;
             history.pushState({ path }, null, path);
         };
         this.handleShowBalanceChargeTab = () => {
             this.balanceChargeView.init();
             this.balanceChargeView.renderAll();
-            const path = '/balanceCharge';
+            const path = _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.BALANCE_CHAREGE;
             history.pushState({ path }, null, path);
         };
+        this.productManageView = new _ProductManageView__WEBPACK_IMPORTED_MODULE_0__.ProductManageView();
+        this.balanceChargeView = new _BalanceChargeView__WEBPACK_IMPORTED_MODULE_1__.BalanceChargeView();
+        this.contentsContainer = document.querySelector('#contents-container');
         this.productManageNavBtn = document.querySelector('#product-manage-nav-button');
         this.balanceChargeNavBtn = document.querySelector('#charge-balance-nav-button');
         this.productPurchaseNavBtn = document.querySelector('#product-purchase-nav-button');
         this.productManageNavBtn.addEventListener('click', this.handleShowProductManageTab);
         this.balanceChargeNavBtn.addEventListener('click', this.handleShowBalanceChargeTab);
-        this.productManageView = new _ProductManageView__WEBPACK_IMPORTED_MODULE_0__.ProductManageView();
-        this.balanceChargeView = new _BalanceChargeView__WEBPACK_IMPORTED_MODULE_1__.BalanceChargeView();
-        this.renderHome();
         window.addEventListener('popstate', (savedData) => {
             this.handlePopstate(savedData);
         });
+        this.renderHome();
     }
     renderHome() {
-        const path = '/';
+        const path = _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.HOME;
         history.pushState({ path }, null, path);
-        this.contentsContainer = document.querySelector('#contents-container');
         this.contentsContainer.textContent = '';
     }
 }
@@ -1336,11 +1353,11 @@ class ProductManageView {
         this.contentsContainer = document.querySelector('#contents-container');
     }
     init() {
+        this.contentsContainer.textContent = '';
         this.props = {
             target: this.contentsContainer,
             productCatalog: this.productCatalog,
         };
-        this.contentsContainer.textContent = '';
         this.productInformationInput = new _component_ProductInformationInput__WEBPACK_IMPORTED_MODULE_0__.ProductInformationInput(this.props);
         this.productCatalogTable = new _component_ProductCatalogTable__WEBPACK_IMPORTED_MODULE_1__.ProductCatalogTable(this.props);
     }
