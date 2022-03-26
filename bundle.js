@@ -1301,13 +1301,13 @@ class NavView {
             this.productManageView.init();
             this.productManageView.renderAll();
             const path = _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.PRODUCT_MANAGE;
-            history.pushState({ path }, null, path);
+            this.handleUrlPath(path);
         };
         this.handleShowBalanceChargeTab = () => {
             this.balanceChargeView.init();
             this.balanceChargeView.renderAll();
             const path = _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.BALANCE_CHAREGE;
-            history.pushState({ path }, null, path);
+            this.handleUrlPath(path);
         };
         this.productManageView = new _ProductManageView__WEBPACK_IMPORTED_MODULE_0__.ProductManageView();
         this.balanceChargeView = new _BalanceChargeView__WEBPACK_IMPORTED_MODULE_1__.BalanceChargeView();
@@ -1322,9 +1322,17 @@ class NavView {
         this.renderHome();
     }
     renderHome() {
+        this.contentsContainer.textContent = '';
         const path = _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.HOME;
         history.pushState({ path }, null, path);
-        this.contentsContainer.textContent = '';
+    }
+    handleUrlPath(path) {
+        const isSamePath = location.pathname === path;
+        if (isSamePath) {
+            history.replaceState({ path }, null, path);
+            return;
+        }
+        history.pushState({ path }, null, path);
     }
 }
 
