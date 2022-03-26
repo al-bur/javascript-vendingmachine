@@ -761,7 +761,7 @@ class ProductCatalogTable {
     constructor(props) {
         this.render = () => {
             if (this.isRerender()) {
-                this.productTableBody.textContent = ``;
+                this.productTableBody.textContent = '';
                 this.productTableBody.insertAdjacentHTML('beforeend', this.tableBodyTemplate());
                 return;
             }
@@ -924,6 +924,7 @@ class ProductInformationInput {
             try {
                 this.productCatalog.addProduct(productName, productPrice, productQuantity);
                 this.target.dispatchEvent(new CustomEvent('productAdded'));
+                console.log('added', 'informationInput');
             }
             catch (err) {
                 alert(err.message);
@@ -942,10 +943,10 @@ class ProductInformationInput {
         return `
       <form id="product-information-input">
         <label id="product-input-label" for="product-information-input">추가할 상품 정보를 입력해주세요</label>
-        <input id="product-name-input" type="text" placeholder="상품명" class="input" />
-        <input id="product-price-input" type="number" placeholder="가격" class="input" />
-        <input id="product-quantity-input" type="number" placeholder="수량" class="input" />
-        <button id="product-information-submit-btn" type="submit" class="submit-button button">추가</button>
+        <input id="product-name-input" class="input" type="text" placeholder="상품명" />
+        <input id="product-price-input" class="input" type="number" placeholder="가격" />
+        <input id="product-quantity-input" class="input" type="number" placeholder="수량" />
+        <button id="product-information-submit-btn" class="submit-button button" type="submit">추가</button>
       </form>
     `;
     }
@@ -985,11 +986,6 @@ class CoinVault {
     getCoins() {
         return this.coinsQuantity;
     }
-    addCoins(coins) {
-        [...Object.entries(coins)].forEach(([key, value]) => {
-            this.coinsQuantity[key] += value;
-        });
-    }
     getBalance() {
         return [...Object.entries(this.coinsQuantity)].reduce((previous, [key, value]) => previous + _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_PRICE_TABLE[key] * value, 0);
     }
@@ -1001,6 +997,11 @@ class CoinVault {
         catch (err) {
             throw err;
         }
+    }
+    addCoins(coins) {
+        [...Object.entries(coins)].forEach(([key, value]) => {
+            this.coinsQuantity[key] += value;
+        });
     }
     validateMoney(money) {
         if (money + this.getBalance() > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_VAULT_CONDITION.MAX_BALANCE) {
@@ -1246,7 +1247,7 @@ class BalanceChargeView {
         this.contentsContainer = document.querySelector('#contents-container');
     }
     init() {
-        this.contentsContainer.textContent = ``;
+        this.contentsContainer.textContent = '';
         this.props = {
             target: this.contentsContainer,
             coinVault: this.coinVault,
@@ -1314,7 +1315,6 @@ class NavView {
         this.contentsContainer = document.querySelector('#contents-container');
         this.productManageNavBtn = document.querySelector('#product-manage-nav-button');
         this.balanceChargeNavBtn = document.querySelector('#charge-balance-nav-button');
-        this.productPurchaseNavBtn = document.querySelector('#product-purchase-nav-button');
         this.productManageNavBtn.addEventListener('click', this.handleShowProductManageTab);
         this.balanceChargeNavBtn.addEventListener('click', this.handleShowBalanceChargeTab);
         window.addEventListener('popstate', (savedData) => {
