@@ -857,25 +857,24 @@ class ProductCatalogTable {
         }
     }
     saveEditedProductState(tableRow) {
-        const productState = {
-            index: this.productCatalog.findExistingProductIndex(tableRow.id),
+        const product = this.productCatalog.findProduct(tableRow.id);
+        const editedProductState = {
             name: tableRow.querySelector('.product-name input').value,
             price: tableRow.querySelector('.product-price input').valueAsNumber,
             quantity: tableRow.querySelector('.product-quantity input')
                 .valueAsNumber,
         };
-        if (this.isSavable(productState)) {
-            this.productCatalog.getProductList()[productState.index].setName(productState.name);
-            this.productCatalog.getProductList()[productState.index].setPrice(productState.price);
-            this.productCatalog.getProductList()[productState.index].setQuantity(productState.quantity);
+        if (this.isSavable(product, editedProductState)) {
+            product.setName(editedProductState.name);
+            product.setPrice(editedProductState.price);
+            product.setQuantity(editedProductState.quantity);
         }
     }
-    isSavable(productState) {
+    isSavable(product, editedProductState) {
         try {
-            this.productCatalog.getProductList()[productState.index].validateName(productState.name);
-            this.productCatalog.getProductList()[productState.index].validatePrice(productState.price);
-            this.productCatalog
-                .getProductList()[productState.index].validateQuantity(productState.quantity);
+            product.validateName(editedProductState.name);
+            product.validatePrice(editedProductState.price);
+            product.validateQuantity(editedProductState.quantity);
             return true;
         }
         catch (err) {
@@ -1128,21 +1127,20 @@ class ProductCatalog {
         return this.productList;
     }
     addProduct(name, price, quantity) {
-        const productIndex = this.findExistingProductIndex(name);
-        if (productIndex !== -1) {
-            this.accumulateQuantity(productIndex, quantity);
+        const product = this.findProduct(name);
+        if (product) {
+            this.accumulateQuantity(product, quantity);
             return;
         }
         this.productList = [...this.productList, new _Product__WEBPACK_IMPORTED_MODULE_0__.Product(name, price, quantity)];
     }
-    findExistingProductIndex(name) {
-        return this.productList.findIndex((product) => product.getName() === name);
+    findProduct(name) {
+        return this.productList.find((product) => product.getName() === name);
     }
-    accumulateQuantity(productIndex, quantity) {
-        const targetProduct = this.productList[productIndex];
+    accumulateQuantity(product, quantity) {
         try {
-            targetProduct.validateQuantity(targetProduct.getQuantity() + quantity);
-            targetProduct.setQuantity(targetProduct.getQuantity() + quantity);
+            product.validateQuantity(product.getQuantity() + quantity);
+            product.setQuantity(product.getQuantity() + quantity);
         }
         catch (err) {
             throw err;
