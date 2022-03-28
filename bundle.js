@@ -637,6 +637,7 @@ class BalanceChargeInput {
             catch (err) {
                 this.chargeBalanceInputForm.reset();
                 alert(err.message);
+                // return;
             }
             this.updateCurrentBalance();
             this.target.dispatchEvent(new CustomEvent('coinCharged'));
@@ -857,28 +858,16 @@ class ProductCatalogTable {
         }
     }
     saveEditedProductState(tableRow) {
-        const product = this.productCatalog.findProduct(tableRow.id);
-        const editedProductState = {
-            name: tableRow.querySelector('.product-name input').value,
-            price: tableRow.querySelector('.product-price input').valueAsNumber,
-            quantity: tableRow.querySelector('.product-quantity input')
-                .valueAsNumber,
-        };
-        if (this.isSavable(product, editedProductState)) {
-            product.setName(editedProductState.name);
-            product.setPrice(editedProductState.price);
-            product.setQuantity(editedProductState.quantity);
-        }
-    }
-    isSavable(product, editedProductState) {
-        try {
-            product.validateName(editedProductState.name);
-            product.validatePrice(editedProductState.price);
-            product.validateQuantity(editedProductState.quantity);
-            return true;
-        }
-        catch (err) {
-            throw err;
+        const targetProduct = this.productCatalog.findProduct(tableRow.id);
+        const editedProductName = tableRow.querySelector('.product-name input')
+            .value;
+        const editedProductPrice = tableRow.querySelector('.product-price input')
+            .valueAsNumber;
+        const editedProductQuantity = tableRow.querySelector('.product-quantity input').valueAsNumber;
+        if (targetProduct.validateAllProp(editedProductName, editedProductPrice, editedProductQuantity)) {
+            targetProduct.setName(editedProductName);
+            targetProduct.setPrice(editedProductPrice);
+            targetProduct.setQuantity(editedProductQuantity);
         }
     }
     confirmEditProduct(tableRow) {
@@ -988,13 +977,8 @@ class CoinVault {
         return [...Object.entries(this.coinsQuantity)].reduce((previous, [key, value]) => previous + _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_PRICE_TABLE[key] * value, 0);
     }
     chargeMoney(money) {
-        try {
-            this.validateMoney(money);
-            this.addCoins(this.generateRandomCoins(money));
-        }
-        catch (err) {
-            throw err;
-        }
+        this.validateMoney(money);
+        this.addCoins(this.generateRandomCoins(money));
     }
     addCoins(coins) {
         [...Object.entries(coins)].forEach(([key, value]) => {
@@ -1043,14 +1027,10 @@ __webpack_require__.r(__webpack_exports__);
 
 class Product {
     constructor(name, price, quantity) {
-        try {
-            this.validateAllProp(name, price, quantity);
+        if (this.validateAllProp(name, price, quantity)) {
             this.setName(name);
             this.setPrice(price);
             this.setQuantity(quantity);
-        }
-        catch (err) {
-            throw err;
         }
     }
     getName() {
@@ -1075,6 +1055,7 @@ class Product {
         if (name.length > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_NAME_LENGTH) {
             throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_PRODUCT_NAME_LENGTH_LIMIT);
         }
+        return true;
     }
     validatePrice(price) {
         if (price < _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MIN_PRICE || price > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_PRICE) {
@@ -1083,21 +1064,16 @@ class Product {
         if (price % _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.UNIT_PRICE !== 0) {
             throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_DIVIDED_BY_PRODUCT_PRICE_UNIT);
         }
+        return true;
     }
     validateQuantity(quantity) {
         if (quantity > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_QUANTITY) {
             throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_PRODUCT_QUANTITY_LIMIT);
         }
+        return true;
     }
     validateAllProp(name, price, quantity) {
-        try {
-            this.validateName(name);
-            this.validatePrice(price);
-            this.validateQuantity(quantity);
-        }
-        catch (err) {
-            throw err;
-        }
+        return this.validateName(name) && this.validatePrice(price) && this.validateQuantity(quantity);
     }
     getAllProperties() {
         return { name: this.name, price: this.price, quantity: this.quantity };
@@ -1138,13 +1114,8 @@ class ProductCatalog {
         return this.productList.find((product) => product.getName() === name);
     }
     accumulateQuantity(product, quantity) {
-        try {
-            product.validateQuantity(product.getQuantity() + quantity);
-            product.setQuantity(product.getQuantity() + quantity);
-        }
-        catch (err) {
-            throw err;
-        }
+        product.validateQuantity(product.getQuantity() + quantity);
+        product.setQuantity(product.getQuantity() + quantity);
     }
     deleteProduct(name) {
         this.productList = this.productList.filter((product) => product.getName() !== name);
