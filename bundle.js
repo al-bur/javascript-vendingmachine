@@ -637,7 +637,7 @@ class BalanceChargeInput {
             catch (err) {
                 this.chargeBalanceInputForm.reset();
                 alert(err.message);
-                // return;
+                return;
             }
             this.updateCurrentBalance();
             this.target.dispatchEvent(new CustomEvent('coinCharged'));
@@ -785,12 +785,13 @@ class ProductCatalogTable {
                 const tableRow = e.target.closest('tr');
                 try {
                     this.saveEditedProductState(tableRow);
-                    this.confirmEditProduct(tableRow);
-                    this.toggleEditBtn(tableRow);
                 }
                 catch (err) {
                     alert(err.message);
+                    return;
                 }
+                this.confirmEditProduct(tableRow);
+                this.toggleEditBtn(tableRow);
             }
         };
         this.renderEditProduct = (tableRow) => {
@@ -911,11 +912,12 @@ class ProductInformationInput {
             const productQuantity = this.productQuantityInput.valueAsNumber;
             try {
                 this.productCatalog.addProduct(productName, productPrice, productQuantity);
-                this.target.dispatchEvent(new CustomEvent('productAdded'));
             }
             catch (err) {
                 alert(err.message);
+                return;
             }
+            this.target.dispatchEvent(new CustomEvent('productAdded'));
             this.productInformationForm.reset();
         };
         this.target = props.target;
