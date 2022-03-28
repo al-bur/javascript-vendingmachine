@@ -917,8 +917,10 @@ class ProductInformationInput {
                 alert(err.message);
                 return;
             }
+            finally {
+                this.productInformationForm.reset();
+            }
             this.target.dispatchEvent(new CustomEvent('productAdded'));
-            this.productInformationForm.reset();
         };
         this.target = props.target;
         this.productCatalog = props.productCatalog;
@@ -1095,7 +1097,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ProductCatalog": () => (/* binding */ ProductCatalog)
 /* harmony export */ });
-/* harmony import */ var _Product__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Product */ "./src/domain/Product.ts");
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
+/* harmony import */ var _Product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Product */ "./src/domain/Product.ts");
+
 
 class ProductCatalog {
     constructor() {
@@ -1106,11 +1110,18 @@ class ProductCatalog {
     }
     addProduct(name, price, quantity) {
         const product = this.findProduct(name);
-        if (product) {
+        if (this.isSameProductExist(product, price)) {
             this.accumulateQuantity(product, quantity);
             return;
         }
-        this.productList = [...this.productList, new _Product__WEBPACK_IMPORTED_MODULE_0__.Product(name, price, quantity)];
+        this.productList = [...this.productList, new _Product__WEBPACK_IMPORTED_MODULE_1__.Product(name, price, quantity)];
+    }
+    isSameProductExist(product, price) {
+        if (!product)
+            return false;
+        if (product.getPrice() !== price)
+            throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.SAME_PRODUCT_NAME_NOT_SAME_PRODUCT_PRICE);
+        return true;
     }
     findProduct(name) {
         return this.productList.find((product) => product.getName() === name);
@@ -1164,12 +1175,13 @@ const COIN_VAULT_CONDITION = {
     MAX_BALANCE: 100000,
 };
 const ERROR_MESSAGE = {
-    OVER_PRODUCT_NAME_LENGTH_LIMIT: '10글자 미만의 상품명을 넣어주세요~',
+    NOT_DIVIDED_BY_COIN_UNIT: '상평통보는 안 받습니다. 10원단위로 넣어주세요!',
     NOT_DIVIDED_BY_PRODUCT_PRICE_UNIT: '10원단위로 가격을 입력해주세요~',
     NOT_WITHIN_PRODUCT_PRICE_RANGE: '100원 이상, 10,000원 이하의 가격을 입력주세요~',
-    OVER_PRODUCT_QUANTITY_LIMIT: '수량은 최대 20개까지만 가능합니다~',
     OVER_BALANCE_LIMIT: '돈통이 가득찼어요! 100,000원 까지만 보관 가능합니다.',
-    NOT_DIVIDED_BY_COIN_UNIT: '상평통보는 안 받습니다. 10원단위로 넣어주세요!',
+    OVER_PRODUCT_NAME_LENGTH_LIMIT: '10글자 미만의 상품명을 넣어주세요~',
+    OVER_PRODUCT_QUANTITY_LIMIT: '수량은 최대 20개까지만 가능합니다~',
+    SAME_PRODUCT_NAME_NOT_SAME_PRODUCT_PRICE: '이미 존재하는 상품이름을 사용하시려면 가격이 동일해야합니다.',
 };
 const URL_PATH = {
     HOME: '/',
