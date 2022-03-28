@@ -1004,10 +1004,10 @@ class CoinVault {
     }
     validateMoney(money) {
         if (money + this.getBalance() > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_VAULT_CONDITION.MAX_BALANCE) {
-            throw new Error('돈통이 가득찼어요! 100,000원 까지만 보관 가능합니다.');
+            throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_BALANCE_LIMIT);
         }
         if (money % _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_CONDITION.UNIT_PRICE !== 0) {
-            throw new Error('상평통보는 안 받습니다. 10원단위로 넣어주세요!');
+            throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_DIVIDED_BY_COIN_UNIT);
         }
     }
     generateRandomCoins(money) {
@@ -1074,20 +1074,20 @@ class Product {
     }
     validateName(name) {
         if (name.length > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_NAME_LENGTH) {
-            throw new Error('10글자 미만의 이름을 넣어주세요~');
+            throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_PRODUCT_NAME_LENGTH_LIMIT);
         }
     }
     validatePrice(price) {
         if (price < _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MIN_PRICE || price > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_PRICE) {
-            throw new Error('100원 이상, 10,000원 이하의 돈을 넣어주세요~');
+            throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_WITHIN_PRODUCT_PRICE_RANGE);
         }
         if (price % _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.UNIT_PRICE !== 0) {
-            throw new Error('10원단위로 돈을 넣어주세요~');
+            throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_DIVIDED_BY_PRODUCT_PRICE_UNIT);
         }
     }
     validateQuantity(quantity) {
         if (quantity > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_QUANTITY) {
-            throw new Error('상품수량은 최대 20개까지만 가능합니다~');
+            throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_PRODUCT_QUANTITY_LIMIT);
         }
     }
     validateAllProp(name, price, quantity) {
@@ -1169,6 +1169,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "COINS_INIT_QUANTITY": () => (/* binding */ COINS_INIT_QUANTITY),
 /* harmony export */   "COINS_PRICE_TABLE": () => (/* binding */ COINS_PRICE_TABLE),
 /* harmony export */   "COIN_VAULT_CONDITION": () => (/* binding */ COIN_VAULT_CONDITION),
+/* harmony export */   "ERROR_MESSAGE": () => (/* binding */ ERROR_MESSAGE),
 /* harmony export */   "URL_PATH": () => (/* binding */ URL_PATH),
 /* harmony export */   "PRODUCT_CONDITION": () => (/* binding */ PRODUCT_CONDITION)
 /* harmony export */ });
@@ -1190,6 +1191,14 @@ const COINS_PRICE_TABLE = {
 };
 const COIN_VAULT_CONDITION = {
     MAX_BALANCE: 100000,
+};
+const ERROR_MESSAGE = {
+    OVER_PRODUCT_NAME_LENGTH_LIMIT: '10글자 미만의 상품명을 넣어주세요~',
+    NOT_DIVIDED_BY_PRODUCT_PRICE_UNIT: '10원단위로 가격을 입력해주세요~',
+    NOT_WITHIN_PRODUCT_PRICE_RANGE: '100원 이상, 10,000원 이하의 가격을 입력주세요~',
+    OVER_PRODUCT_QUANTITY_LIMIT: '수량은 최대 20개까지만 가능합니다~',
+    OVER_BALANCE_LIMIT: '돈통이 가득찼어요! 100,000원 까지만 보관 가능합니다.',
+    NOT_DIVIDED_BY_COIN_UNIT: '상평통보는 안 받습니다. 10원단위로 넣어주세요!',
 };
 const URL_PATH = {
     HOME: '/',
