@@ -117,7 +117,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#contents-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  margin-top: 50px;\r\n  width: 632px;\r\n  row-gap: 40px;\r\n}\r\n\r\n#login-button {\r\n  position: absolute;\r\n  right: 10px;\r\n}\r\n\r\n.feature-section {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n.thumbnail {\r\n  cursor: pointer;\r\n  position: fixed;\r\n  right: 20px;\r\n  background-color: var(--cyan);\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  width: 50px;\r\n  height: 50px;\r\n  border-radius: 50%;\r\n}\r\n\r\n.thumbnail .name {\r\n  position: relative;\r\n  font-size: 16px;\r\n  font-weight: bold;\r\n  color: var(--white);\r\n}\r\n\r\n.select-container {\r\n  position: fixed;\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 130px;\r\n  top: 70px;\r\n  right: 20px;\r\n  font-size: 16px;\r\n}\r\n\r\n.edit-user-info,\r\n.logout {\r\n  padding: 10px 5px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/nav.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,gBAAgB;EAChB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,kBAAkB;EAClB,WAAW;AACb;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,eAAe;EACf,WAAW;EACX,6BAA6B;EAC7B,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,WAAW;EACX,YAAY;EACZ,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,eAAe;EACf,iBAAiB;EACjB,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,aAAa;EACb,sBAAsB;EACtB,YAAY;EACZ,SAAS;EACT,WAAW;EACX,eAAe;AACjB;;AAEA;;EAEE,iBAAiB;AACnB","sourcesContent":["#contents-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  margin-top: 50px;\r\n  width: 632px;\r\n  row-gap: 40px;\r\n}\r\n\r\n#login-button {\r\n  position: absolute;\r\n  right: 10px;\r\n}\r\n\r\n.feature-section {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n.thumbnail {\r\n  cursor: pointer;\r\n  position: fixed;\r\n  right: 20px;\r\n  background-color: var(--cyan);\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  width: 50px;\r\n  height: 50px;\r\n  border-radius: 50%;\r\n}\r\n\r\n.thumbnail .name {\r\n  position: relative;\r\n  font-size: 16px;\r\n  font-weight: bold;\r\n  color: var(--white);\r\n}\r\n\r\n.select-container {\r\n  position: fixed;\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 130px;\r\n  top: 70px;\r\n  right: 20px;\r\n  font-size: 16px;\r\n}\r\n\r\n.edit-user-info,\r\n.logout {\r\n  padding: 10px 5px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#contents-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  margin-top: 50px;\r\n  width: 632px;\r\n  row-gap: 40px;\r\n}\r\n\r\n#login-button {\r\n  position: absolute;\r\n  right: 10px;\r\n}\r\n\r\n.feature-section {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n.thumbnail {\r\n  cursor: pointer;\r\n  position: fixed;\r\n  right: 20px;\r\n  background-color: var(--cyan);\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  width: 50px;\r\n  height: 50px;\r\n  border-radius: 50%;\r\n}\r\n\r\n.thumbnail .name {\r\n  position: relative;\r\n  font-size: 16px;\r\n  font-weight: bold;\r\n  color: var(--white);\r\n}\r\n\r\n.select-container {\r\n  position: fixed;\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 130px;\r\n  top: 70px;\r\n  right: 20px;\r\n  font-size: 16px;\r\n}\r\n\r\n.edit-user-info-button,\r\n.logout-button {\r\n  padding: 10px 5px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/nav.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,gBAAgB;EAChB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,kBAAkB;EAClB,WAAW;AACb;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,eAAe;EACf,WAAW;EACX,6BAA6B;EAC7B,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,WAAW;EACX,YAAY;EACZ,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,eAAe;EACf,iBAAiB;EACjB,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,aAAa;EACb,sBAAsB;EACtB,YAAY;EACZ,SAAS;EACT,WAAW;EACX,eAAe;AACjB;;AAEA;;EAEE,iBAAiB;AACnB","sourcesContent":["#contents-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  margin-top: 50px;\r\n  width: 632px;\r\n  row-gap: 40px;\r\n}\r\n\r\n#login-button {\r\n  position: absolute;\r\n  right: 10px;\r\n}\r\n\r\n.feature-section {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n.thumbnail {\r\n  cursor: pointer;\r\n  position: fixed;\r\n  right: 20px;\r\n  background-color: var(--cyan);\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  width: 50px;\r\n  height: 50px;\r\n  border-radius: 50%;\r\n}\r\n\r\n.thumbnail .name {\r\n  position: relative;\r\n  font-size: 16px;\r\n  font-weight: bold;\r\n  color: var(--white);\r\n}\r\n\r\n.select-container {\r\n  position: fixed;\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 130px;\r\n  top: 70px;\r\n  right: 20px;\r\n  font-size: 16px;\r\n}\r\n\r\n.edit-user-info-button,\r\n.logout-button {\r\n  padding: 10px 5px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -739,14 +739,16 @@ class BalanceChargeInputForm {
             e.preventDefault();
             try {
                 __classPrivateFieldGet(this, _BalanceChargeInputForm_coinVault, "f").chargeMoney(Number(__classPrivateFieldGet(this, _BalanceChargeInputForm_chargeBalanceInput, "f").value));
+                __classPrivateFieldGet(this, _BalanceChargeInputForm_updateCurrentBalance, "f").call(this);
+                __classPrivateFieldGet(this, _BalanceChargeInputForm_target, "f").dispatchEvent(new CustomEvent('coinCharged'));
             }
             catch (err) {
                 __classPrivateFieldGet(this, _BalanceChargeInputForm_chargeBalanceInputForm, "f").reset();
                 alert(err.message);
-                return;
             }
-            __classPrivateFieldGet(this, _BalanceChargeInputForm_updateCurrentBalance, "f").call(this);
-            __classPrivateFieldGet(this, _BalanceChargeInputForm_target, "f").dispatchEvent(new CustomEvent('coinCharged'));
+            finally {
+                __classPrivateFieldGet(this, _BalanceChargeInputForm_chargeBalanceInputForm, "f").reset();
+            }
         });
         _BalanceChargeInputForm_updateCurrentBalance.set(this, () => {
             __classPrivateFieldGet(this, _BalanceChargeInputForm_currentBalance, "f").textContent = `${__classPrivateFieldGet(this, _BalanceChargeInputForm_coinVault, "f").getBalance()}`;
@@ -1201,8 +1203,8 @@ _Profile_isRendered = new WeakMap(), _Profile_target = new WeakMap(), _Profile_s
     return `
       <span class="name">${name.slice(0, 1)}</span>
       <div class="select-container hide">
-        <button type="button" class="edit-user-info button">회원정보 수정</button>
-        <button type="button" class="logout button">로그아웃</button>
+        <button type="button" class="edit-user-info-button button">회원정보 수정</button>
+        <button type="button" class="logout-button button">로그아웃</button>
       </div>
     `;
 }, _Profile_updateThumbnail = function _Profile_updateThumbnail() {
@@ -1211,8 +1213,8 @@ _Profile_isRendered = new WeakMap(), _Profile_target = new WeakMap(), _Profile_s
 }, _Profile_selectDOM = function _Profile_selectDOM() {
     __classPrivateFieldSet(this, _Profile_thumbnailName, document.querySelector('.name'), "f");
     __classPrivateFieldSet(this, _Profile_selectContainer, document.querySelector('.select-container'), "f");
-    __classPrivateFieldSet(this, _Profile_editUserInfoBtn, document.querySelector('.edit-user-info'), "f");
-    __classPrivateFieldSet(this, _Profile_logoutBtn, document.querySelector('.logout'), "f");
+    __classPrivateFieldSet(this, _Profile_editUserInfoBtn, document.querySelector('.edit-user-info-button'), "f");
+    __classPrivateFieldSet(this, _Profile_logoutBtn, document.querySelector('.logout-button'), "f");
 }, _Profile_bindEvent = function _Profile_bindEvent() {
     __classPrivateFieldGet(this, _Profile_thumbnailName, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleToggleSelectContainer, "f"));
     __classPrivateFieldGet(this, _Profile_editUserInfoBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleRequestEditUserInfoPage, "f"));
@@ -1288,12 +1290,15 @@ class PurchasableProductCatalogTable {
         _PurchasableProductCatalogTable_updateEditedProduct.set(this, (e) => {
             const { targetName, name, price, quantity } = e.detail;
             const tableRow = __classPrivateFieldGet(this, _PurchasableProductCatalogTable_productTableBody, "f").querySelector(`#${targetName}`);
+            tableRow.id = name;
             const nameSpan = tableRow.querySelector('.product-name > span');
             const priceSpan = tableRow.querySelector('.product-price > span');
             const quantitySpan = tableRow.querySelector('.product-quantity > span');
+            const purchaseButton = tableRow.querySelector('.purchase-button');
             nameSpan.textContent = name;
             priceSpan.textContent = price;
             quantitySpan.textContent = quantity;
+            purchaseButton.dataset.productId = name;
         });
         __classPrivateFieldSet(this, _PurchasableProductCatalogTable_target, target, "f");
         __classPrivateFieldSet(this, _PurchasableProductCatalogTable_productCatalog, productCatalog, "f");
@@ -1381,7 +1386,7 @@ var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || 
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
-var _PurchaseMoneyInputForm_instances, _PurchaseMoneyInputForm_target, _PurchaseMoneyInputForm_purchaseMoney, _PurchaseMoneyInputForm_purchaseMoneySubmitBtn, _PurchaseMoneyInputForm_purchaseMoneySpan, _PurchaseMoneyInputForm_template, _PurchaseMoneyInputForm_selectDOM, _PurchaseMoneyInputForm_bindEvent, _PurchaseMoneyInputForm_handleSetPurchaseMoney, _PurchaseMoneyInputForm_updatePurchaseMoney;
+var _PurchaseMoneyInputForm_instances, _PurchaseMoneyInputForm_target, _PurchaseMoneyInputForm_purchaseMoney, _PurchaseMoneyInputForm_purchaseMoneySubmitBtn, _PurchaseMoneyInputForm_purchaseMoneySpan, _PurchaseMoneyInputForm_purchaseMoneyInputForm, _PurchaseMoneyInputForm_template, _PurchaseMoneyInputForm_selectDOM, _PurchaseMoneyInputForm_bindEvent, _PurchaseMoneyInputForm_handleSetPurchaseMoney, _PurchaseMoneyInputForm_updatePurchaseMoney;
 class PurchaseMoneyInputForm {
     constructor({ target, purchaseMoney }) {
         _PurchaseMoneyInputForm_instances.add(this);
@@ -1389,6 +1394,7 @@ class PurchaseMoneyInputForm {
         _PurchaseMoneyInputForm_purchaseMoney.set(this, void 0);
         _PurchaseMoneyInputForm_purchaseMoneySubmitBtn.set(this, void 0);
         _PurchaseMoneyInputForm_purchaseMoneySpan.set(this, void 0);
+        _PurchaseMoneyInputForm_purchaseMoneyInputForm.set(this, void 0);
         _PurchaseMoneyInputForm_handleSetPurchaseMoney.set(this, (e) => {
             e.preventDefault();
             const purchaseMoney = document.querySelector('#purchase-money-input')
@@ -1405,6 +1411,9 @@ class PurchaseMoneyInputForm {
                     detail: { type: 'fail', message: err.message },
                 }));
             }
+            finally {
+                __classPrivateFieldGet(this, _PurchaseMoneyInputForm_purchaseMoneyInputForm, "f").reset();
+            }
         });
         _PurchaseMoneyInputForm_updatePurchaseMoney.set(this, () => {
             __classPrivateFieldGet(this, _PurchaseMoneyInputForm_purchaseMoneySpan, "f").textContent = String(__classPrivateFieldGet(this, _PurchaseMoneyInputForm_purchaseMoney, "f").getMoney());
@@ -1420,7 +1429,7 @@ class PurchaseMoneyInputForm {
         __classPrivateFieldGet(this, _PurchaseMoneyInputForm_instances, "m", _PurchaseMoneyInputForm_bindEvent).call(this);
     }
 }
-_PurchaseMoneyInputForm_target = new WeakMap(), _PurchaseMoneyInputForm_purchaseMoney = new WeakMap(), _PurchaseMoneyInputForm_purchaseMoneySubmitBtn = new WeakMap(), _PurchaseMoneyInputForm_purchaseMoneySpan = new WeakMap(), _PurchaseMoneyInputForm_handleSetPurchaseMoney = new WeakMap(), _PurchaseMoneyInputForm_updatePurchaseMoney = new WeakMap(), _PurchaseMoneyInputForm_instances = new WeakSet(), _PurchaseMoneyInputForm_template = function _PurchaseMoneyInputForm_template(purhcaseMoney) {
+_PurchaseMoneyInputForm_target = new WeakMap(), _PurchaseMoneyInputForm_purchaseMoney = new WeakMap(), _PurchaseMoneyInputForm_purchaseMoneySubmitBtn = new WeakMap(), _PurchaseMoneyInputForm_purchaseMoneySpan = new WeakMap(), _PurchaseMoneyInputForm_purchaseMoneyInputForm = new WeakMap(), _PurchaseMoneyInputForm_handleSetPurchaseMoney = new WeakMap(), _PurchaseMoneyInputForm_updatePurchaseMoney = new WeakMap(), _PurchaseMoneyInputForm_instances = new WeakSet(), _PurchaseMoneyInputForm_template = function _PurchaseMoneyInputForm_template(purhcaseMoney) {
     return `
       <div>
         <form id="purchase-money-input-form">
@@ -1432,6 +1441,7 @@ _PurchaseMoneyInputForm_target = new WeakMap(), _PurchaseMoneyInputForm_purchase
       </div>
     `;
 }, _PurchaseMoneyInputForm_selectDOM = function _PurchaseMoneyInputForm_selectDOM() {
+    __classPrivateFieldSet(this, _PurchaseMoneyInputForm_purchaseMoneyInputForm, document.querySelector('#purchase-money-input-form'), "f");
     __classPrivateFieldSet(this, _PurchaseMoneyInputForm_purchaseMoneySubmitBtn, document.querySelector('#purchase-money-submit-btn'), "f");
     __classPrivateFieldSet(this, _PurchaseMoneyInputForm_purchaseMoneySpan, document.querySelector('#purchase-money'), "f");
 }, _PurchaseMoneyInputForm_bindEvent = function _PurchaseMoneyInputForm_bindEvent() {
@@ -2402,7 +2412,7 @@ class NavView {
             __classPrivateFieldGet(this, _NavView_nav, "f").classList.add('hide');
             __classPrivateFieldGet(this, _NavView_thumbnail, "f").classList.add('hide');
             __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.remove('hide');
-            __classPrivateFieldGet(this, _NavView_handleShowProductPurhcaseTab, "f");
+            __classPrivateFieldGet(this, _NavView_handleShowProductPurhcaseTab, "f").call(this);
         });
         _NavView_renderHome.set(this, () => {
             const accessToken = JSON.parse(localStorage.getItem('accessToken'));
