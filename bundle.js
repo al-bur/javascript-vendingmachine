@@ -1404,12 +1404,12 @@ class ReturnedCoinTable {
         __classPrivateFieldSet(this, _ReturnedCoinTable_purchaseMoney, purchaseMoney, "f");
     }
     render() {
-        __classPrivateFieldGet(this, _ReturnedCoinTable_target, "f").insertAdjacentHTML('beforeend', __classPrivateFieldGet(this, _ReturnedCoinTable_instances, "m", _ReturnedCoinTable_template).call(this, __classPrivateFieldGet(this, _ReturnedCoinTable_coinVault, "f").getCoins()));
+        __classPrivateFieldGet(this, _ReturnedCoinTable_target, "f").insertAdjacentHTML('beforeend', __classPrivateFieldGet(this, _ReturnedCoinTable_instances, "m", _ReturnedCoinTable_template).call(this));
         __classPrivateFieldGet(this, _ReturnedCoinTable_instances, "m", _ReturnedCoinTable_selectDom).call(this);
         __classPrivateFieldGet(this, _ReturnedCoinTable_instances, "m", _ReturnedCoinTable_bindEvent).call(this);
     }
 }
-_ReturnedCoinTable_coinVault = new WeakMap(), _ReturnedCoinTable_purchaseMoney = new WeakMap(), _ReturnedCoinTable_target = new WeakMap(), _ReturnedCoinTable_coin500Quantity = new WeakMap(), _ReturnedCoinTable_coin100Quantity = new WeakMap(), _ReturnedCoinTable_coin50Quantity = new WeakMap(), _ReturnedCoinTable_coin10Quantity = new WeakMap(), _ReturnedCoinTable_returnBtn = new WeakMap(), _ReturnedCoinTable_handleReturnCoins = new WeakMap(), _ReturnedCoinTable_instances = new WeakSet(), _ReturnedCoinTable_template = function _ReturnedCoinTable_template(coinsQuantity) {
+_ReturnedCoinTable_coinVault = new WeakMap(), _ReturnedCoinTable_purchaseMoney = new WeakMap(), _ReturnedCoinTable_target = new WeakMap(), _ReturnedCoinTable_coin500Quantity = new WeakMap(), _ReturnedCoinTable_coin100Quantity = new WeakMap(), _ReturnedCoinTable_coin50Quantity = new WeakMap(), _ReturnedCoinTable_coin10Quantity = new WeakMap(), _ReturnedCoinTable_returnBtn = new WeakMap(), _ReturnedCoinTable_handleReturnCoins = new WeakMap(), _ReturnedCoinTable_instances = new WeakSet(), _ReturnedCoinTable_template = function _ReturnedCoinTable_template() {
     return `
       <div class="table-container">
         <h2>잔돈 반환</h2>
@@ -1423,19 +1423,19 @@ _ReturnedCoinTable_coinVault = new WeakMap(), _ReturnedCoinTable_purchaseMoney =
           <tbody>
             <tr>
               <td>500원</td>
-              <td><span class="coin500-quantity">${coinsQuantity.coin500}</span>개</td>
+              <td><span class="coin500-quantity">0</span>개</td>
             </tr>
             <tr>
               <td>100원</td>
-              <td><span class="coin100-quantity">${coinsQuantity.coin100}</span>개</td>
+              <td><span class="coin100-quantity">0</span>개</td>
             </tr>
             <tr>
               <td>50원</td>
-              <td><span class="coin50-quantity">${coinsQuantity.coin50}</span>개</td>
+              <td><span class="coin50-quantity">0</span>개</td>
             </tr>
             <tr>
               <td>10원</td>
-              <td><span class="coin10-quantity">${coinsQuantity.coin10}</span>개</td>
+              <td><span class="coin10-quantity">0</span>개</td>
             </tr>
           </tbody>
         </table>
