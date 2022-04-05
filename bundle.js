@@ -1569,20 +1569,25 @@ var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || 
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
-var _CoinVault_instances, _CoinVault_coinsQuantity, _CoinVault_addCoins, _CoinVault_validateMoney, _CoinVault_isValidatedReturnCoins, _CoinVault_substractCoins;
+var _CoinVault_instances, _CoinVault_coins, _CoinVault_addCoins, _CoinVault_validateMoney, _CoinVault_isValidatedReturnCoins, _CoinVault_substractCoins;
 
 
 class CoinVault {
     constructor() {
+        var _a;
         _CoinVault_instances.add(this);
-        _CoinVault_coinsQuantity.set(this, void 0);
-        __classPrivateFieldSet(this, _CoinVault_coinsQuantity, Object.assign({}, _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_INIT_QUANTITY), "f");
+        _CoinVault_coins.set(this, void 0);
+        __classPrivateFieldSet(this, _CoinVault_coins, (_a = JSON.parse(localStorage.getItem('coins'))) !== null && _a !== void 0 ? _a : Object.assign({}, _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_INIT_QUANTITY), "f");
     }
     getCoins() {
-        return __classPrivateFieldGet(this, _CoinVault_coinsQuantity, "f");
+        return __classPrivateFieldGet(this, _CoinVault_coins, "f");
+    }
+    setCoins(coins) {
+        __classPrivateFieldSet(this, _CoinVault_coins, coins, "f");
+        localStorage.setItem('coins', JSON.stringify(__classPrivateFieldGet(this, _CoinVault_coins, "f")));
     }
     getBalance() {
-        return Object.entries(__classPrivateFieldGet(this, _CoinVault_coinsQuantity, "f")).reduce((previous, [key, value]) => previous + _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_UNIT_TABLE[key] * value, 0);
+        return Object.entries(__classPrivateFieldGet(this, _CoinVault_coins, "f")).reduce((previous, [key, value]) => previous + _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_UNIT_TABLE[key] * value, 0);
     }
     chargeMoney(money) {
         __classPrivateFieldGet(this, _CoinVault_instances, "m", _CoinVault_validateMoney).call(this, money);
@@ -1607,7 +1612,7 @@ class CoinVault {
         if (__classPrivateFieldGet(this, _CoinVault_instances, "m", _CoinVault_isValidatedReturnCoins).call(this, purhcaseMoney)) {
             const returnedCoins = Object.assign({}, _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_INIT_QUANTITY);
             let remainder = purhcaseMoney;
-            Object.entries(__classPrivateFieldGet(this, _CoinVault_coinsQuantity, "f")).forEach(([key, quantity]) => {
+            Object.entries(__classPrivateFieldGet(this, _CoinVault_coins, "f")).forEach(([key, quantity]) => {
                 const coinUnit = _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_UNIT_TABLE[key];
                 if (remainder === 0 || remainder < coinUnit)
                     return;
@@ -1620,12 +1625,13 @@ class CoinVault {
         }
     }
 }
-_CoinVault_coinsQuantity = new WeakMap(), _CoinVault_instances = new WeakSet(), _CoinVault_addCoins = function _CoinVault_addCoins(coins) {
-    const coinsQuantity = Object.assign({}, __classPrivateFieldGet(this, _CoinVault_coinsQuantity, "f"));
+_CoinVault_coins = new WeakMap(), _CoinVault_instances = new WeakSet(), _CoinVault_addCoins = function _CoinVault_addCoins(coins) {
+    const coinsQuantity = Object.assign({}, __classPrivateFieldGet(this, _CoinVault_coins, "f"));
     Object.entries(coins).forEach(([key, value]) => {
         coinsQuantity[key] += value;
     });
-    __classPrivateFieldSet(this, _CoinVault_coinsQuantity, coinsQuantity, "f");
+    this.setCoins(coinsQuantity);
+    // this.#coins = coinsQuantity;
 }, _CoinVault_validateMoney = function _CoinVault_validateMoney(money) {
     if (money + this.getBalance() > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_VAULT_CONDITION.MAX_BALANCE) {
         throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_BALANCE_LIMIT);
@@ -1640,11 +1646,11 @@ _CoinVault_coinsQuantity = new WeakMap(), _CoinVault_instances = new WeakSet(), 
         throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NO_COINS);
     return true;
 }, _CoinVault_substractCoins = function _CoinVault_substractCoins(returnedCoins) {
-    const currentCoins = Object.assign({}, __classPrivateFieldGet(this, _CoinVault_coinsQuantity, "f"));
+    const currentCoins = Object.assign({}, __classPrivateFieldGet(this, _CoinVault_coins, "f"));
     Object.entries(returnedCoins).forEach(([key, quantity]) => {
         currentCoins[key] -= quantity;
     });
-    __classPrivateFieldSet(this, _CoinVault_coinsQuantity, currentCoins, "f");
+    this.setCoins(currentCoins);
 };
 
 
@@ -1769,19 +1775,25 @@ var _ProductCatalog_instances, _ProductCatalog_productList, _ProductCatalog_deep
 
 class ProductCatalog {
     constructor() {
+        var _a;
         _ProductCatalog_instances.add(this);
         _ProductCatalog_productList.set(this, void 0);
-        __classPrivateFieldSet(this, _ProductCatalog_productList, [new _Product__WEBPACK_IMPORTED_MODULE_1__.Product({ name: '콜라', price: 2000, quantity: 10 })], "f");
+        const storedProductList = (_a = JSON.parse(localStorage.getItem('productList'))) !== null && _a !== void 0 ? _a : [];
+        __classPrivateFieldSet(this, _ProductCatalog_productList, storedProductList.map((product) => new _Product__WEBPACK_IMPORTED_MODULE_1__.Product(product)), "f");
     }
     getProductList() {
         return __classPrivateFieldGet(this, _ProductCatalog_productList, "f");
+    }
+    setProductList(productList) {
+        __classPrivateFieldSet(this, _ProductCatalog_productList, productList, "f");
+        localStorage.setItem('productList', JSON.stringify(__classPrivateFieldGet(this, _ProductCatalog_productList, "f").map((product) => product.getAllProperties())));
     }
     addProduct(product) {
         const { name } = product;
         if (this.isSameProductExist(name))
             return;
         const deepCopiedProductList = __classPrivateFieldGet(this, _ProductCatalog_instances, "m", _ProductCatalog_deepCopy).call(this, __classPrivateFieldGet(this, _ProductCatalog_productList, "f"));
-        __classPrivateFieldSet(this, _ProductCatalog_productList, [...deepCopiedProductList, new _Product__WEBPACK_IMPORTED_MODULE_1__.Product(product)], "f");
+        this.setProductList([...deepCopiedProductList, new _Product__WEBPACK_IMPORTED_MODULE_1__.Product(product)]);
     }
     isSameProductExist(name) {
         if (this.findProduct(name))
@@ -1796,21 +1808,23 @@ class ProductCatalog {
             const deepCopiedProductList = __classPrivateFieldGet(this, _ProductCatalog_instances, "m", _ProductCatalog_deepCopy).call(this, __classPrivateFieldGet(this, _ProductCatalog_productList, "f"));
             const targetProduct = this.findProduct(name, deepCopiedProductList);
             targetProduct.decreaseQuantity();
-            __classPrivateFieldSet(this, _ProductCatalog_productList, deepCopiedProductList, "f");
+            this.setProductList(deepCopiedProductList);
             const exchange = purchaseMoney - targetProduct.getPrice();
             return exchange;
         }
     }
     deleteProduct(name) {
-        __classPrivateFieldSet(this, _ProductCatalog_productList, __classPrivateFieldGet(this, _ProductCatalog_productList, "f").filter((product) => product.getName() !== name), "f");
+        this.setProductList(__classPrivateFieldGet(this, _ProductCatalog_productList, "f").filter((product) => product.getName() !== name));
     }
     editProduct(targetProductName, editedProductProps) {
-        const targetProduct = this.findProduct(targetProductName);
+        const deepCopiedProductList = __classPrivateFieldGet(this, _ProductCatalog_instances, "m", _ProductCatalog_deepCopy).call(this, __classPrivateFieldGet(this, _ProductCatalog_productList, "f"));
+        const targetProduct = this.findProduct(targetProductName, deepCopiedProductList);
         if (targetProduct.isValidatedAllProp(editedProductProps)) {
             const { name, price, quantity } = editedProductProps;
             targetProduct.setName(name);
             targetProduct.setPrice(price);
             targetProduct.setQuantity(quantity);
+            this.setProductList(deepCopiedProductList);
         }
     }
 }
@@ -1837,34 +1851,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "PurchaseMoney": () => (/* binding */ PurchaseMoney)
 /* harmony export */ });
 /* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
-var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
-    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
-    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
-};
 var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
     if (kind === "m") throw new TypeError("Private method is not writable");
     if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
     return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
 };
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
 var _PurchaseMoney_instances, _PurchaseMoney_value, _PurchaseMoney_isValidatedMoney;
 
 class PurchaseMoney {
     constructor() {
+        var _a;
         _PurchaseMoney_instances.add(this);
         _PurchaseMoney_value.set(this, void 0);
-        this.setMoney(0);
+        __classPrivateFieldSet(this, _PurchaseMoney_value, (_a = JSON.parse(localStorage.getItem('purchaseMoney'))) !== null && _a !== void 0 ? _a : 0, "f");
     }
     getMoney() {
         return __classPrivateFieldGet(this, _PurchaseMoney_value, "f");
     }
     setMoney(value) {
         __classPrivateFieldSet(this, _PurchaseMoney_value, value, "f");
+        localStorage.setItem('purchaseMoney', JSON.stringify(__classPrivateFieldGet(this, _PurchaseMoney_value, "f")));
     }
     addMoney(money) {
         if (__classPrivateFieldGet(this, _PurchaseMoney_instances, "m", _PurchaseMoney_isValidatedMoney).call(this, money)) {
-            __classPrivateFieldSet(this, _PurchaseMoney_value, __classPrivateFieldGet(this, _PurchaseMoney_value, "f") + money, "f");
+            this.setMoney(__classPrivateFieldGet(this, _PurchaseMoney_value, "f") + money);
         }
     }
 }
