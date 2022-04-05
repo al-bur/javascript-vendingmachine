@@ -16,21 +16,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_productManage_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./productManage.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/productManage.css");
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_balanceCharge_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./balanceCharge.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/balanceCharge.css");
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_root_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./root.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/root.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_root_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./root.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/root.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_auth_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./auth.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/auth.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_nav_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./nav.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/nav.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_productManage_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./productManage.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/productManage.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_balanceCharge_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./balanceCharge.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/balanceCharge.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_productPurhcase_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./productPurhcase.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/productPurhcase.css");
 // Imports
 
 
 
 
 
+
+
+
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_productManage_css__WEBPACK_IMPORTED_MODULE_2__["default"]);
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_balanceCharge_css__WEBPACK_IMPORTED_MODULE_3__["default"]);
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_root_css__WEBPACK_IMPORTED_MODULE_4__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_root_css__WEBPACK_IMPORTED_MODULE_2__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_auth_css__WEBPACK_IMPORTED_MODULE_3__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_nav_css__WEBPACK_IMPORTED_MODULE_4__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_productManage_css__WEBPACK_IMPORTED_MODULE_5__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_balanceCharge_css__WEBPACK_IMPORTED_MODULE_6__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_productPurhcase_css__WEBPACK_IMPORTED_MODULE_7__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".hide {\n  display: none;\n}\n\n#app {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n#contents-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 50px;\n  width: 632px;\n  row-gap: 40px;\n}\n\n.submit-button {\n  background-color: var(--cyan-light);\n  color: var(--white);\n  width: 70px;\n  height: 37px;\n}\n\n.submit-button:hover {\n  background-color: var(--cyan);\n}\n\n.tab-button {\n  background-color: var(--gray-light);\n  color: var(--black);\n  width: 120px;\n  height: 37px;\n}\n\n.tab-button:hover {\n  background-color: var(--gray);\n}\n\n.input {\n  border: solid 1.5px;\n  border-radius: 10px;\n  border-color: var(--gray);\n  width: 160px;\n  height: 30px;\n  padding-left: 8px;\n}\n\n.button {\n  cursor: pointer;\n  border-radius: 10px;\n  border: none;\n  text-align: center;\n}\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAIA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,gBAAgB;EAChB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,mCAAmC;EACnC,mBAAmB;EACnB,WAAW;EACX,YAAY;AACd;;AAEA;EACE,6BAA6B;AAC/B;;AAEA;EACE,mCAAmC;EACnC,mBAAmB;EACnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,6BAA6B;AAC/B;;AAEA;EACE,mBAAmB;EACnB,mBAAmB;EACnB,yBAAyB;EACzB,YAAY;EACZ,YAAY;EACZ,iBAAiB;AACnB;;AAEA;EACE,eAAe;EACf,mBAAmB;EACnB,YAAY;EACZ,kBAAkB;AACpB","sourcesContent":["@import './productManage.css';\n@import './balanceCharge.css';\n@import './root.css';\n\n.hide {\n  display: none;\n}\n\n#app {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n#contents-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 50px;\n  width: 632px;\n  row-gap: 40px;\n}\n\n.submit-button {\n  background-color: var(--cyan-light);\n  color: var(--white);\n  width: 70px;\n  height: 37px;\n}\n\n.submit-button:hover {\n  background-color: var(--cyan);\n}\n\n.tab-button {\n  background-color: var(--gray-light);\n  color: var(--black);\n  width: 120px;\n  height: 37px;\n}\n\n.tab-button:hover {\n  background-color: var(--gray);\n}\n\n.input {\n  border: solid 1.5px;\n  border-radius: 10px;\n  border-color: var(--gray);\n  width: 160px;\n  height: 30px;\n  padding-left: 8px;\n}\n\n.button {\n  cursor: pointer;\n  border-radius: 10px;\n  border: none;\n  text-align: center;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".button {\n  cursor: pointer;\n  border-radius: 10px;\n  border: none;\n  text-align: center;\n}\n\n.hide {\n  display: none;\n}\n\n.submit-button {\n  background-color: var(--cyan-light);\n  color: var(--white);\n  height: 37px;\n}\n\n.submit-button:hover {\n  background-color: var(--cyan);\n}\n\n.tab-button {\n  background-color: var(--gray-light);\n  color: var(--black);\n  width: 120px;\n  height: 37px;\n}\n\n.tab-button:hover {\n  background-color: var(--gray);\n}\n\n.table-container {\n  display: flex;\n  text-align: center;\n  flex-direction: column;\n}\n\n.input {\n  border: solid 1.5px;\n  border-radius: 10px;\n  border-color: var(--gray);\n  height: 30px;\n  padding-left: 8px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAOA;EACE,eAAe;EACf,mBAAmB;EACnB,YAAY;EACZ,kBAAkB;AACpB;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,mCAAmC;EACnC,mBAAmB;EACnB,YAAY;AACd;;AAEA;EACE,6BAA6B;AAC/B;;AAEA;EACE,mCAAmC;EACnC,mBAAmB;EACnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,6BAA6B;AAC/B;;AAEA;EACE,aAAa;EACb,kBAAkB;EAClB,sBAAsB;AACxB;;AAEA;EACE,mBAAmB;EACnB,mBAAmB;EACnB,yBAAyB;EACzB,YAAY;EACZ,iBAAiB;AACnB","sourcesContent":["@import './root.css';\n@import './auth.css';\n@import './nav.css';\n@import './productManage.css';\n@import './balanceCharge.css';\n@import './productPurhcase.css';\n\n.button {\n  cursor: pointer;\n  border-radius: 10px;\n  border: none;\n  text-align: center;\n}\n\n.hide {\n  display: none;\n}\n\n.submit-button {\n  background-color: var(--cyan-light);\n  color: var(--white);\n  height: 37px;\n}\n\n.submit-button:hover {\n  background-color: var(--cyan);\n}\n\n.tab-button {\n  background-color: var(--gray-light);\n  color: var(--black);\n  width: 120px;\n  height: 37px;\n}\n\n.tab-button:hover {\n  background-color: var(--gray);\n}\n\n.table-container {\n  display: flex;\n  text-align: center;\n  flex-direction: column;\n}\n\n.input {\n  border: solid 1.5px;\n  border-radius: 10px;\n  border-color: var(--gray);\n  height: 30px;\n  padding-left: 8px;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/css/auth.css":
+/*!****************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/css/auth.css ***!
+  \****************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#auth-section {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n#auth-section > .submit-button {\n  width: 100%;\n}\n\n.auth-form {\n  display: flex;\n  flex-direction: column;\n  row-gap: 15px;\n  width: 300px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/auth.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,aAAa;EACb,YAAY;AACd","sourcesContent":["#auth-section {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n#auth-section > .submit-button {\n  width: 100%;\n}\n\n.auth-form {\n  display: flex;\n  flex-direction: column;\n  row-gap: 15px;\n  width: 300px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -56,7 +91,33 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#charge-balance-input-container {\n  display: grid;\n  margin-top: 13px;\n  grid-template-areas:\n    'lb lb lb'\n    'bi . bt'\n    'cb cb cb';\n  grid-row-gap: 13px;\n  grid-column-gap: 7px;\n}\n\n#charge-balance-input-label {\n  grid-area: lb;\n}\n\n#charge-balance-input {\n  width: 330px;\n  grid-area: bi;\n}\n\n#charge-balance-submit-btn {\n  grid-area: bt;\n}\n\n#current-balance-container {\n  grid-area: cb;\n}\n\n#coin-vault-table {\n  border-top: 2px solid var(--gray);\n  border-bottom: 2px solid var(--gray);\n  border-collapse: collapse;\n  text-align: center;\n}\n", "",{"version":3,"sources":["webpack://./src/css/balanceCharge.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,gBAAgB;EAChB;;;cAGY;EACZ,kBAAkB;EAClB,oBAAoB;AACtB;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,iCAAiC;EACjC,oCAAoC;EACpC,yBAAyB;EACzB,kBAAkB;AACpB","sourcesContent":["#charge-balance-input-container {\n  display: grid;\n  margin-top: 13px;\n  grid-template-areas:\n    'lb lb lb'\n    'bi . bt'\n    'cb cb cb';\n  grid-row-gap: 13px;\n  grid-column-gap: 7px;\n}\n\n#charge-balance-input-label {\n  grid-area: lb;\n}\n\n#charge-balance-input {\n  width: 330px;\n  grid-area: bi;\n}\n\n#charge-balance-submit-btn {\n  grid-area: bt;\n}\n\n#current-balance-container {\n  grid-area: cb;\n}\n\n#coin-vault-table {\n  border-top: 2px solid var(--gray);\n  border-bottom: 2px solid var(--gray);\n  border-collapse: collapse;\n  text-align: center;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#charge-balance-input-form {\n  display: grid;\n  margin-top: 13px;\n  grid-template-areas:\n    'lb lb lb'\n    'bi . bt';\n  grid-row-gap: 13px;\n  grid-column-gap: 7px;\n}\n\n#charge-balance-input-form > .submit-button {\n  width: 70px;\n}\n\n#charge-balance-input-label {\n  grid-area: lb;\n}\n\n#charge-balance-input {\n  width: 330px;\n  grid-area: bi;\n}\n\n#charge-balance-submit-btn {\n  grid-area: bt;\n}\n\n#coin-vault-table {\n  border-top: 2px solid var(--gray);\n  border-bottom: 2px solid var(--gray);\n  border-collapse: collapse;\n  text-align: center;\n}\n\n#coin-vault-table td {\n  padding: 10px 0;\n  border-top: 2px solid var(--gray);\n  border-bottom: 2px solid var(--gray);\n}\n\n#coin-vault-table th {\n  padding: 10px 0;\n}\n", "",{"version":3,"sources":["webpack://./src/css/balanceCharge.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,gBAAgB;EAChB;;aAEW;EACX,kBAAkB;EAClB,oBAAoB;AACtB;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,iCAAiC;EACjC,oCAAoC;EACpC,yBAAyB;EACzB,kBAAkB;AACpB;;AAEA;EACE,eAAe;EACf,iCAAiC;EACjC,oCAAoC;AACtC;;AAEA;EACE,eAAe;AACjB","sourcesContent":["#charge-balance-input-form {\n  display: grid;\n  margin-top: 13px;\n  grid-template-areas:\n    'lb lb lb'\n    'bi . bt';\n  grid-row-gap: 13px;\n  grid-column-gap: 7px;\n}\n\n#charge-balance-input-form > .submit-button {\n  width: 70px;\n}\n\n#charge-balance-input-label {\n  grid-area: lb;\n}\n\n#charge-balance-input {\n  width: 330px;\n  grid-area: bi;\n}\n\n#charge-balance-submit-btn {\n  grid-area: bt;\n}\n\n#coin-vault-table {\n  border-top: 2px solid var(--gray);\n  border-bottom: 2px solid var(--gray);\n  border-collapse: collapse;\n  text-align: center;\n}\n\n#coin-vault-table td {\n  padding: 10px 0;\n  border-top: 2px solid var(--gray);\n  border-bottom: 2px solid var(--gray);\n}\n\n#coin-vault-table th {\n  padding: 10px 0;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/css/nav.css":
+/*!***************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/css/nav.css ***!
+  \***************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#contents-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  margin-top: 50px;\r\n  width: 632px;\r\n  row-gap: 40px;\r\n}\r\n\r\n#login-button {\r\n  position: absolute;\r\n  right: 10px;\r\n}\r\n#auth-section {\r\n}\r\n\r\n#vending-machine-section {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/nav.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,gBAAgB;EAChB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,kBAAkB;EAClB,WAAW;AACb;AACA;AACA;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB","sourcesContent":["#contents-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  margin-top: 50px;\r\n  width: 632px;\r\n  row-gap: 40px;\r\n}\r\n\r\n#login-button {\r\n  position: absolute;\r\n  right: 10px;\r\n}\r\n#auth-section {\r\n}\r\n\r\n#vending-machine-section {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -82,7 +143,33 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* 공통 사용 */\n#product-information-input {\n  display: grid;\n  margin-top: 13px;\n  grid-template-areas:\n    'lb lb lb lb lb'\n    'nm pr qt . bt';\n  grid-row-gap: 13px;\n  grid-column-gap: 7px;\n}\n\n#product-input-label {\n  grid-area: lb;\n}\n\n#product-name-input {\n  grid-area: nm;\n}\n\n#product-price-input {\n  grid-area: pr;\n}\n\n#product-quantity-input {\n  grid-area: qt;\n}\n\n#product-information-submit-btn {\n  grid-area: bt;\n}\n\n.table-container {\n  display: flex;\n  text-align: center;\n  flex-direction: column;\n}\n\n#product-table {\n  border-top: 2px solid var(--gray);\n  border-bottom: 2px solid var(--gray);\n  border-collapse: collapse;\n  width: 630px;\n  text-align: center;\n}\n\ntd {\n  padding: 10px 0;\n  border-top: 2px solid var(--gray);\n  border-bottom: 2px solid var(--gray);\n}\n\nth {\n  padding: 10px 0;\n}\n\n.edit-button-container {\n  width: 20%;\n}\n\n.edit-button,\n.delete-button {\n  background-color: var(--gray-light);\n  color: var(--black);\n\n  width: 50px;\n  height: 37px;\n}\n\n.confirm-button {\n  background-color: var(--gray-light);\n  color: var(--black);\n\n  width: 100px;\n  height: 37px;\n}\n\n.product-input {\n  border: solid 1px;\n  border-radius: 5px;\n  border-color: var(--gray);\n  width: 150px;\n  height: 37px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/productManage.css"],"names":[],"mappings":"AAAA,UAAU;AACV;EACE,aAAa;EACb,gBAAgB;EAChB;;mBAEiB;EACjB,kBAAkB;EAClB,oBAAoB;AACtB;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;EACb,kBAAkB;EAClB,sBAAsB;AACxB;;AAEA;EACE,iCAAiC;EACjC,oCAAoC;EACpC,yBAAyB;EACzB,YAAY;EACZ,kBAAkB;AACpB;;AAEA;EACE,eAAe;EACf,iCAAiC;EACjC,oCAAoC;AACtC;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,UAAU;AACZ;;AAEA;;EAEE,mCAAmC;EACnC,mBAAmB;;EAEnB,WAAW;EACX,YAAY;AACd;;AAEA;EACE,mCAAmC;EACnC,mBAAmB;;EAEnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,iBAAiB;EACjB,kBAAkB;EAClB,yBAAyB;EACzB,YAAY;EACZ,YAAY;AACd","sourcesContent":["/* 공통 사용 */\n#product-information-input {\n  display: grid;\n  margin-top: 13px;\n  grid-template-areas:\n    'lb lb lb lb lb'\n    'nm pr qt . bt';\n  grid-row-gap: 13px;\n  grid-column-gap: 7px;\n}\n\n#product-input-label {\n  grid-area: lb;\n}\n\n#product-name-input {\n  grid-area: nm;\n}\n\n#product-price-input {\n  grid-area: pr;\n}\n\n#product-quantity-input {\n  grid-area: qt;\n}\n\n#product-information-submit-btn {\n  grid-area: bt;\n}\n\n.table-container {\n  display: flex;\n  text-align: center;\n  flex-direction: column;\n}\n\n#product-table {\n  border-top: 2px solid var(--gray);\n  border-bottom: 2px solid var(--gray);\n  border-collapse: collapse;\n  width: 630px;\n  text-align: center;\n}\n\ntd {\n  padding: 10px 0;\n  border-top: 2px solid var(--gray);\n  border-bottom: 2px solid var(--gray);\n}\n\nth {\n  padding: 10px 0;\n}\n\n.edit-button-container {\n  width: 20%;\n}\n\n.edit-button,\n.delete-button {\n  background-color: var(--gray-light);\n  color: var(--black);\n\n  width: 50px;\n  height: 37px;\n}\n\n.confirm-button {\n  background-color: var(--gray-light);\n  color: var(--black);\n\n  width: 100px;\n  height: 37px;\n}\n\n.product-input {\n  border: solid 1px;\n  border-radius: 5px;\n  border-color: var(--gray);\n  width: 150px;\n  height: 37px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#product-information-input-form {\n  display: grid;\n  margin-top: 13px;\n  grid-template-areas:\n    'lb lb lb lb lb'\n    'nm pr qt . bt';\n  grid-row-gap: 13px;\n  grid-column-gap: 7px;\n}\n\n#product-information-input-form > .submit-button {\n  width: 70px;\n}\n\n#product-input-label {\n  grid-area: lb;\n}\n\n#product-name-input {\n  grid-area: nm;\n  width: 160px;\n}\n\n#product-price-input {\n  grid-area: pr;\n  width: 160px;\n}\n\n#product-quantity-input {\n  grid-area: qt;\n  width: 160px;\n}\n\n#product-information-submit-btn {\n  grid-area: bt;\n}\n\n#product-table {\n  border-top: 2px solid var(--gray);\n  border-bottom: 2px solid var(--gray);\n  border-collapse: collapse;\n  width: 630px;\n  text-align: center;\n}\n\n#product-table td {\n  padding: 10px 0;\n  border-top: 2px solid var(--gray);\n  border-bottom: 2px solid var(--gray);\n}\n\n#product-table th {\n  padding: 10px 0;\n}\n\n.edit-button-container {\n  width: 20%;\n}\n\n.edit-button,\n.delete-button {\n  background-color: var(--gray-light);\n  color: var(--black);\n\n  width: 50px;\n  height: 37px;\n}\n\n.confirm-button {\n  background-color: var(--gray-light);\n  color: var(--black);\n\n  width: 100px;\n  height: 37px;\n}\n\n.product-input {\n  border: solid 1px;\n  border-radius: 5px;\n  border-color: var(--gray);\n  width: 150px;\n  height: 37px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/productManage.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,gBAAgB;EAChB;;mBAEiB;EACjB,kBAAkB;EAClB,oBAAoB;AACtB;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;EACb,YAAY;AACd;;AAEA;EACE,aAAa;EACb,YAAY;AACd;;AAEA;EACE,aAAa;EACb,YAAY;AACd;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,iCAAiC;EACjC,oCAAoC;EACpC,yBAAyB;EACzB,YAAY;EACZ,kBAAkB;AACpB;;AAEA;EACE,eAAe;EACf,iCAAiC;EACjC,oCAAoC;AACtC;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,UAAU;AACZ;;AAEA;;EAEE,mCAAmC;EACnC,mBAAmB;;EAEnB,WAAW;EACX,YAAY;AACd;;AAEA;EACE,mCAAmC;EACnC,mBAAmB;;EAEnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,iBAAiB;EACjB,kBAAkB;EAClB,yBAAyB;EACzB,YAAY;EACZ,YAAY;AACd","sourcesContent":["#product-information-input-form {\n  display: grid;\n  margin-top: 13px;\n  grid-template-areas:\n    'lb lb lb lb lb'\n    'nm pr qt . bt';\n  grid-row-gap: 13px;\n  grid-column-gap: 7px;\n}\n\n#product-information-input-form > .submit-button {\n  width: 70px;\n}\n\n#product-input-label {\n  grid-area: lb;\n}\n\n#product-name-input {\n  grid-area: nm;\n  width: 160px;\n}\n\n#product-price-input {\n  grid-area: pr;\n  width: 160px;\n}\n\n#product-quantity-input {\n  grid-area: qt;\n  width: 160px;\n}\n\n#product-information-submit-btn {\n  grid-area: bt;\n}\n\n#product-table {\n  border-top: 2px solid var(--gray);\n  border-bottom: 2px solid var(--gray);\n  border-collapse: collapse;\n  width: 630px;\n  text-align: center;\n}\n\n#product-table td {\n  padding: 10px 0;\n  border-top: 2px solid var(--gray);\n  border-bottom: 2px solid var(--gray);\n}\n\n#product-table th {\n  padding: 10px 0;\n}\n\n.edit-button-container {\n  width: 20%;\n}\n\n.edit-button,\n.delete-button {\n  background-color: var(--gray-light);\n  color: var(--black);\n\n  width: 50px;\n  height: 37px;\n}\n\n.confirm-button {\n  background-color: var(--gray-light);\n  color: var(--black);\n\n  width: 100px;\n  height: 37px;\n}\n\n.product-input {\n  border: solid 1px;\n  border-radius: 5px;\n  border-color: var(--gray);\n  width: 150px;\n  height: 37px;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/css/productPurhcase.css":
+/*!***************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/css/productPurhcase.css ***!
+  \***************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#purchase-money-input-form {\r\n  display: grid;\r\n  margin-top: 13px;\r\n  grid-template-areas:\r\n    'lb lb lb'\r\n    'mi . bt';\r\n  grid-row-gap: 13px;\r\n  grid-column-gap: 7px;\r\n}\r\n\r\n#purchase-money-input-label {\r\n  grid-area: lb;\r\n}\r\n\r\n#purchase-money-input {\r\n  width: 330px;\r\n  grid-area: mi;\r\n}\r\n\r\n#purchase-money-submit-btn {\r\n  width: 70px;\r\n  grid-area: bt;\r\n}\r\n\r\n.product-purchase-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  row-gap: 30px;\r\n}\r\n\r\n#purchasable-product-table {\r\n  border-top: 2px solid var(--gray);\r\n  border-bottom: 2px solid var(--gray);\r\n  border-collapse: collapse;\r\n  width: 630px;\r\n  text-align: center;\r\n}\r\n\r\n#purchasable-product-table td {\r\n  padding: 10px 0;\r\n  border-top: 2px solid var(--gray);\r\n  border-bottom: 2px solid var(--gray);\r\n}\r\n\r\n#purchasable-product-table th {\r\n  padding: 10px 0;\r\n}\r\n\r\n.purchase-button,\r\n.return-button {\r\n  background-color: var(--gray-light);\r\n  color: var(--black);\r\n\r\n  width: 100px;\r\n  height: 37px;\r\n}\r\n\r\n.return-button {\r\n  margin-top: 20px;\r\n  align-self: center;\r\n}\r\n\r\n#returned-coin-table {\r\n  border-top: 2px solid var(--gray);\r\n  border-bottom: 2px solid var(--gray);\r\n  border-collapse: collapse;\r\n  text-align: center;\r\n}\r\n\r\n#returned-coin-table td {\r\n  padding: 10px 50px;\r\n  border-top: 2px solid var(--gray);\r\n  border-bottom: 2px solid var(--gray);\r\n}\r\n\r\n#returned-coin-table th {\r\n  padding: 10px 50px;\r\n}\r\n\r\n#snackbar {\r\n  visibility: hidden;\r\n  min-width: 250px;\r\n  margin-left: -125px;\r\n  background-color: #333;\r\n  color: #fff;\r\n  text-align: center;\r\n  border-radius: 2px;\r\n  padding: 16px;\r\n  position: fixed;\r\n  z-index: 1;\r\n  left: 50%;\r\n  bottom: 0;\r\n}\r\n\r\n#snackbar.show {\r\n  visibility: visible !important; /* Show the snackbar */\r\n  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.7s;\r\n  animation: fadein 0.5s, fadeout 0.5s 2.7s;\r\n}\r\n\r\n@-webkit-keyframes fadein {\r\n  from {\r\n    bottom: 0;\r\n    opacity: 0;\r\n  }\r\n  to {\r\n    bottom: 30px;\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n@keyframes fadein {\r\n  from {\r\n    bottom: 0;\r\n    opacity: 0;\r\n  }\r\n  to {\r\n    bottom: 0;\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n@-webkit-keyframes fadeout {\r\n  from {\r\n    bottom: 0;\r\n    opacity: 1;\r\n  }\r\n  to {\r\n    bottom: -30px;\r\n    opacity: 0;\r\n  }\r\n}\r\n\r\n@keyframes fadeout {\r\n  from {\r\n    bottom: 0;\r\n    opacity: 1;\r\n  }\r\n  to {\r\n    bottom: -30px;\r\n    opacity: 0;\r\n  }\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/productPurhcase.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,gBAAgB;EAChB;;aAEW;EACX,kBAAkB;EAClB,oBAAoB;AACtB;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,WAAW;EACX,aAAa;AACf;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,aAAa;AACf;;AAEA;EACE,iCAAiC;EACjC,oCAAoC;EACpC,yBAAyB;EACzB,YAAY;EACZ,kBAAkB;AACpB;;AAEA;EACE,eAAe;EACf,iCAAiC;EACjC,oCAAoC;AACtC;;AAEA;EACE,eAAe;AACjB;;AAEA;;EAEE,mCAAmC;EACnC,mBAAmB;;EAEnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,iCAAiC;EACjC,oCAAoC;EACpC,yBAAyB;EACzB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,iCAAiC;EACjC,oCAAoC;AACtC;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,mBAAmB;EACnB,sBAAsB;EACtB,WAAW;EACX,kBAAkB;EAClB,kBAAkB;EAClB,aAAa;EACb,eAAe;EACf,UAAU;EACV,SAAS;EACT,SAAS;AACX;;AAEA;EACE,8BAA8B,EAAE,sBAAsB;EACtD,iDAAiD;EACjD,yCAAyC;AAC3C;;AAEA;EACE;IACE,SAAS;IACT,UAAU;EACZ;EACA;IACE,YAAY;IACZ,UAAU;EACZ;AACF;;AAEA;EACE;IACE,SAAS;IACT,UAAU;EACZ;EACA;IACE,SAAS;IACT,UAAU;EACZ;AACF;;AAEA;EACE;IACE,SAAS;IACT,UAAU;EACZ;EACA;IACE,aAAa;IACb,UAAU;EACZ;AACF;;AAEA;EACE;IACE,SAAS;IACT,UAAU;EACZ;EACA;IACE,aAAa;IACb,UAAU;EACZ;AACF","sourcesContent":["#purchase-money-input-form {\r\n  display: grid;\r\n  margin-top: 13px;\r\n  grid-template-areas:\r\n    'lb lb lb'\r\n    'mi . bt';\r\n  grid-row-gap: 13px;\r\n  grid-column-gap: 7px;\r\n}\r\n\r\n#purchase-money-input-label {\r\n  grid-area: lb;\r\n}\r\n\r\n#purchase-money-input {\r\n  width: 330px;\r\n  grid-area: mi;\r\n}\r\n\r\n#purchase-money-submit-btn {\r\n  width: 70px;\r\n  grid-area: bt;\r\n}\r\n\r\n.product-purchase-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  row-gap: 30px;\r\n}\r\n\r\n#purchasable-product-table {\r\n  border-top: 2px solid var(--gray);\r\n  border-bottom: 2px solid var(--gray);\r\n  border-collapse: collapse;\r\n  width: 630px;\r\n  text-align: center;\r\n}\r\n\r\n#purchasable-product-table td {\r\n  padding: 10px 0;\r\n  border-top: 2px solid var(--gray);\r\n  border-bottom: 2px solid var(--gray);\r\n}\r\n\r\n#purchasable-product-table th {\r\n  padding: 10px 0;\r\n}\r\n\r\n.purchase-button,\r\n.return-button {\r\n  background-color: var(--gray-light);\r\n  color: var(--black);\r\n\r\n  width: 100px;\r\n  height: 37px;\r\n}\r\n\r\n.return-button {\r\n  margin-top: 20px;\r\n  align-self: center;\r\n}\r\n\r\n#returned-coin-table {\r\n  border-top: 2px solid var(--gray);\r\n  border-bottom: 2px solid var(--gray);\r\n  border-collapse: collapse;\r\n  text-align: center;\r\n}\r\n\r\n#returned-coin-table td {\r\n  padding: 10px 50px;\r\n  border-top: 2px solid var(--gray);\r\n  border-bottom: 2px solid var(--gray);\r\n}\r\n\r\n#returned-coin-table th {\r\n  padding: 10px 50px;\r\n}\r\n\r\n#snackbar {\r\n  visibility: hidden;\r\n  min-width: 250px;\r\n  margin-left: -125px;\r\n  background-color: #333;\r\n  color: #fff;\r\n  text-align: center;\r\n  border-radius: 2px;\r\n  padding: 16px;\r\n  position: fixed;\r\n  z-index: 1;\r\n  left: 50%;\r\n  bottom: 0;\r\n}\r\n\r\n#snackbar.show {\r\n  visibility: visible !important; /* Show the snackbar */\r\n  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.7s;\r\n  animation: fadein 0.5s, fadeout 0.5s 2.7s;\r\n}\r\n\r\n@-webkit-keyframes fadein {\r\n  from {\r\n    bottom: 0;\r\n    opacity: 0;\r\n  }\r\n  to {\r\n    bottom: 30px;\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n@keyframes fadein {\r\n  from {\r\n    bottom: 0;\r\n    opacity: 0;\r\n  }\r\n  to {\r\n    bottom: 0;\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n@-webkit-keyframes fadeout {\r\n  from {\r\n    bottom: 0;\r\n    opacity: 1;\r\n  }\r\n  to {\r\n    bottom: -30px;\r\n    opacity: 0;\r\n  }\r\n}\r\n\r\n@keyframes fadeout {\r\n  from {\r\n    bottom: 0;\r\n    opacity: 1;\r\n  }\r\n  to {\r\n    bottom: -30px;\r\n    opacity: 0;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -617,62 +704,82 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/component/BalanceChargeInput.ts":
-/*!*********************************************!*\
-  !*** ./src/component/BalanceChargeInput.ts ***!
-  \*********************************************/
+/***/ "./src/component/BalanceChargeInputForm.ts":
+/*!*************************************************!*\
+  !*** ./src/component/BalanceChargeInputForm.ts ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "BalanceChargeInput": () => (/* binding */ BalanceChargeInput)
+/* harmony export */   "BalanceChargeInputForm": () => (/* binding */ BalanceChargeInputForm)
 /* harmony export */ });
-class BalanceChargeInput {
-    constructor(props) {
-        this.handleChargeBalance = (e) => {
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _BalanceChargeInputForm_instances, _BalanceChargeInputForm_target, _BalanceChargeInputForm_coinVault, _BalanceChargeInputForm_submitBtn, _BalanceChargeInputForm_chargeBalanceInput, _BalanceChargeInputForm_chargeBalanceInputForm, _BalanceChargeInputForm_currentBalance, _BalanceChargeInputForm_template, _BalanceChargeInputForm_selectDom, _BalanceChargeInputForm_bindEvent, _BalanceChargeInputForm_handleChargeBalance, _BalanceChargeInputForm_updateCurrentBalance;
+class BalanceChargeInputForm {
+    constructor({ target, coinVault }) {
+        _BalanceChargeInputForm_instances.add(this);
+        _BalanceChargeInputForm_target.set(this, void 0);
+        _BalanceChargeInputForm_coinVault.set(this, void 0);
+        _BalanceChargeInputForm_submitBtn.set(this, void 0);
+        _BalanceChargeInputForm_chargeBalanceInput.set(this, void 0);
+        _BalanceChargeInputForm_chargeBalanceInputForm.set(this, void 0);
+        _BalanceChargeInputForm_currentBalance.set(this, void 0);
+        _BalanceChargeInputForm_handleChargeBalance.set(this, (e) => {
             e.preventDefault();
             try {
-                this.coinVault.chargeMoney(Number(this.chargeBalanceInput.value));
+                __classPrivateFieldGet(this, _BalanceChargeInputForm_coinVault, "f").chargeMoney(Number(__classPrivateFieldGet(this, _BalanceChargeInputForm_chargeBalanceInput, "f").value));
             }
             catch (err) {
-                this.chargeBalanceInputForm.reset();
+                __classPrivateFieldGet(this, _BalanceChargeInputForm_chargeBalanceInputForm, "f").reset();
                 alert(err.message);
                 return;
             }
-            this.updateCurrentBalance();
-            this.target.dispatchEvent(new CustomEvent('coinCharged'));
-        };
-        this.target = props.target;
-        this.coinVault = props.coinVault;
+            __classPrivateFieldGet(this, _BalanceChargeInputForm_updateCurrentBalance, "f").call(this);
+            __classPrivateFieldGet(this, _BalanceChargeInputForm_target, "f").dispatchEvent(new CustomEvent('coinCharged'));
+        });
+        _BalanceChargeInputForm_updateCurrentBalance.set(this, () => {
+            __classPrivateFieldGet(this, _BalanceChargeInputForm_currentBalance, "f").textContent = `${__classPrivateFieldGet(this, _BalanceChargeInputForm_coinVault, "f").getBalance()}`;
+        });
+        __classPrivateFieldSet(this, _BalanceChargeInputForm_target, target, "f");
+        __classPrivateFieldSet(this, _BalanceChargeInputForm_coinVault, coinVault, "f");
     }
     render() {
-        this.target.insertAdjacentHTML('beforeend', this.template(this.coinVault.getBalance()));
-        this.selectDom();
-        this.bindEvent();
-    }
-    template(balance) {
-        return `
-      <form id="charge-balance-input-container">
-        <label id="charge-balance-input-label" for="charge-balance-input">자판기가 보유할 금액을 입력해주세요</label>
-        <input id="charge-balance-input" class="input" type="text" placeholder="금액" />
-        <button id="charge-balance-submit-btn" class="submit-button button" type="submit">충전</button>
-        <div id="current-balance-container">현재보유금액 : <span id="current-balance">${balance}</span>원</div>
-      </form>
-    `;
-    }
-    selectDom() {
-        this.chargeBalanceInputForm = document.querySelector('#charge-balance-input-container');
-        this.chargeBalanceInput = document.querySelector('#charge-balance-input');
-        this.submitBtn = document.querySelector('#charge-balance-submit-btn');
-        this.currentBalance = document.querySelector('#current-balance');
-    }
-    bindEvent() {
-        this.submitBtn.addEventListener('click', this.handleChargeBalance);
-    }
-    updateCurrentBalance() {
-        this.currentBalance.textContent = `${this.coinVault.getBalance()}`;
+        __classPrivateFieldGet(this, _BalanceChargeInputForm_target, "f").insertAdjacentHTML('beforeend', __classPrivateFieldGet(this, _BalanceChargeInputForm_instances, "m", _BalanceChargeInputForm_template).call(this, __classPrivateFieldGet(this, _BalanceChargeInputForm_coinVault, "f").getBalance()));
+        __classPrivateFieldGet(this, _BalanceChargeInputForm_instances, "m", _BalanceChargeInputForm_selectDom).call(this);
+        __classPrivateFieldGet(this, _BalanceChargeInputForm_instances, "m", _BalanceChargeInputForm_bindEvent).call(this);
     }
 }
+_BalanceChargeInputForm_target = new WeakMap(), _BalanceChargeInputForm_coinVault = new WeakMap(), _BalanceChargeInputForm_submitBtn = new WeakMap(), _BalanceChargeInputForm_chargeBalanceInput = new WeakMap(), _BalanceChargeInputForm_chargeBalanceInputForm = new WeakMap(), _BalanceChargeInputForm_currentBalance = new WeakMap(), _BalanceChargeInputForm_handleChargeBalance = new WeakMap(), _BalanceChargeInputForm_updateCurrentBalance = new WeakMap(), _BalanceChargeInputForm_instances = new WeakSet(), _BalanceChargeInputForm_template = function _BalanceChargeInputForm_template(balance) {
+    return `
+      <div>
+        <form id="charge-balance-input-form">
+          <label id="charge-balance-input-label" for="charge-balance-input">자판기가 보유할 금액을 입력해주세요</label>
+          <input id="charge-balance-input" class="input" type="text" placeholder="금액" />
+          <button id="charge-balance-submit-btn" class="submit-button button" type="submit">충전</button>
+        </form>
+        <div id="current-balance-container">현재보유금액 : <span id="current-balance">${balance}</span>원</div>
+      </div>
+    `;
+}, _BalanceChargeInputForm_selectDom = function _BalanceChargeInputForm_selectDom() {
+    __classPrivateFieldSet(this, _BalanceChargeInputForm_chargeBalanceInputForm, document.querySelector('#charge-balance-input-form'), "f");
+    __classPrivateFieldSet(this, _BalanceChargeInputForm_chargeBalanceInput, document.querySelector('#charge-balance-input'), "f");
+    __classPrivateFieldSet(this, _BalanceChargeInputForm_submitBtn, document.querySelector('#charge-balance-submit-btn'), "f");
+    __classPrivateFieldSet(this, _BalanceChargeInputForm_currentBalance, document.querySelector('#current-balance'), "f");
+}, _BalanceChargeInputForm_bindEvent = function _BalanceChargeInputForm_bindEvent() {
+    __classPrivateFieldGet(this, _BalanceChargeInputForm_submitBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _BalanceChargeInputForm_handleChargeBalance, "f"));
+    document.addEventListener('coinsReturned', __classPrivateFieldGet(this, _BalanceChargeInputForm_updateCurrentBalance, "f"));
+};
 
 
 /***/ }),
@@ -687,25 +794,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "CoinVaultTable": () => (/* binding */ CoinVaultTable)
 /* harmony export */ });
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _CoinVaultTable_instances, _CoinVaultTable_target, _CoinVaultTable_coinVault, _CoinVaultTable_coin500Quantity, _CoinVaultTable_coin100Quantity, _CoinVaultTable_coin50Quantity, _CoinVaultTable_coin10Quantity, _CoinVaultTable_template, _CoinVaultTable_selectDom, _CoinVaultTable_bindEvent, _CoinVaultTable_updateCoinVaultTable;
 class CoinVaultTable {
-    constructor(props) {
-        this.updateCoinVaultTableTemplate = () => {
-            const { coin500, coin100, coin50, coin10 } = this.coinVault.getCoins();
-            this.coin500Quantity.textContent = `${coin500}`;
-            this.coin100Quantity.textContent = `${coin100}`;
-            this.coin50Quantity.textContent = `${coin50}`;
-            this.coin10Quantity.textContent = `${coin10}`;
-        };
-        this.target = props.target;
-        this.coinVault = props.coinVault;
-        this.target.addEventListener('coinCharged', this.updateCoinVaultTableTemplate);
+    constructor({ target, coinVault }) {
+        _CoinVaultTable_instances.add(this);
+        _CoinVaultTable_target.set(this, void 0);
+        _CoinVaultTable_coinVault.set(this, void 0);
+        _CoinVaultTable_coin500Quantity.set(this, void 0);
+        _CoinVaultTable_coin100Quantity.set(this, void 0);
+        _CoinVaultTable_coin50Quantity.set(this, void 0);
+        _CoinVaultTable_coin10Quantity.set(this, void 0);
+        _CoinVaultTable_updateCoinVaultTable.set(this, () => {
+            const { coin500, coin100, coin50, coin10 } = __classPrivateFieldGet(this, _CoinVaultTable_coinVault, "f").getCoins();
+            __classPrivateFieldGet(this, _CoinVaultTable_coin500Quantity, "f").textContent = `${coin500}`;
+            __classPrivateFieldGet(this, _CoinVaultTable_coin100Quantity, "f").textContent = `${coin100}`;
+            __classPrivateFieldGet(this, _CoinVaultTable_coin50Quantity, "f").textContent = `${coin50}`;
+            __classPrivateFieldGet(this, _CoinVaultTable_coin10Quantity, "f").textContent = `${coin10}`;
+        });
+        __classPrivateFieldSet(this, _CoinVaultTable_target, target, "f");
+        __classPrivateFieldSet(this, _CoinVaultTable_coinVault, coinVault, "f");
+        __classPrivateFieldGet(this, _CoinVaultTable_target, "f").addEventListener('coinCharged', __classPrivateFieldGet(this, _CoinVaultTable_updateCoinVaultTable, "f"));
     }
     render() {
-        this.target.insertAdjacentHTML('beforeend', this.template(this.coinVault.getCoins()));
-        this.selectDom();
+        __classPrivateFieldGet(this, _CoinVaultTable_target, "f").insertAdjacentHTML('beforeend', __classPrivateFieldGet(this, _CoinVaultTable_instances, "m", _CoinVaultTable_template).call(this, __classPrivateFieldGet(this, _CoinVaultTable_coinVault, "f").getCoins()));
+        __classPrivateFieldGet(this, _CoinVaultTable_instances, "m", _CoinVaultTable_selectDom).call(this);
+        __classPrivateFieldGet(this, _CoinVaultTable_instances, "m", _CoinVaultTable_bindEvent).call(this);
     }
-    template(coinsQuantity) {
-        return `
+}
+_CoinVaultTable_target = new WeakMap(), _CoinVaultTable_coinVault = new WeakMap(), _CoinVaultTable_coin500Quantity = new WeakMap(), _CoinVaultTable_coin100Quantity = new WeakMap(), _CoinVaultTable_coin50Quantity = new WeakMap(), _CoinVaultTable_coin10Quantity = new WeakMap(), _CoinVaultTable_updateCoinVaultTable = new WeakMap(), _CoinVaultTable_instances = new WeakSet(), _CoinVaultTable_template = function _CoinVaultTable_template(coinsQuantity) {
+    return `
       <div class="table-container">
         <h2>자판기가 보유한 동전</h2>
         <table id="coin-vault-table">
@@ -718,32 +846,32 @@ class CoinVaultTable {
           <tbody>
             <tr>
               <td>500원</td>
-              <td><span id="coin500-quantity">${coinsQuantity.coin500}</span>개</td>
+              <td><span class="coin500-quantity">${coinsQuantity.coin500}</span>개</td>
             </tr>
             <tr>
               <td>100원</td>
-              <td><span id="coin100-quantity">${coinsQuantity.coin100}</span>개</td>
+              <td><span class="coin100-quantity">${coinsQuantity.coin100}</span>개</td>
             </tr>
             <tr>
               <td>50원</td>
-              <td><span id="coin50-quantity">${coinsQuantity.coin50}</span>개</td>
+              <td><span class="coin50-quantity">${coinsQuantity.coin50}</span>개</td>
             </tr>
             <tr>
               <td>10원</td>
-              <td><span id="coin10-quantity">${coinsQuantity.coin10}</span>개</td>
+              <td><span class="coin10-quantity">${coinsQuantity.coin10}</span>개</td>
             </tr>
           </tbody>
         </table>
       </div>
     `;
-    }
-    selectDom() {
-        this.coin500Quantity = document.querySelector('#coin500-quantity');
-        this.coin100Quantity = document.querySelector('#coin100-quantity');
-        this.coin50Quantity = document.querySelector('#coin50-quantity');
-        this.coin10Quantity = document.querySelector('#coin10-quantity');
-    }
-}
+}, _CoinVaultTable_selectDom = function _CoinVaultTable_selectDom() {
+    __classPrivateFieldSet(this, _CoinVaultTable_coin500Quantity, document.querySelector('.coin500-quantity'), "f");
+    __classPrivateFieldSet(this, _CoinVaultTable_coin100Quantity, document.querySelector('.coin100-quantity'), "f");
+    __classPrivateFieldSet(this, _CoinVaultTable_coin50Quantity, document.querySelector('.coin50-quantity'), "f");
+    __classPrivateFieldSet(this, _CoinVaultTable_coin10Quantity, document.querySelector('.coin10-quantity'), "f");
+}, _CoinVaultTable_bindEvent = function _CoinVaultTable_bindEvent() {
+    document.addEventListener('coinsReturned', __classPrivateFieldGet(this, _CoinVaultTable_updateCoinVaultTable, "f"));
+};
 
 
 /***/ }),
@@ -758,60 +886,84 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ProductCatalogTable": () => (/* binding */ ProductCatalogTable)
 /* harmony export */ });
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _ProductCatalogTable_instances, _ProductCatalogTable_productCatalog, _ProductCatalogTable_target, _ProductCatalogTable_productTableBody, _ProductCatalogTable_selectDOM, _ProductCatalogTable_bindEvent, _ProductCatalogTable_renderAddedProduct, _ProductCatalogTable_updatePurchasedProduct, _ProductCatalogTable_template, _ProductCatalogTable_tableBodyTemplate, _ProductCatalogTable_tableRowTemplate, _ProductCatalogTable_handleProductStateManage, _ProductCatalogTable_renderEditProduct, _ProductCatalogTable_createProductInputElement, _ProductCatalogTable_deleteProduct, _ProductCatalogTable_saveEditedProduct, _ProductCatalogTable_confirmEditProduct, _ProductCatalogTable_createProductSpanElement, _ProductCatalogTable_toggleEditBtn;
 class ProductCatalogTable {
-    constructor(props) {
+    constructor({ target, productCatalog }) {
+        _ProductCatalogTable_instances.add(this);
+        _ProductCatalogTable_productCatalog.set(this, void 0);
+        _ProductCatalogTable_target.set(this, void 0);
+        _ProductCatalogTable_productTableBody.set(this, void 0);
         this.render = () => {
-            if (this.isRerender()) {
-                this.productTableBody.textContent = '';
-                this.productTableBody.insertAdjacentHTML('beforeend', this.tableBodyTemplate());
-                return;
-            }
-            this.target.insertAdjacentHTML('beforeend', this.template());
-            this.productTableBody = document.querySelector('#product-table-body');
-            this.productTableBody.addEventListener('click', this.handleProductStateManage);
+            __classPrivateFieldGet(this, _ProductCatalogTable_target, "f").insertAdjacentHTML('beforeend', __classPrivateFieldGet(this, _ProductCatalogTable_instances, "m", _ProductCatalogTable_template).call(this));
+            __classPrivateFieldGet(this, _ProductCatalogTable_instances, "m", _ProductCatalogTable_selectDOM).call(this);
+            __classPrivateFieldGet(this, _ProductCatalogTable_instances, "m", _ProductCatalogTable_bindEvent).call(this);
         };
-        this.handleProductStateManage = (e) => {
+        _ProductCatalogTable_renderAddedProduct.set(this, (e) => {
+            const addedProduct = e.detail;
+            __classPrivateFieldGet(this, _ProductCatalogTable_productTableBody, "f").insertAdjacentHTML('beforeend', __classPrivateFieldGet(this, _ProductCatalogTable_instances, "m", _ProductCatalogTable_tableRowTemplate).call(this, addedProduct));
+        });
+        _ProductCatalogTable_updatePurchasedProduct.set(this, (e) => {
+            const { name } = e.detail;
+            const tableRow = __classPrivateFieldGet(this, _ProductCatalogTable_productTableBody, "f").querySelector(`#${name}`);
+            const quantitySpan = tableRow.querySelector('.product-quantity > span');
+            let decreasedQuantity = Number(quantitySpan.textContent) - 1;
+            quantitySpan.textContent = String(decreasedQuantity);
+        });
+        _ProductCatalogTable_handleProductStateManage.set(this, (e) => {
             if (e.target.classList.contains('edit-button')) {
                 const tableRow = e.target.closest('tr');
-                this.renderEditProduct(tableRow);
+                __classPrivateFieldGet(this, _ProductCatalogTable_renderEditProduct, "f").call(this, tableRow);
                 return;
             }
             if (e.target.classList.contains('delete-button')) {
                 const tableRow = e.target.closest('tr');
-                this.deleteProduct(tableRow);
+                __classPrivateFieldGet(this, _ProductCatalogTable_instances, "m", _ProductCatalogTable_deleteProduct).call(this, tableRow);
                 return;
             }
             if (e.target.classList.contains('confirm-button')) {
                 const tableRow = e.target.closest('tr');
                 try {
-                    this.saveEditedProductState(tableRow);
+                    __classPrivateFieldGet(this, _ProductCatalogTable_instances, "m", _ProductCatalogTable_saveEditedProduct).call(this, tableRow);
+                    __classPrivateFieldGet(this, _ProductCatalogTable_instances, "m", _ProductCatalogTable_confirmEditProduct).call(this, tableRow);
+                    __classPrivateFieldGet(this, _ProductCatalogTable_instances, "m", _ProductCatalogTable_toggleEditBtn).call(this, tableRow);
                 }
                 catch (err) {
                     alert(err.message);
-                    return;
                 }
-                this.confirmEditProduct(tableRow);
-                this.toggleEditBtn(tableRow);
             }
-        };
-        this.renderEditProduct = (tableRow) => {
+        });
+        _ProductCatalogTable_renderEditProduct.set(this, (tableRow) => {
             const productRowItems = tableRow.querySelectorAll('.product-prop');
             productRowItems.forEach((tableDatum) => {
                 const productSpanElement = tableDatum.querySelector('span');
                 const content = productSpanElement.textContent;
-                tableDatum.replaceChild(this.createProductInputElement(tableDatum, content), productSpanElement);
+                tableDatum.replaceChild(__classPrivateFieldGet(this, _ProductCatalogTable_instances, "m", _ProductCatalogTable_createProductInputElement).call(this, tableDatum, content), productSpanElement);
             });
-            this.toggleEditBtn(tableRow);
-        };
-        this.target = props.target;
-        this.productCatalog = props.productCatalog;
-        this.target.addEventListener('productAdded', this.render);
+            __classPrivateFieldGet(this, _ProductCatalogTable_instances, "m", _ProductCatalogTable_toggleEditBtn).call(this, tableRow);
+        });
+        __classPrivateFieldSet(this, _ProductCatalogTable_target, target, "f");
+        __classPrivateFieldSet(this, _ProductCatalogTable_productCatalog, productCatalog, "f");
+        __classPrivateFieldGet(this, _ProductCatalogTable_target, "f").addEventListener('productAdded', __classPrivateFieldGet(this, _ProductCatalogTable_renderAddedProduct, "f"));
     }
-    isRerender() {
-        return this.productTableBody !== undefined;
-    }
-    template() {
-        return `
+}
+_ProductCatalogTable_productCatalog = new WeakMap(), _ProductCatalogTable_target = new WeakMap(), _ProductCatalogTable_productTableBody = new WeakMap(), _ProductCatalogTable_renderAddedProduct = new WeakMap(), _ProductCatalogTable_updatePurchasedProduct = new WeakMap(), _ProductCatalogTable_handleProductStateManage = new WeakMap(), _ProductCatalogTable_renderEditProduct = new WeakMap(), _ProductCatalogTable_instances = new WeakSet(), _ProductCatalogTable_selectDOM = function _ProductCatalogTable_selectDOM() {
+    __classPrivateFieldSet(this, _ProductCatalogTable_productTableBody, document.querySelector('.product-table-body'), "f");
+}, _ProductCatalogTable_bindEvent = function _ProductCatalogTable_bindEvent() {
+    __classPrivateFieldGet(this, _ProductCatalogTable_productTableBody, "f").addEventListener('click', __classPrivateFieldGet(this, _ProductCatalogTable_handleProductStateManage, "f"));
+    document.addEventListener('productPurchased', __classPrivateFieldGet(this, _ProductCatalogTable_updatePurchasedProduct, "f"));
+}, _ProductCatalogTable_template = function _ProductCatalogTable_template() {
+    return `
     <div class="table-container">
       <h2>상품 현황</h2>
       <table id="product-table">
@@ -822,117 +974,143 @@ class ProductCatalogTable {
             <th>수량</th>
           </tr>
         </thead>
-        <tbody id="product-table-body">${this.tableBodyTemplate()}</tbody>
+        <tbody class="product-table-body">${__classPrivateFieldGet(this, _ProductCatalogTable_instances, "m", _ProductCatalogTable_tableBodyTemplate).call(this)}</tbody>
       </table>
     </div>
   `;
-    }
-    tableBodyTemplate() {
-        return this.productCatalog
-            .getProductList()
-            .map((product) => this.tableRowTemplate(product))
-            .join('');
-    }
-    tableRowTemplate(product) {
-        return `<tr id="${product.getName()}">
-      <td class="product-name product-prop"><span>${product.getName()}</span></td>
-      <td class="product-price product-prop"><span>${product.getPrice()}</span></td>
-      <td class="product-quantity product-prop"><span>${product.getQuantity()}</span></td>
+}, _ProductCatalogTable_tableBodyTemplate = function _ProductCatalogTable_tableBodyTemplate() {
+    return __classPrivateFieldGet(this, _ProductCatalogTable_productCatalog, "f")
+        .getProductList()
+        .map((product) => {
+        const name = product.getName();
+        const price = product.getPrice();
+        const quantity = product.getQuantity();
+        return __classPrivateFieldGet(this, _ProductCatalogTable_instances, "m", _ProductCatalogTable_tableRowTemplate).call(this, { name, price, quantity });
+    })
+        .join('');
+}, _ProductCatalogTable_tableRowTemplate = function _ProductCatalogTable_tableRowTemplate({ name, price, quantity }) {
+    return `<tr id="${name}">
+      <td class="product-name product-prop"><span>${name}</span></td>
+      <td class="product-price product-prop"><span>${price}</span></td>
+      <td class="product-quantity product-prop"><span>${quantity}</span></td>
       <td class="edit-button-container">
         <button class="edit-button button" type="button">수정</button>
         <button class="delete-button button" type="button">삭제</button>
         <button class="confirm-button button hide" type="button">확인</button>
       </td>
     </tr>`;
+}, _ProductCatalogTable_createProductInputElement = function _ProductCatalogTable_createProductInputElement(tableDatum, content) {
+    const productInputElement = document.createElement('input');
+    productInputElement.setAttribute('type', `${tableDatum.classList.contains('product-name') ? 'text' : 'number'}`);
+    productInputElement.classList.add('product-input');
+    productInputElement.value = content;
+    return productInputElement;
+}, _ProductCatalogTable_deleteProduct = function _ProductCatalogTable_deleteProduct(tableRow) {
+    if (window.confirm('진짜 지우실건가요?')) {
+        tableRow.remove();
+        __classPrivateFieldGet(this, _ProductCatalogTable_productCatalog, "f").deleteProduct(tableRow.id);
+        __classPrivateFieldGet(this, _ProductCatalogTable_target, "f").dispatchEvent(new CustomEvent('productDeleted', { detail: { name: tableRow.id }, bubbles: true }));
     }
-    createProductInputElement(tableDatum, content) {
-        const productInputElement = document.createElement('input');
-        productInputElement.setAttribute('type', `${tableDatum.classList.contains('product-name') ? 'text' : 'number'}`);
-        productInputElement.classList.add('product-input');
-        productInputElement.value = content;
-        return productInputElement;
-    }
-    deleteProduct(tableRow) {
-        if (window.confirm('진짜 지우실건가요?')) {
-            tableRow.remove();
-            this.productCatalog.deleteProduct(tableRow.id);
-        }
-    }
-    saveEditedProductState(tableRow) {
-        const targetProduct = this.productCatalog.findProduct(tableRow.id);
-        const editedProductName = tableRow.querySelector('.product-name input')
-            .value;
-        const editedProductPrice = tableRow.querySelector('.product-price input')
-            .valueAsNumber;
-        const editedProductQuantity = tableRow.querySelector('.product-quantity input').valueAsNumber;
-        if (targetProduct.validateAllProp(editedProductName, editedProductPrice, editedProductQuantity)) {
-            targetProduct.setName(editedProductName);
-            targetProduct.setPrice(editedProductPrice);
-            targetProduct.setQuantity(editedProductQuantity);
-        }
-    }
-    confirmEditProduct(tableRow) {
-        const productProp = tableRow.querySelectorAll('.product-prop');
-        productProp.forEach((tableDatum) => {
-            const productInputElement = tableDatum.querySelector('input');
-            const editedValue = productInputElement.value;
-            tableDatum.replaceChild(this.createProductSpanElement(editedValue), productInputElement);
-        });
-        tableRow.id = `${tableRow.querySelector('.product-name').textContent}`;
-    }
-    createProductSpanElement(editedValue) {
-        const productSpanElement = document.createElement('span');
-        productSpanElement.innerText = editedValue;
-        return productSpanElement;
-    }
-    toggleEditBtn(tableRow) {
-        [...tableRow.querySelector('.edit-button-container').children].forEach((btn) => btn.classList.toggle('hide'));
-    }
-}
+}, _ProductCatalogTable_saveEditedProduct = function _ProductCatalogTable_saveEditedProduct(tableRow) {
+    const targetProductName = tableRow.id;
+    const editedProductName = tableRow.querySelector('.product-name input')
+        .value;
+    const editedProductPrice = tableRow.querySelector('.product-price input')
+        .valueAsNumber;
+    const editedProductQuantity = tableRow.querySelector('.product-quantity input').valueAsNumber;
+    __classPrivateFieldGet(this, _ProductCatalogTable_productCatalog, "f").editProduct(targetProductName, {
+        name: editedProductName,
+        price: editedProductPrice,
+        quantity: editedProductQuantity,
+    });
+    __classPrivateFieldGet(this, _ProductCatalogTable_target, "f").dispatchEvent(new CustomEvent('productEdited', {
+        detail: {
+            targetName: targetProductName,
+            name: editedProductName,
+            price: editedProductPrice,
+            quantity: editedProductQuantity,
+        },
+        bubbles: true,
+    }));
+}, _ProductCatalogTable_confirmEditProduct = function _ProductCatalogTable_confirmEditProduct(tableRow) {
+    const productProp = tableRow.querySelectorAll('.product-prop');
+    productProp.forEach((tableDatum) => {
+        const productInputElement = tableDatum.querySelector('input');
+        const editedValue = productInputElement.value;
+        tableDatum.replaceChild(__classPrivateFieldGet(this, _ProductCatalogTable_instances, "m", _ProductCatalogTable_createProductSpanElement).call(this, editedValue), productInputElement);
+    });
+    tableRow.id = `${tableRow.querySelector('.product-name').textContent}`;
+}, _ProductCatalogTable_createProductSpanElement = function _ProductCatalogTable_createProductSpanElement(editedValue) {
+    const productSpanElement = document.createElement('span');
+    productSpanElement.textContent = editedValue;
+    return productSpanElement;
+}, _ProductCatalogTable_toggleEditBtn = function _ProductCatalogTable_toggleEditBtn(tableRow) {
+    [...tableRow.querySelector('.edit-button-container').children].forEach((btn) => btn.classList.toggle('hide'));
+};
 
 
 /***/ }),
 
-/***/ "./src/component/ProductInformationInput.ts":
-/*!**************************************************!*\
-  !*** ./src/component/ProductInformationInput.ts ***!
-  \**************************************************/
+/***/ "./src/component/ProductInformationInputForm.ts":
+/*!******************************************************!*\
+  !*** ./src/component/ProductInformationInputForm.ts ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ProductInformationInput": () => (/* binding */ ProductInformationInput)
+/* harmony export */   "ProductInformationInputForm": () => (/* binding */ ProductInformationInputForm)
 /* harmony export */ });
-class ProductInformationInput {
-    constructor(props) {
-        this.handleAddProduct = (e) => {
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _ProductInformationInputForm_instances, _ProductInformationInputForm_productCatalog, _ProductInformationInputForm_target, _ProductInformationInputForm_productInformationInputForm, _ProductInformationInputForm_productNameInput, _ProductInformationInputForm_productPriceInput, _ProductInformationInputForm_productQuantityInput, _ProductInformationInputForm_submitButton, _ProductInformationInputForm_template, _ProductInformationInputForm_selectDom, _ProductInformationInputForm_bindEvent, _ProductInformationInputForm_handleAddProduct;
+class ProductInformationInputForm {
+    constructor({ target, productCatalog }) {
+        _ProductInformationInputForm_instances.add(this);
+        _ProductInformationInputForm_productCatalog.set(this, void 0);
+        _ProductInformationInputForm_target.set(this, void 0);
+        _ProductInformationInputForm_productInformationInputForm.set(this, void 0);
+        _ProductInformationInputForm_productNameInput.set(this, void 0);
+        _ProductInformationInputForm_productPriceInput.set(this, void 0);
+        _ProductInformationInputForm_productQuantityInput.set(this, void 0);
+        _ProductInformationInputForm_submitButton.set(this, void 0);
+        _ProductInformationInputForm_handleAddProduct.set(this, (e) => {
             e.preventDefault();
-            const productName = this.productNameInput.value;
-            const productPrice = this.productPriceInput.valueAsNumber;
-            const productQuantity = this.productQuantityInput.valueAsNumber;
+            const name = __classPrivateFieldGet(this, _ProductInformationInputForm_productNameInput, "f").value;
+            const price = __classPrivateFieldGet(this, _ProductInformationInputForm_productPriceInput, "f").valueAsNumber;
+            const quantity = __classPrivateFieldGet(this, _ProductInformationInputForm_productQuantityInput, "f").valueAsNumber;
             try {
-                this.productCatalog.addProduct(productName, productPrice, productQuantity);
+                __classPrivateFieldGet(this, _ProductInformationInputForm_productCatalog, "f").addProduct({ name, price, quantity });
+                __classPrivateFieldGet(this, _ProductInformationInputForm_target, "f").dispatchEvent(new CustomEvent('productAdded', { detail: { name, price, quantity }, bubbles: true }));
             }
             catch (err) {
                 alert(err.message);
-                return;
             }
             finally {
-                this.productInformationForm.reset();
+                __classPrivateFieldGet(this, _ProductInformationInputForm_productInformationInputForm, "f").reset();
             }
-            this.target.dispatchEvent(new CustomEvent('productAdded'));
-        };
-        this.target = props.target;
-        this.productCatalog = props.productCatalog;
+        });
+        __classPrivateFieldSet(this, _ProductInformationInputForm_target, target, "f");
+        __classPrivateFieldSet(this, _ProductInformationInputForm_productCatalog, productCatalog, "f");
     }
     render() {
-        this.target.insertAdjacentHTML('beforeend', this.template());
-        this.selectDom();
-        this.bindEvent();
+        __classPrivateFieldGet(this, _ProductInformationInputForm_target, "f").insertAdjacentHTML('beforeend', __classPrivateFieldGet(this, _ProductInformationInputForm_instances, "m", _ProductInformationInputForm_template).call(this));
+        __classPrivateFieldGet(this, _ProductInformationInputForm_instances, "m", _ProductInformationInputForm_selectDom).call(this);
+        __classPrivateFieldGet(this, _ProductInformationInputForm_instances, "m", _ProductInformationInputForm_bindEvent).call(this);
     }
-    template() {
-        return `
-      <form id="product-information-input">
+}
+_ProductInformationInputForm_productCatalog = new WeakMap(), _ProductInformationInputForm_target = new WeakMap(), _ProductInformationInputForm_productInformationInputForm = new WeakMap(), _ProductInformationInputForm_productNameInput = new WeakMap(), _ProductInformationInputForm_productPriceInput = new WeakMap(), _ProductInformationInputForm_productQuantityInput = new WeakMap(), _ProductInformationInputForm_submitButton = new WeakMap(), _ProductInformationInputForm_handleAddProduct = new WeakMap(), _ProductInformationInputForm_instances = new WeakSet(), _ProductInformationInputForm_template = function _ProductInformationInputForm_template() {
+    return `
+      <form id="product-information-input-form">
         <label id="product-input-label" for="product-information-input">추가할 상품 정보를 입력해주세요</label>
         <input id="product-name-input" class="input" type="text" placeholder="상품명" />
         <input id="product-price-input" class="input" type="number" placeholder="가격" />
@@ -940,18 +1118,428 @@ class ProductInformationInput {
         <button id="product-information-submit-btn" class="submit-button button" type="submit">추가</button>
       </form>
     `;
-    }
-    selectDom() {
-        this.productInformationForm = document.querySelector('#product-information-input');
-        this.productNameInput = document.querySelector('#product-name-input');
-        this.productPriceInput = document.querySelector('#product-price-input');
-        this.productQuantityInput = document.querySelector('#product-quantity-input');
-        this.submitButton = document.querySelector('#product-information-submit-btn');
-    }
-    bindEvent() {
-        this.submitButton.addEventListener('click', this.handleAddProduct);
+}, _ProductInformationInputForm_selectDom = function _ProductInformationInputForm_selectDom() {
+    __classPrivateFieldSet(this, _ProductInformationInputForm_productInformationInputForm, document.querySelector('#product-information-input-form'), "f");
+    __classPrivateFieldSet(this, _ProductInformationInputForm_productNameInput, document.querySelector('#product-name-input'), "f");
+    __classPrivateFieldSet(this, _ProductInformationInputForm_productPriceInput, document.querySelector('#product-price-input'), "f");
+    __classPrivateFieldSet(this, _ProductInformationInputForm_productQuantityInput, document.querySelector('#product-quantity-input'), "f");
+    __classPrivateFieldSet(this, _ProductInformationInputForm_submitButton, document.querySelector('#product-information-submit-btn'), "f");
+}, _ProductInformationInputForm_bindEvent = function _ProductInformationInputForm_bindEvent() {
+    __classPrivateFieldGet(this, _ProductInformationInputForm_submitButton, "f").addEventListener('click', __classPrivateFieldGet(this, _ProductInformationInputForm_handleAddProduct, "f"));
+};
+
+
+/***/ }),
+
+/***/ "./src/component/PurchasableProductCatalogTable.ts":
+/*!*********************************************************!*\
+  !*** ./src/component/PurchasableProductCatalogTable.ts ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "PurchasableProductCatalogTable": () => (/* binding */ PurchasableProductCatalogTable)
+/* harmony export */ });
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _PurchasableProductCatalogTable_instances, _PurchasableProductCatalogTable_target, _PurchasableProductCatalogTable_purchasableProductTable, _PurchasableProductCatalogTable_productTableBody, _PurchasableProductCatalogTable_productCatalog, _PurchasableProductCatalogTable_purchaseMoney, _PurchasableProductCatalogTable_template, _PurchasableProductCatalogTable_tableBodyTemplate, _PurchasableProductCatalogTable_tableRowTemplate, _PurchasableProductCatalogTable_selectDOM, _PurchasableProductCatalogTable_bindEvent, _PurchasableProductCatalogTable_handlePurchaseProduct, _PurchasableProductCatalogTable_updatePurchasedProduct, _PurchasableProductCatalogTable_updateAddedProduct, _PurchasableProductCatalogTable_updatedDeletedProduct, _PurchasableProductCatalogTable_updateEditedProduct;
+class PurchasableProductCatalogTable {
+    constructor({ target, productCatalog, purchaseMoney }) {
+        _PurchasableProductCatalogTable_instances.add(this);
+        _PurchasableProductCatalogTable_target.set(this, void 0);
+        _PurchasableProductCatalogTable_purchasableProductTable.set(this, void 0);
+        _PurchasableProductCatalogTable_productTableBody.set(this, void 0);
+        _PurchasableProductCatalogTable_productCatalog.set(this, void 0);
+        _PurchasableProductCatalogTable_purchaseMoney.set(this, void 0);
+        this.render = () => {
+            __classPrivateFieldGet(this, _PurchasableProductCatalogTable_target, "f").insertAdjacentHTML('beforeend', __classPrivateFieldGet(this, _PurchasableProductCatalogTable_instances, "m", _PurchasableProductCatalogTable_template).call(this));
+            __classPrivateFieldGet(this, _PurchasableProductCatalogTable_instances, "m", _PurchasableProductCatalogTable_selectDOM).call(this);
+            __classPrivateFieldGet(this, _PurchasableProductCatalogTable_instances, "m", _PurchasableProductCatalogTable_bindEvent).call(this);
+        };
+        _PurchasableProductCatalogTable_handlePurchaseProduct.set(this, (e) => {
+            if (e.target.matches('.purchase-button')) {
+                // TODO: 0개일때는 구매 못하도록 해야함
+                const productName = e.target.dataset.productId;
+                try {
+                    const exchange = __classPrivateFieldGet(this, _PurchasableProductCatalogTable_productCatalog, "f").buyProduct(productName, __classPrivateFieldGet(this, _PurchasableProductCatalogTable_purchaseMoney, "f").getMoney());
+                    __classPrivateFieldGet(this, _PurchasableProductCatalogTable_purchaseMoney, "f").setMoney(exchange);
+                    __classPrivateFieldGet(this, _PurchasableProductCatalogTable_target, "f").dispatchEvent(new CustomEvent('productPurchased', { detail: { name: productName }, bubbles: true }));
+                    __classPrivateFieldGet(this, _PurchasableProductCatalogTable_target, "f").dispatchEvent(new CustomEvent('showSnackbar', {
+                        detail: { type: 'success', message: `${productName}를(을) 구매하였습니다` },
+                    }));
+                    const tableRow = e.target.closest(`#${productName}`);
+                    __classPrivateFieldGet(this, _PurchasableProductCatalogTable_instances, "m", _PurchasableProductCatalogTable_updatePurchasedProduct).call(this, tableRow);
+                }
+                catch (err) {
+                    __classPrivateFieldGet(this, _PurchasableProductCatalogTable_target, "f").dispatchEvent(new CustomEvent('showSnackbar', {
+                        detail: { type: 'fail', message: err.message },
+                    }));
+                }
+            }
+        });
+        _PurchasableProductCatalogTable_updateAddedProduct.set(this, (e) => {
+            const addedProduct = e.detail;
+            __classPrivateFieldGet(this, _PurchasableProductCatalogTable_productTableBody, "f").insertAdjacentHTML('beforeend', __classPrivateFieldGet(this, _PurchasableProductCatalogTable_instances, "m", _PurchasableProductCatalogTable_tableRowTemplate).call(this, addedProduct));
+        });
+        _PurchasableProductCatalogTable_updatedDeletedProduct.set(this, (e) => {
+            const { name } = e.detail;
+            __classPrivateFieldGet(this, _PurchasableProductCatalogTable_productTableBody, "f").querySelector(`#${name}`).remove();
+        });
+        _PurchasableProductCatalogTable_updateEditedProduct.set(this, (e) => {
+            const { targetName, name, price, quantity } = e.detail;
+            const tableRow = __classPrivateFieldGet(this, _PurchasableProductCatalogTable_productTableBody, "f").querySelector(`#${targetName}`);
+            const nameSpan = tableRow.querySelector('.product-name > span');
+            const priceSpan = tableRow.querySelector('.product-price > span');
+            const quantitySpan = tableRow.querySelector('.product-quantity > span');
+            nameSpan.textContent = name;
+            priceSpan.textContent = price;
+            quantitySpan.textContent = quantity;
+        });
+        __classPrivateFieldSet(this, _PurchasableProductCatalogTable_target, target, "f");
+        __classPrivateFieldSet(this, _PurchasableProductCatalogTable_productCatalog, productCatalog, "f");
+        __classPrivateFieldSet(this, _PurchasableProductCatalogTable_purchaseMoney, purchaseMoney, "f");
     }
 }
+_PurchasableProductCatalogTable_target = new WeakMap(), _PurchasableProductCatalogTable_purchasableProductTable = new WeakMap(), _PurchasableProductCatalogTable_productTableBody = new WeakMap(), _PurchasableProductCatalogTable_productCatalog = new WeakMap(), _PurchasableProductCatalogTable_purchaseMoney = new WeakMap(), _PurchasableProductCatalogTable_handlePurchaseProduct = new WeakMap(), _PurchasableProductCatalogTable_updateAddedProduct = new WeakMap(), _PurchasableProductCatalogTable_updatedDeletedProduct = new WeakMap(), _PurchasableProductCatalogTable_updateEditedProduct = new WeakMap(), _PurchasableProductCatalogTable_instances = new WeakSet(), _PurchasableProductCatalogTable_template = function _PurchasableProductCatalogTable_template() {
+    return `
+        <div class="table-container">
+        <h2>구매 가능 상품현황</h2>
+        <table id="purchasable-product-table">
+          <thead>
+            <tr>
+              <th>상품명</th>
+              <th>가격</th>
+              <th>수량</th>
+              <th>구매</th>
+            </tr>
+          </thead>
+          <tbody class="product-table-body">${__classPrivateFieldGet(this, _PurchasableProductCatalogTable_instances, "m", _PurchasableProductCatalogTable_tableBodyTemplate).call(this)}</tbody>
+        </table>
+      </div>
+      `;
+}, _PurchasableProductCatalogTable_tableBodyTemplate = function _PurchasableProductCatalogTable_tableBodyTemplate() {
+    return __classPrivateFieldGet(this, _PurchasableProductCatalogTable_productCatalog, "f")
+        .getProductList()
+        .map((product) => {
+        const name = product.getName();
+        const price = product.getPrice();
+        const quantity = product.getQuantity();
+        return __classPrivateFieldGet(this, _PurchasableProductCatalogTable_instances, "m", _PurchasableProductCatalogTable_tableRowTemplate).call(this, { name, price, quantity });
+    })
+        .join('');
+}, _PurchasableProductCatalogTable_tableRowTemplate = function _PurchasableProductCatalogTable_tableRowTemplate({ name, price, quantity }) {
+    return `<tr id="${name}">
+        <td class="product-name product-prop"><span>${name}</span></td>
+        <td class="product-price product-prop"><span>${price}</span></td>
+        <td class="product-quantity product-prop"><span>${quantity}</span></td>
+        <td>
+          <button class="purchase-button button" type="button" data-product-id="${name}">구매</button>
+        </td>
+      </tr>`;
+}, _PurchasableProductCatalogTable_selectDOM = function _PurchasableProductCatalogTable_selectDOM() {
+    __classPrivateFieldSet(this, _PurchasableProductCatalogTable_purchasableProductTable, document.querySelector('#purchasable-product-table'), "f");
+    __classPrivateFieldSet(this, _PurchasableProductCatalogTable_productTableBody, document.querySelector('.product-table-body'), "f");
+}, _PurchasableProductCatalogTable_bindEvent = function _PurchasableProductCatalogTable_bindEvent() {
+    __classPrivateFieldGet(this, _PurchasableProductCatalogTable_purchasableProductTable, "f").addEventListener('click', __classPrivateFieldGet(this, _PurchasableProductCatalogTable_handlePurchaseProduct, "f"));
+    document.addEventListener('productAdded', __classPrivateFieldGet(this, _PurchasableProductCatalogTable_updateAddedProduct, "f"));
+    document.addEventListener('productDeleted', __classPrivateFieldGet(this, _PurchasableProductCatalogTable_updatedDeletedProduct, "f"));
+    document.addEventListener('productEdited', __classPrivateFieldGet(this, _PurchasableProductCatalogTable_updateEditedProduct, "f"));
+}, _PurchasableProductCatalogTable_updatePurchasedProduct = function _PurchasableProductCatalogTable_updatePurchasedProduct(tableRow) {
+    const quantitySpan = tableRow.querySelector('.product-quantity > span');
+    let decreasedQuantity = Number(quantitySpan.textContent) - 1;
+    quantitySpan.textContent = String(decreasedQuantity);
+    if (decreasedQuantity === 0) {
+        const purchaseBtn = tableRow.querySelector('.purchase-button');
+        purchaseBtn.disabled = true;
+    }
+};
+
+
+/***/ }),
+
+/***/ "./src/component/PurchaseMoneyInputForm.ts":
+/*!*************************************************!*\
+  !*** ./src/component/PurchaseMoneyInputForm.ts ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "PurchaseMoneyInputForm": () => (/* binding */ PurchaseMoneyInputForm)
+/* harmony export */ });
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _PurchaseMoneyInputForm_instances, _PurchaseMoneyInputForm_target, _PurchaseMoneyInputForm_purchaseMoney, _PurchaseMoneyInputForm_purchaseMoneySubmitBtn, _PurchaseMoneyInputForm_purchaseMoneySpan, _PurchaseMoneyInputForm_template, _PurchaseMoneyInputForm_selectDOM, _PurchaseMoneyInputForm_bindEvent, _PurchaseMoneyInputForm_handleSetPurchaseMoney, _PurchaseMoneyInputForm_updatePurchaseMoney;
+class PurchaseMoneyInputForm {
+    constructor({ target, purchaseMoney }) {
+        _PurchaseMoneyInputForm_instances.add(this);
+        _PurchaseMoneyInputForm_target.set(this, void 0);
+        _PurchaseMoneyInputForm_purchaseMoney.set(this, void 0);
+        _PurchaseMoneyInputForm_purchaseMoneySubmitBtn.set(this, void 0);
+        _PurchaseMoneyInputForm_purchaseMoneySpan.set(this, void 0);
+        _PurchaseMoneyInputForm_handleSetPurchaseMoney.set(this, (e) => {
+            e.preventDefault();
+            const purchaseMoney = document.querySelector('#purchase-money-input')
+                .valueAsNumber;
+            try {
+                __classPrivateFieldGet(this, _PurchaseMoneyInputForm_purchaseMoney, "f").addMoney(purchaseMoney);
+                __classPrivateFieldGet(this, _PurchaseMoneyInputForm_updatePurchaseMoney, "f").call(this);
+                __classPrivateFieldGet(this, _PurchaseMoneyInputForm_target, "f").dispatchEvent(new CustomEvent('showSnackbar', {
+                    detail: { type: 'success', message: `${purchaseMoney}원을 투입하였습니다` },
+                }));
+            }
+            catch (err) {
+                __classPrivateFieldGet(this, _PurchaseMoneyInputForm_target, "f").dispatchEvent(new CustomEvent('showSnackbar', {
+                    detail: { type: 'fail', message: err.message },
+                }));
+            }
+        });
+        _PurchaseMoneyInputForm_updatePurchaseMoney.set(this, () => {
+            __classPrivateFieldGet(this, _PurchaseMoneyInputForm_purchaseMoneySpan, "f").textContent = String(__classPrivateFieldGet(this, _PurchaseMoneyInputForm_purchaseMoney, "f").getMoney());
+        });
+        __classPrivateFieldSet(this, _PurchaseMoneyInputForm_target, target, "f");
+        __classPrivateFieldSet(this, _PurchaseMoneyInputForm_purchaseMoney, purchaseMoney, "f");
+        __classPrivateFieldGet(this, _PurchaseMoneyInputForm_target, "f").addEventListener('productPurchased', __classPrivateFieldGet(this, _PurchaseMoneyInputForm_updatePurchaseMoney, "f"));
+        __classPrivateFieldGet(this, _PurchaseMoneyInputForm_target, "f").addEventListener('coinsReturned', __classPrivateFieldGet(this, _PurchaseMoneyInputForm_updatePurchaseMoney, "f"));
+    }
+    render() {
+        __classPrivateFieldGet(this, _PurchaseMoneyInputForm_target, "f").insertAdjacentHTML('beforeend', __classPrivateFieldGet(this, _PurchaseMoneyInputForm_instances, "m", _PurchaseMoneyInputForm_template).call(this, __classPrivateFieldGet(this, _PurchaseMoneyInputForm_purchaseMoney, "f").getMoney()));
+        __classPrivateFieldGet(this, _PurchaseMoneyInputForm_instances, "m", _PurchaseMoneyInputForm_selectDOM).call(this);
+        __classPrivateFieldGet(this, _PurchaseMoneyInputForm_instances, "m", _PurchaseMoneyInputForm_bindEvent).call(this);
+    }
+}
+_PurchaseMoneyInputForm_target = new WeakMap(), _PurchaseMoneyInputForm_purchaseMoney = new WeakMap(), _PurchaseMoneyInputForm_purchaseMoneySubmitBtn = new WeakMap(), _PurchaseMoneyInputForm_purchaseMoneySpan = new WeakMap(), _PurchaseMoneyInputForm_handleSetPurchaseMoney = new WeakMap(), _PurchaseMoneyInputForm_updatePurchaseMoney = new WeakMap(), _PurchaseMoneyInputForm_instances = new WeakSet(), _PurchaseMoneyInputForm_template = function _PurchaseMoneyInputForm_template(purhcaseMoney) {
+    return `
+      <div>
+        <form id="purchase-money-input-form">
+          <label id="purchase-money-input-label" for="purchase-money-input">상품을 구매할 금액을 투입해주세요</label>
+          <input id="purchase-money-input" class="input" type="number" placeholder="금액" step="10" min="10" max="10000" />
+          <button id="purchase-money-submit-btn" class="submit-button button" type="submit">투입</button>
+        </form>
+        <div id="purchase-money-container">현재보유금액 : <span id="purchase-money">${purhcaseMoney}</span>원</div>
+      </div>
+    `;
+}, _PurchaseMoneyInputForm_selectDOM = function _PurchaseMoneyInputForm_selectDOM() {
+    __classPrivateFieldSet(this, _PurchaseMoneyInputForm_purchaseMoneySubmitBtn, document.querySelector('#purchase-money-submit-btn'), "f");
+    __classPrivateFieldSet(this, _PurchaseMoneyInputForm_purchaseMoneySpan, document.querySelector('#purchase-money'), "f");
+}, _PurchaseMoneyInputForm_bindEvent = function _PurchaseMoneyInputForm_bindEvent() {
+    __classPrivateFieldGet(this, _PurchaseMoneyInputForm_purchaseMoneySubmitBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _PurchaseMoneyInputForm_handleSetPurchaseMoney, "f"));
+};
+
+
+/***/ }),
+
+/***/ "./src/component/ReturnedCoinTable.ts":
+/*!********************************************!*\
+  !*** ./src/component/ReturnedCoinTable.ts ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ReturnedCoinTable": () => (/* binding */ ReturnedCoinTable)
+/* harmony export */ });
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _ReturnedCoinTable_instances, _ReturnedCoinTable_coinVault, _ReturnedCoinTable_purchaseMoney, _ReturnedCoinTable_target, _ReturnedCoinTable_coin500Quantity, _ReturnedCoinTable_coin100Quantity, _ReturnedCoinTable_coin50Quantity, _ReturnedCoinTable_coin10Quantity, _ReturnedCoinTable_returnBtn, _ReturnedCoinTable_template, _ReturnedCoinTable_selectDom, _ReturnedCoinTable_bindEvent, _ReturnedCoinTable_handleReturnCoins, _ReturnedCoinTable_updateReturnedCoinTable;
+class ReturnedCoinTable {
+    constructor({ target, coinVault, purchaseMoney }) {
+        _ReturnedCoinTable_instances.add(this);
+        _ReturnedCoinTable_coinVault.set(this, void 0);
+        _ReturnedCoinTable_purchaseMoney.set(this, void 0);
+        _ReturnedCoinTable_target.set(this, void 0);
+        _ReturnedCoinTable_coin500Quantity.set(this, void 0);
+        _ReturnedCoinTable_coin100Quantity.set(this, void 0);
+        _ReturnedCoinTable_coin50Quantity.set(this, void 0);
+        _ReturnedCoinTable_coin10Quantity.set(this, void 0);
+        _ReturnedCoinTable_returnBtn.set(this, void 0);
+        _ReturnedCoinTable_handleReturnCoins.set(this, () => {
+            try {
+                const [{ coin500, coin100, coin50, coin10 }, remainder] = __classPrivateFieldGet(this, _ReturnedCoinTable_coinVault, "f").returnCoins(__classPrivateFieldGet(this, _ReturnedCoinTable_purchaseMoney, "f").getMoney());
+                __classPrivateFieldGet(this, _ReturnedCoinTable_purchaseMoney, "f").setMoney(remainder);
+                __classPrivateFieldGet(this, _ReturnedCoinTable_instances, "m", _ReturnedCoinTable_updateReturnedCoinTable).call(this, { coin500, coin100, coin50, coin10 });
+                __classPrivateFieldGet(this, _ReturnedCoinTable_target, "f").dispatchEvent(new CustomEvent('coinsReturned', { bubbles: true }));
+                __classPrivateFieldGet(this, _ReturnedCoinTable_target, "f").dispatchEvent(new CustomEvent('showSnackbar', {
+                    detail: { type: 'success', message: '잔돈을 반환하였습니다.' },
+                }));
+            }
+            catch (err) {
+                __classPrivateFieldGet(this, _ReturnedCoinTable_target, "f").dispatchEvent(new CustomEvent('showSnackbar', {
+                    detail: { type: 'fail', message: err.message },
+                }));
+            }
+        });
+        __classPrivateFieldSet(this, _ReturnedCoinTable_target, target, "f");
+        __classPrivateFieldSet(this, _ReturnedCoinTable_coinVault, coinVault, "f");
+        __classPrivateFieldSet(this, _ReturnedCoinTable_purchaseMoney, purchaseMoney, "f");
+    }
+    render() {
+        __classPrivateFieldGet(this, _ReturnedCoinTable_target, "f").insertAdjacentHTML('beforeend', __classPrivateFieldGet(this, _ReturnedCoinTable_instances, "m", _ReturnedCoinTable_template).call(this, __classPrivateFieldGet(this, _ReturnedCoinTable_coinVault, "f").getCoins()));
+        __classPrivateFieldGet(this, _ReturnedCoinTable_instances, "m", _ReturnedCoinTable_selectDom).call(this);
+        __classPrivateFieldGet(this, _ReturnedCoinTable_instances, "m", _ReturnedCoinTable_bindEvent).call(this);
+    }
+}
+_ReturnedCoinTable_coinVault = new WeakMap(), _ReturnedCoinTable_purchaseMoney = new WeakMap(), _ReturnedCoinTable_target = new WeakMap(), _ReturnedCoinTable_coin500Quantity = new WeakMap(), _ReturnedCoinTable_coin100Quantity = new WeakMap(), _ReturnedCoinTable_coin50Quantity = new WeakMap(), _ReturnedCoinTable_coin10Quantity = new WeakMap(), _ReturnedCoinTable_returnBtn = new WeakMap(), _ReturnedCoinTable_handleReturnCoins = new WeakMap(), _ReturnedCoinTable_instances = new WeakSet(), _ReturnedCoinTable_template = function _ReturnedCoinTable_template(coinsQuantity) {
+    return `
+      <div class="table-container">
+        <h2>잔돈 반환</h2>
+        <table id="returned-coin-table">
+          <thead>
+            <tr>
+              <th>동전</th>
+              <th>개수</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>500원</td>
+              <td><span class="coin500-quantity">${coinsQuantity.coin500}</span>개</td>
+            </tr>
+            <tr>
+              <td>100원</td>
+              <td><span class="coin100-quantity">${coinsQuantity.coin100}</span>개</td>
+            </tr>
+            <tr>
+              <td>50원</td>
+              <td><span class="coin50-quantity">${coinsQuantity.coin50}</span>개</td>
+            </tr>
+            <tr>
+              <td>10원</td>
+              <td><span class="coin10-quantity">${coinsQuantity.coin10}</span>개</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="return-button button" type="button">반환</button>
+      </div>
+    `;
+}, _ReturnedCoinTable_selectDom = function _ReturnedCoinTable_selectDom() {
+    __classPrivateFieldSet(this, _ReturnedCoinTable_coin500Quantity, document.querySelector('.coin500-quantity'), "f");
+    __classPrivateFieldSet(this, _ReturnedCoinTable_coin100Quantity, document.querySelector('.coin100-quantity'), "f");
+    __classPrivateFieldSet(this, _ReturnedCoinTable_coin50Quantity, document.querySelector('.coin50-quantity'), "f");
+    __classPrivateFieldSet(this, _ReturnedCoinTable_coin10Quantity, document.querySelector('.coin10-quantity'), "f");
+    __classPrivateFieldSet(this, _ReturnedCoinTable_returnBtn, document.querySelector('.return-button'), "f");
+}, _ReturnedCoinTable_bindEvent = function _ReturnedCoinTable_bindEvent() {
+    __classPrivateFieldGet(this, _ReturnedCoinTable_returnBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _ReturnedCoinTable_handleReturnCoins, "f"));
+}, _ReturnedCoinTable_updateReturnedCoinTable = function _ReturnedCoinTable_updateReturnedCoinTable({ coin500, coin100, coin50, coin10 }) {
+    __classPrivateFieldGet(this, _ReturnedCoinTable_coin500Quantity, "f").textContent = `${coin500}`;
+    __classPrivateFieldGet(this, _ReturnedCoinTable_coin100Quantity, "f").textContent = `${coin100}`;
+    __classPrivateFieldGet(this, _ReturnedCoinTable_coin50Quantity, "f").textContent = `${coin50}`;
+    __classPrivateFieldGet(this, _ReturnedCoinTable_coin10Quantity, "f").textContent = `${coin10}`;
+};
+
+
+/***/ }),
+
+/***/ "./src/domain/Auth.ts":
+/*!****************************!*\
+  !*** ./src/domain/Auth.ts ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Auth": () => (/* binding */ Auth)
+/* harmony export */ });
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var _Auth_signupButton;
+
+class Auth {
+    constructor() {
+        _Auth_signupButton.set(this, void 0);
+        this.signup = () => __awaiter(this, void 0, void 0, function* () {
+            const response = yield fetch('http://localhost:3000/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: 'sam4606@naver.com',
+                    password: '123456',
+                }),
+            });
+            if (response.ok) {
+                const json = yield response.json();
+            }
+        });
+        this.login = () => __awaiter(this, void 0, void 0, function* () {
+            const response = yield fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: 'sam4606@naver.com',
+                    password: '123456',
+                }),
+            });
+            if (response.ok) {
+                const json = yield response.json();
+            }
+        });
+        /**
+         * 임시 시작
+         */
+        // this.#signupButton = document.querySelector('#signup');
+        // this.#signupButton.addEventListener('click', this.signup);
+        /**
+         * 임시 끝
+         */
+    }
+    logout() {
+        localStorage.removeItem('accessToken');
+    }
+    isValidatedName(name) {
+        if (name.length < _utils_constants__WEBPACK_IMPORTED_MODULE_0__.AUTH_CONDITION.MIN_USER_NAME_LENGTH ||
+            name.length > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.AUTH_CONDITION.MAX_USER_NAME_LENGTH)
+            throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INVALID_USER_NAME_LENGTH);
+        return true;
+    }
+    isValidatedPassword(password) {
+        // 8~16자, 최소 영어, 숫자, 특수문자 포함
+        const passwordRegExp = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/;
+        if (!passwordRegExp.test(password))
+            throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INVALID_USER_PASSWORD);
+        return true;
+    }
+}
+_Auth_signupButton = new WeakMap();
 
 
 /***/ }),
@@ -968,39 +1556,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
 /* harmony import */ var _utils_domain_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/domain.utils */ "./src/utils/domain.utils.ts");
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _CoinVault_instances, _CoinVault_coinsQuantity, _CoinVault_addCoins, _CoinVault_validateMoney, _CoinVault_isValidatedReturnCoins, _CoinVault_substractCoins;
 
 
 class CoinVault {
     constructor() {
-        this.coinsQuantity = Object.assign({}, _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_INIT_QUANTITY);
+        _CoinVault_instances.add(this);
+        _CoinVault_coinsQuantity.set(this, void 0);
+        __classPrivateFieldSet(this, _CoinVault_coinsQuantity, Object.assign({}, _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_INIT_QUANTITY), "f");
     }
     getCoins() {
-        return this.coinsQuantity;
+        return __classPrivateFieldGet(this, _CoinVault_coinsQuantity, "f");
     }
     getBalance() {
-        return [...Object.entries(this.coinsQuantity)].reduce((previous, [key, value]) => previous + _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_PRICE_TABLE[key] * value, 0);
+        return Object.entries(__classPrivateFieldGet(this, _CoinVault_coinsQuantity, "f")).reduce((previous, [key, value]) => previous + _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_UNIT_TABLE[key] * value, 0);
     }
     chargeMoney(money) {
-        this.validateMoney(money);
-        this.addCoins(this.generateRandomCoins(money));
-    }
-    addCoins(coins) {
-        [...Object.entries(coins)].forEach(([key, value]) => {
-            this.coinsQuantity[key] += value;
-        });
-    }
-    validateMoney(money) {
-        if (money + this.getBalance() > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_VAULT_CONDITION.MAX_BALANCE) {
-            throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_BALANCE_LIMIT);
-        }
-        if (money % _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_CONDITION.UNIT_PRICE !== 0) {
-            throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_DIVIDED_BY_COIN_UNIT);
-        }
+        __classPrivateFieldGet(this, _CoinVault_instances, "m", _CoinVault_validateMoney).call(this, money);
+        __classPrivateFieldGet(this, _CoinVault_instances, "m", _CoinVault_addCoins).call(this, this.generateRandomCoins(money));
     }
     generateRandomCoins(money) {
         let balance = money;
         const generatedCoins = Object.assign({}, _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_INIT_QUANTITY);
-        [...Object.entries(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_PRICE_TABLE)].forEach(([key, price]) => {
+        Object.entries(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_UNIT_TABLE).forEach(([key, price]) => {
             const maxQuotient = balance / price;
             if (price === _utils_constants__WEBPACK_IMPORTED_MODULE_0__.CHEAPEST_COIN) {
                 generatedCoins[key] = maxQuotient;
@@ -1012,7 +1601,49 @@ class CoinVault {
         });
         return generatedCoins;
     }
+    returnCoins(purhcaseMoney) {
+        if (__classPrivateFieldGet(this, _CoinVault_instances, "m", _CoinVault_isValidatedReturnCoins).call(this, purhcaseMoney)) {
+            const returnedCoins = Object.assign({}, _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_INIT_QUANTITY);
+            let remainder = purhcaseMoney;
+            Object.entries(__classPrivateFieldGet(this, _CoinVault_coinsQuantity, "f")).forEach(([key, quantity]) => {
+                const coinUnit = _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_UNIT_TABLE[key];
+                if (remainder === 0 || remainder < coinUnit)
+                    return;
+                const maxAvailableCoinQuantity = Math.min(quantity, remainder / coinUnit);
+                returnedCoins[key] = maxAvailableCoinQuantity;
+                remainder -= maxAvailableCoinQuantity * coinUnit;
+            });
+            __classPrivateFieldGet(this, _CoinVault_instances, "m", _CoinVault_substractCoins).call(this, returnedCoins);
+            return [returnedCoins, remainder];
+        }
+    }
 }
+_CoinVault_coinsQuantity = new WeakMap(), _CoinVault_instances = new WeakSet(), _CoinVault_addCoins = function _CoinVault_addCoins(coins) {
+    const coinsQuantity = Object.assign({}, __classPrivateFieldGet(this, _CoinVault_coinsQuantity, "f"));
+    Object.entries(coins).forEach(([key, value]) => {
+        coinsQuantity[key] += value;
+    });
+    __classPrivateFieldSet(this, _CoinVault_coinsQuantity, coinsQuantity, "f");
+}, _CoinVault_validateMoney = function _CoinVault_validateMoney(money) {
+    if (money + this.getBalance() > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_VAULT_CONDITION.MAX_BALANCE) {
+        throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_BALANCE_LIMIT);
+    }
+    if (money % _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_CONDITION.UNIT_PRICE !== 0) {
+        throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_DIVIDED_BY_COIN_UNIT);
+    }
+}, _CoinVault_isValidatedReturnCoins = function _CoinVault_isValidatedReturnCoins(purhcaseMoney) {
+    if (purhcaseMoney === 0)
+        throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NO_PURCHASE_MONEY);
+    if (this.getBalance() === 0)
+        throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NO_COINS);
+    return true;
+}, _CoinVault_substractCoins = function _CoinVault_substractCoins(returnedCoins) {
+    const currentCoins = Object.assign({}, __classPrivateFieldGet(this, _CoinVault_coinsQuantity, "f"));
+    Object.entries(returnedCoins).forEach(([key, quantity]) => {
+        currentCoins[key] -= quantity;
+    });
+    __classPrivateFieldSet(this, _CoinVault_coinsQuantity, currentCoins, "f");
+};
 
 
 /***/ }),
@@ -1028,40 +1659,61 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Product": () => (/* binding */ Product)
 /* harmony export */ });
 /* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var _Product_name, _Product_price, _Product_quantity;
 
 class Product {
-    constructor(name, price, quantity) {
-        if (this.validateAllProp(name, price, quantity)) {
+    constructor({ name, price, quantity }) {
+        _Product_name.set(this, void 0);
+        _Product_price.set(this, void 0);
+        _Product_quantity.set(this, void 0);
+        if (this.isValidatedAllProp({ name, price, quantity })) {
             this.setName(name);
             this.setPrice(price);
             this.setQuantity(quantity);
         }
     }
     getName() {
-        return this.name;
+        return __classPrivateFieldGet(this, _Product_name, "f");
     }
     getPrice() {
-        return this.price;
+        return __classPrivateFieldGet(this, _Product_price, "f");
     }
     getQuantity() {
-        return this.quantity;
+        return __classPrivateFieldGet(this, _Product_quantity, "f");
+    }
+    getAllProperties() {
+        return { name: __classPrivateFieldGet(this, _Product_name, "f"), price: __classPrivateFieldGet(this, _Product_price, "f"), quantity: __classPrivateFieldGet(this, _Product_quantity, "f") };
     }
     setName(name) {
-        this.name = name;
+        __classPrivateFieldSet(this, _Product_name, name, "f");
     }
     setPrice(price) {
-        this.price = price;
+        __classPrivateFieldSet(this, _Product_price, price, "f");
     }
     setQuantity(quantity) {
-        this.quantity = quantity;
+        __classPrivateFieldSet(this, _Product_quantity, quantity, "f");
     }
-    validateName(name) {
+    decreaseQuantity(quantity = 1) {
+        __classPrivateFieldSet(this, _Product_quantity, __classPrivateFieldGet(this, _Product_quantity, "f") - quantity, "f");
+    }
+    isValidatedName(name) {
         if (name.length > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_NAME_LENGTH) {
             throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_PRODUCT_NAME_LENGTH_LIMIT);
         }
         return true;
     }
-    validatePrice(price) {
+    isValidatedPrice(price) {
         if (price < _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MIN_PRICE || price > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_PRICE) {
             throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_WITHIN_PRODUCT_PRICE_RANGE);
         }
@@ -1070,19 +1722,19 @@ class Product {
         }
         return true;
     }
-    validateQuantity(quantity) {
+    isValidatedQuantity(quantity) {
         if (quantity > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_QUANTITY) {
             throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_PRODUCT_QUANTITY_LIMIT);
         }
         return true;
     }
-    validateAllProp(name, price, quantity) {
-        return this.validateName(name) && this.validatePrice(price) && this.validateQuantity(quantity);
-    }
-    getAllProperties() {
-        return { name: this.name, price: this.price, quantity: this.quantity };
+    isValidatedAllProp({ name, price, quantity }) {
+        return (this.isValidatedName(name) &&
+            this.isValidatedPrice(price) &&
+            this.isValidatedQuantity(quantity));
     }
 }
+_Product_name = new WeakMap(), _Product_price = new WeakMap(), _Product_quantity = new WeakMap();
 
 
 /***/ }),
@@ -1099,41 +1751,128 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
 /* harmony import */ var _Product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Product */ "./src/domain/Product.ts");
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _ProductCatalog_instances, _ProductCatalog_productList, _ProductCatalog_deepCopy, _ProductCatalog_isValidatedPurchase;
 
 
 class ProductCatalog {
     constructor() {
-        this.productList = [];
+        _ProductCatalog_instances.add(this);
+        _ProductCatalog_productList.set(this, void 0);
+        __classPrivateFieldSet(this, _ProductCatalog_productList, [new _Product__WEBPACK_IMPORTED_MODULE_1__.Product({ name: '콜라', price: 2000, quantity: 10 })], "f");
     }
     getProductList() {
-        return this.productList;
+        return __classPrivateFieldGet(this, _ProductCatalog_productList, "f");
     }
-    addProduct(name, price, quantity) {
-        const product = this.findProduct(name);
-        if (this.isSameProductExist(product, price)) {
-            this.accumulateQuantity(product, quantity);
+    addProduct(product) {
+        const { name } = product;
+        if (this.isSameProductExist(name))
             return;
+        const deepCopiedProductList = __classPrivateFieldGet(this, _ProductCatalog_instances, "m", _ProductCatalog_deepCopy).call(this, __classPrivateFieldGet(this, _ProductCatalog_productList, "f"));
+        __classPrivateFieldSet(this, _ProductCatalog_productList, [...deepCopiedProductList, new _Product__WEBPACK_IMPORTED_MODULE_1__.Product(product)], "f");
+    }
+    isSameProductExist(name) {
+        if (this.findProduct(name))
+            throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.DUPLICATE_PRODUCT_NAME_EXIST);
+        return false;
+    }
+    findProduct(name, targetList = __classPrivateFieldGet(this, _ProductCatalog_productList, "f")) {
+        return targetList.find((product) => product.getName() === name);
+    }
+    buyProduct(name, purchaseMoney) {
+        if (__classPrivateFieldGet(this, _ProductCatalog_instances, "m", _ProductCatalog_isValidatedPurchase).call(this, name, purchaseMoney)) {
+            const deepCopiedProductList = __classPrivateFieldGet(this, _ProductCatalog_instances, "m", _ProductCatalog_deepCopy).call(this, __classPrivateFieldGet(this, _ProductCatalog_productList, "f"));
+            const targetProduct = this.findProduct(name, deepCopiedProductList);
+            targetProduct.decreaseQuantity();
+            __classPrivateFieldSet(this, _ProductCatalog_productList, deepCopiedProductList, "f");
+            const exchange = purchaseMoney - targetProduct.getPrice();
+            return exchange;
         }
-        this.productList = [...this.productList, new _Product__WEBPACK_IMPORTED_MODULE_1__.Product(name, price, quantity)];
-    }
-    isSameProductExist(product, price) {
-        if (!product)
-            return false;
-        if (product.getPrice() !== price)
-            throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.SAME_PRODUCT_NAME_NOT_SAME_PRODUCT_PRICE);
-        return true;
-    }
-    findProduct(name) {
-        return this.productList.find((product) => product.getName() === name);
-    }
-    accumulateQuantity(product, quantity) {
-        product.validateQuantity(product.getQuantity() + quantity);
-        product.setQuantity(product.getQuantity() + quantity);
     }
     deleteProduct(name) {
-        this.productList = this.productList.filter((product) => product.getName() !== name);
+        __classPrivateFieldSet(this, _ProductCatalog_productList, __classPrivateFieldGet(this, _ProductCatalog_productList, "f").filter((product) => product.getName() !== name), "f");
+    }
+    editProduct(targetProductName, editedProductProps) {
+        const targetProduct = this.findProduct(targetProductName);
+        if (targetProduct.isValidatedAllProp(editedProductProps)) {
+            const { name, price, quantity } = editedProductProps;
+            targetProduct.setName(name);
+            targetProduct.setPrice(price);
+            targetProduct.setQuantity(quantity);
+        }
     }
 }
+_ProductCatalog_productList = new WeakMap(), _ProductCatalog_instances = new WeakSet(), _ProductCatalog_deepCopy = function _ProductCatalog_deepCopy(productList) {
+    return productList.map((product) => new _Product__WEBPACK_IMPORTED_MODULE_1__.Product(product.getAllProperties()));
+}, _ProductCatalog_isValidatedPurchase = function _ProductCatalog_isValidatedPurchase(name, purchaseMoney) {
+    const price = this.findProduct(name).getPrice();
+    if (purchaseMoney < price)
+        throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.MORE_PURCHASE_MONEY_NEEDED);
+    return true;
+};
+
+
+/***/ }),
+
+/***/ "./src/domain/PurchaseMoney.ts":
+/*!*************************************!*\
+  !*** ./src/domain/PurchaseMoney.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "PurchaseMoney": () => (/* binding */ PurchaseMoney)
+/* harmony export */ });
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var _PurchaseMoney_instances, _PurchaseMoney_value, _PurchaseMoney_isValidatedMoney;
+
+class PurchaseMoney {
+    constructor() {
+        _PurchaseMoney_instances.add(this);
+        _PurchaseMoney_value.set(this, void 0);
+        this.setMoney(0);
+    }
+    getMoney() {
+        return __classPrivateFieldGet(this, _PurchaseMoney_value, "f");
+    }
+    setMoney(value) {
+        __classPrivateFieldSet(this, _PurchaseMoney_value, value, "f");
+    }
+    addMoney(money) {
+        if (__classPrivateFieldGet(this, _PurchaseMoney_instances, "m", _PurchaseMoney_isValidatedMoney).call(this, money)) {
+            __classPrivateFieldSet(this, _PurchaseMoney_value, __classPrivateFieldGet(this, _PurchaseMoney_value, "f") + money, "f");
+        }
+    }
+}
+_PurchaseMoney_value = new WeakMap(), _PurchaseMoney_instances = new WeakSet(), _PurchaseMoney_isValidatedMoney = function _PurchaseMoney_isValidatedMoney(money) {
+    if (money % 10 != 0)
+        throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INVALID_PURCHASE_MONEY);
+    if (money + __classPrivateFieldGet(this, _PurchaseMoney_value, "f") > 10000)
+        throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_PURCHASE_MONEY_LIMIT);
+    return true;
+};
 
 
 /***/ }),
@@ -1146,15 +1885,22 @@ class ProductCatalog {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AUTH_CONDITION": () => (/* binding */ AUTH_CONDITION),
 /* harmony export */   "CHEAPEST_COIN": () => (/* binding */ CHEAPEST_COIN),
 /* harmony export */   "COIN_CONDITION": () => (/* binding */ COIN_CONDITION),
 /* harmony export */   "COINS_INIT_QUANTITY": () => (/* binding */ COINS_INIT_QUANTITY),
-/* harmony export */   "COINS_PRICE_TABLE": () => (/* binding */ COINS_PRICE_TABLE),
+/* harmony export */   "COINS_UNIT_TABLE": () => (/* binding */ COINS_UNIT_TABLE),
 /* harmony export */   "COIN_VAULT_CONDITION": () => (/* binding */ COIN_VAULT_CONDITION),
 /* harmony export */   "ERROR_MESSAGE": () => (/* binding */ ERROR_MESSAGE),
 /* harmony export */   "URL_PATH": () => (/* binding */ URL_PATH),
 /* harmony export */   "PRODUCT_CONDITION": () => (/* binding */ PRODUCT_CONDITION)
 /* harmony export */ });
+const AUTH_CONDITION = {
+    MIN_USER_NAME_LENGTH: 2,
+    MAX_USER_NAME_LENGTH: 6,
+    MIN_USER_PASSWORD_LENGTH: 8,
+    MAX_USER_PASSWORD_LENGTH: 16,
+};
 const CHEAPEST_COIN = 10;
 const COIN_CONDITION = {
     UNIT_PRICE: 10,
@@ -1165,7 +1911,7 @@ const COINS_INIT_QUANTITY = {
     coin50: 0,
     coin10: 0,
 };
-const COINS_PRICE_TABLE = {
+const COINS_UNIT_TABLE = {
     coin500: 500,
     coin100: 100,
     coin50: 50,
@@ -1177,16 +1923,24 @@ const COIN_VAULT_CONDITION = {
 const ERROR_MESSAGE = {
     NOT_DIVIDED_BY_COIN_UNIT: '상평통보는 안 받습니다. 10원단위로 넣어주세요!',
     NOT_DIVIDED_BY_PRODUCT_PRICE_UNIT: '10원단위로 가격을 입력해주세요~',
+    MORE_PURCHASE_MONEY_NEEDED: '상품을 구매할 금액이 부족합니다. 더 투입해주세요~',
+    INVALID_PURCHASE_MONEY: '10원단위로 나누어 떨어지는 금액만 투입 가능합니다~',
+    INVALID_USER_NAME_LENGTH: '이름은 2~6글자까지 가능합니다~',
+    INVALID_USER_PASSWORD: '비밀번호는 8~16자 영어, 숫자, 특수문자로 구성되있어야 합니다~',
+    NO_COINS: '현재 자판기에 잔돈이 부족하여 반환이 불가능합니다. 관리자에게 문의해주세요~',
+    NO_PURCHASE_MONEY: '투입하신 금액이 없습니다.',
     NOT_WITHIN_PRODUCT_PRICE_RANGE: '100원 이상, 10,000원 이하의 가격을 입력주세요~',
     OVER_BALANCE_LIMIT: '돈통이 가득찼어요! 100,000원 까지만 보관 가능합니다.',
     OVER_PRODUCT_NAME_LENGTH_LIMIT: '10글자 미만의 상품명을 넣어주세요~',
     OVER_PRODUCT_QUANTITY_LIMIT: '수량은 최대 20개까지만 가능합니다~',
-    SAME_PRODUCT_NAME_NOT_SAME_PRODUCT_PRICE: '이미 존재하는 상품이름을 사용하시려면 가격이 동일해야합니다.',
+    OVER_PURCHASE_MONEY_LIMIT: '10,000원까지만 투입 가능합니다',
+    DUPLICATE_PRODUCT_NAME_EXIST: '중복된 상품명입니다',
 };
 const URL_PATH = {
     HOME: '/',
     PRODUCT_MANAGE: '/productManage',
     BALANCE_CHAREGE: '/balanceCharge',
+    PRODUCT_PURCHASE: '/productPurchase',
 };
 const PRODUCT_CONDITION = {
     MAX_NAME_LENGTH: 10,
@@ -1209,9 +1963,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "getRandomNumZeroToMax": () => (/* binding */ getRandomNumZeroToMax)
 /* harmony export */ });
-const getRandomNumZeroToMax = (max) => {
-    return Math.floor(Math.random() * max);
-};
+const getRandomNumZeroToMax = (max) => Math.floor(Math.random() * max);
 
 
 /***/ }),
@@ -1226,31 +1978,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "BalanceChargeView": () => (/* binding */ BalanceChargeView)
 /* harmony export */ });
-/* harmony import */ var _component_BalanceChargeInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../component/BalanceChargeInput */ "./src/component/BalanceChargeInput.ts");
+/* harmony import */ var _component_BalanceChargeInputForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../component/BalanceChargeInputForm */ "./src/component/BalanceChargeInputForm.ts");
 /* harmony import */ var _component_CoinVaultTable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../component/CoinVaultTable */ "./src/component/CoinVaultTable.ts");
-/* harmony import */ var _domain_CoinVault__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../domain/CoinVault */ "./src/domain/CoinVault.ts");
-
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _BalanceChargeView_balanceChargeInputForm, _BalanceChargeView_coinVaultTable, _BalanceChargeView_coinVault, _BalanceChargeView_balanceChargeContainer, _BalanceChargeView_isRendered;
 
 
 class BalanceChargeView {
-    constructor() {
-        this.coinVault = new _domain_CoinVault__WEBPACK_IMPORTED_MODULE_2__.CoinVault();
-        this.contentsContainer = document.querySelector('#contents-container');
+    constructor({ coinVault }) {
+        _BalanceChargeView_balanceChargeInputForm.set(this, void 0);
+        _BalanceChargeView_coinVaultTable.set(this, void 0);
+        _BalanceChargeView_coinVault.set(this, void 0);
+        _BalanceChargeView_balanceChargeContainer.set(this, void 0);
+        _BalanceChargeView_isRendered.set(this, void 0);
+        __classPrivateFieldSet(this, _BalanceChargeView_isRendered, false, "f");
+        __classPrivateFieldSet(this, _BalanceChargeView_balanceChargeContainer, document.querySelector('.balance-charge-container'), "f");
+        __classPrivateFieldSet(this, _BalanceChargeView_coinVault, coinVault, "f");
+        __classPrivateFieldSet(this, _BalanceChargeView_balanceChargeInputForm, new _component_BalanceChargeInputForm__WEBPACK_IMPORTED_MODULE_0__.BalanceChargeInputForm({
+            target: __classPrivateFieldGet(this, _BalanceChargeView_balanceChargeContainer, "f"),
+            coinVault: __classPrivateFieldGet(this, _BalanceChargeView_coinVault, "f"),
+        }), "f");
+        __classPrivateFieldSet(this, _BalanceChargeView_coinVaultTable, new _component_CoinVaultTable__WEBPACK_IMPORTED_MODULE_1__.CoinVaultTable({
+            target: __classPrivateFieldGet(this, _BalanceChargeView_balanceChargeContainer, "f"),
+            coinVault: __classPrivateFieldGet(this, _BalanceChargeView_coinVault, "f"),
+        }), "f");
     }
-    init() {
-        this.contentsContainer.textContent = '';
-        this.props = {
-            target: this.contentsContainer,
-            coinVault: this.coinVault,
-        };
-        this.balanceChargeInput = new _component_BalanceChargeInput__WEBPACK_IMPORTED_MODULE_0__.BalanceChargeInput(this.props);
-        this.coinVaultTable = new _component_CoinVaultTable__WEBPACK_IMPORTED_MODULE_1__.CoinVaultTable(this.props);
+    getIsRendered() {
+        return __classPrivateFieldGet(this, _BalanceChargeView_isRendered, "f");
+    }
+    setIsRendered(status) {
+        __classPrivateFieldSet(this, _BalanceChargeView_isRendered, status, "f");
+    }
+    show() {
+        __classPrivateFieldGet(this, _BalanceChargeView_balanceChargeContainer, "f").classList.remove('hide');
+    }
+    hide() {
+        __classPrivateFieldGet(this, _BalanceChargeView_balanceChargeContainer, "f").classList.add('hide');
     }
     renderAll() {
-        this.balanceChargeInput.render();
-        this.coinVaultTable.render();
+        __classPrivateFieldGet(this, _BalanceChargeView_balanceChargeInputForm, "f").render();
+        __classPrivateFieldGet(this, _BalanceChargeView_coinVaultTable, "f").render();
     }
 }
+_BalanceChargeView_balanceChargeInputForm = new WeakMap(), _BalanceChargeView_coinVaultTable = new WeakMap(), _BalanceChargeView_coinVault = new WeakMap(), _BalanceChargeView_balanceChargeContainer = new WeakMap(), _BalanceChargeView_isRendered = new WeakMap();
 
 
 /***/ }),
@@ -1267,66 +2047,141 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _ProductManageView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductManageView */ "./src/view/ProductManageView.ts");
 /* harmony import */ var _BalanceChargeView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BalanceChargeView */ "./src/view/BalanceChargeView.ts");
-/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
+/* harmony import */ var _ProductPurchaseView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductPurchaseView */ "./src/view/ProductPurchaseView.ts");
+/* harmony import */ var _domain_CoinVault__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../domain/CoinVault */ "./src/domain/CoinVault.ts");
+/* harmony import */ var _domain_ProductCatalog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../domain/ProductCatalog */ "./src/domain/ProductCatalog.ts");
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _NavView_instances, _NavView_productManageNavBtn, _NavView_balanceChargeNavBtn, _NavView_productPurchaseNavBtn, _NavView_contentsContainer, _NavView_productManageView, _NavView_balanceChargeView, _NavView_productPurchaseView, _NavView_coinVault, _NavView_productCatalog, _NavView_handlePopstate, _NavView_handleShowProductManageTab, _NavView_handleShowBalanceChargeTab, _NavView_handleShowProductPurhcaseTab, _NavView_renderHome, _NavView_handleUrlPath;
 
 
 
+
+
+
+// 임시
+// import { LoginView } from './LoginView';
+// import { SignupView } from './SignupView';
+// import { UserInfoEditView } from './userInfoEditView';
+// 임시 종료
 class NavView {
     constructor() {
-        this.handlePopstate = (savedData) => {
-            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.HOME) {
-                this.renderHome();
+        _NavView_instances.add(this);
+        _NavView_productManageNavBtn.set(this, void 0);
+        _NavView_balanceChargeNavBtn.set(this, void 0);
+        _NavView_productPurchaseNavBtn.set(this, void 0);
+        _NavView_contentsContainer.set(this, void 0);
+        _NavView_productManageView.set(this, void 0);
+        _NavView_balanceChargeView.set(this, void 0);
+        _NavView_productPurchaseView.set(this, void 0);
+        _NavView_coinVault.set(this, void 0);
+        _NavView_productCatalog.set(this, void 0);
+        _NavView_handlePopstate.set(this, (savedData) => {
+            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_5__.URL_PATH.HOME) {
+                __classPrivateFieldGet(this, _NavView_instances, "m", _NavView_renderHome).call(this);
                 return;
             }
-            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.PRODUCT_MANAGE) {
-                this.productManageView.init();
-                this.productManageView.renderAll();
+            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_5__.URL_PATH.PRODUCT_MANAGE) {
+                __classPrivateFieldGet(this, _NavView_productManageView, "f").show();
+                __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").hide();
+                __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").hide();
                 return;
             }
-            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.BALANCE_CHAREGE) {
-                this.balanceChargeView.init();
-                this.balanceChargeView.renderAll();
+            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_5__.URL_PATH.BALANCE_CHAREGE) {
+                __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").show();
+                __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").hide();
+                __classPrivateFieldGet(this, _NavView_productManageView, "f").hide();
                 return;
             }
-        };
-        this.handleShowProductManageTab = () => {
-            this.productManageView.init();
-            this.productManageView.renderAll();
-            const path = _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.PRODUCT_MANAGE;
-            this.handleUrlPath(path);
-        };
-        this.handleShowBalanceChargeTab = () => {
-            this.balanceChargeView.init();
-            this.balanceChargeView.renderAll();
-            const path = _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.BALANCE_CHAREGE;
-            this.handleUrlPath(path);
-        };
-        this.productManageView = new _ProductManageView__WEBPACK_IMPORTED_MODULE_0__.ProductManageView();
-        this.balanceChargeView = new _BalanceChargeView__WEBPACK_IMPORTED_MODULE_1__.BalanceChargeView();
-        this.contentsContainer = document.querySelector('#contents-container');
-        this.productManageNavBtn = document.querySelector('#product-manage-nav-button');
-        this.balanceChargeNavBtn = document.querySelector('#charge-balance-nav-button');
-        this.productManageNavBtn.addEventListener('click', this.handleShowProductManageTab);
-        this.balanceChargeNavBtn.addEventListener('click', this.handleShowBalanceChargeTab);
-        window.addEventListener('popstate', (savedData) => {
-            this.handlePopstate(savedData);
         });
-        this.renderHome();
-    }
-    renderHome() {
-        this.contentsContainer.textContent = '';
-        const path = _utils_constants__WEBPACK_IMPORTED_MODULE_2__.URL_PATH.HOME;
-        history.pushState({ path }, null, path);
-    }
-    handleUrlPath(path) {
-        const isSamePath = location.pathname === path;
-        if (isSamePath) {
-            history.replaceState({ path }, null, path);
-            return;
-        }
-        history.pushState({ path }, null, path);
+        _NavView_handleShowProductManageTab.set(this, () => {
+            if (!__classPrivateFieldGet(this, _NavView_productManageView, "f").getIsRendered()) {
+                __classPrivateFieldGet(this, _NavView_productManageView, "f").renderAll();
+                __classPrivateFieldGet(this, _NavView_productManageView, "f").setIsRendered(true);
+            }
+            __classPrivateFieldGet(this, _NavView_productManageView, "f").show();
+            __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").hide();
+            __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").hide();
+            const path = _utils_constants__WEBPACK_IMPORTED_MODULE_5__.URL_PATH.PRODUCT_MANAGE;
+            __classPrivateFieldGet(this, _NavView_instances, "m", _NavView_handleUrlPath).call(this, path);
+        });
+        _NavView_handleShowBalanceChargeTab.set(this, () => {
+            if (!__classPrivateFieldGet(this, _NavView_balanceChargeView, "f").getIsRendered()) {
+                __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").renderAll();
+                __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").setIsRendered(true);
+            }
+            __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").show();
+            __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").hide();
+            __classPrivateFieldGet(this, _NavView_productManageView, "f").hide();
+            const path = _utils_constants__WEBPACK_IMPORTED_MODULE_5__.URL_PATH.BALANCE_CHAREGE;
+            __classPrivateFieldGet(this, _NavView_instances, "m", _NavView_handleUrlPath).call(this, path);
+        });
+        _NavView_handleShowProductPurhcaseTab.set(this, () => {
+            // 렌더링이 되어있지 않다면 렌더링을 해주고
+            // 되어있다면 class hide show만 조정
+            if (!__classPrivateFieldGet(this, _NavView_productPurchaseView, "f").getIsRendered()) {
+                __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").renderAll();
+                __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").setIsRendered(true);
+            }
+            __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").show();
+            __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").hide();
+            __classPrivateFieldGet(this, _NavView_productManageView, "f").hide();
+            const path = _utils_constants__WEBPACK_IMPORTED_MODULE_5__.URL_PATH.PRODUCT_PURCHASE;
+            __classPrivateFieldGet(this, _NavView_instances, "m", _NavView_handleUrlPath).call(this, path);
+        });
+        __classPrivateFieldSet(this, _NavView_coinVault, new _domain_CoinVault__WEBPACK_IMPORTED_MODULE_3__.CoinVault(), "f");
+        __classPrivateFieldSet(this, _NavView_productCatalog, new _domain_ProductCatalog__WEBPACK_IMPORTED_MODULE_4__.ProductCatalog(), "f");
+        __classPrivateFieldSet(this, _NavView_productManageView, new _ProductManageView__WEBPACK_IMPORTED_MODULE_0__.ProductManageView({
+            productCatalog: __classPrivateFieldGet(this, _NavView_productCatalog, "f"),
+        }), "f");
+        __classPrivateFieldSet(this, _NavView_balanceChargeView, new _BalanceChargeView__WEBPACK_IMPORTED_MODULE_1__.BalanceChargeView({
+            coinVault: __classPrivateFieldGet(this, _NavView_coinVault, "f"),
+        }), "f");
+        __classPrivateFieldSet(this, _NavView_productPurchaseView, new _ProductPurchaseView__WEBPACK_IMPORTED_MODULE_2__.ProductPurchaseView({
+            productCatalog: __classPrivateFieldGet(this, _NavView_productCatalog, "f"),
+            coinVault: __classPrivateFieldGet(this, _NavView_coinVault, "f"),
+        }), "f");
+        /**
+         * 임시
+         */
+        // new LoginView(document.querySelector('#auth-section')).render();
+        // new SignupView(document.querySelector('#auth-section')).render();
+        // new UserInfoEditView(document.querySelector('#auth-section')).render();
+        /**
+         * 임시 종료
+         */
+        __classPrivateFieldSet(this, _NavView_productManageNavBtn, document.querySelector('#product-manage-nav-button'), "f");
+        __classPrivateFieldSet(this, _NavView_balanceChargeNavBtn, document.querySelector('#charge-balance-nav-button'), "f");
+        __classPrivateFieldSet(this, _NavView_productPurchaseNavBtn, document.querySelector('#product-purchase-nav-button'), "f");
+        __classPrivateFieldGet(this, _NavView_productManageNavBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _NavView_handleShowProductManageTab, "f"));
+        __classPrivateFieldGet(this, _NavView_balanceChargeNavBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _NavView_handleShowBalanceChargeTab, "f"));
+        __classPrivateFieldGet(this, _NavView_productPurchaseNavBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _NavView_handleShowProductPurhcaseTab, "f"));
+        window.addEventListener('popstate', (savedData) => {
+            __classPrivateFieldGet(this, _NavView_handlePopstate, "f").call(this, savedData);
+        });
+        __classPrivateFieldGet(this, _NavView_instances, "m", _NavView_renderHome).call(this);
     }
 }
+_NavView_productManageNavBtn = new WeakMap(), _NavView_balanceChargeNavBtn = new WeakMap(), _NavView_productPurchaseNavBtn = new WeakMap(), _NavView_contentsContainer = new WeakMap(), _NavView_productManageView = new WeakMap(), _NavView_balanceChargeView = new WeakMap(), _NavView_productPurchaseView = new WeakMap(), _NavView_coinVault = new WeakMap(), _NavView_productCatalog = new WeakMap(), _NavView_handlePopstate = new WeakMap(), _NavView_handleShowProductManageTab = new WeakMap(), _NavView_handleShowBalanceChargeTab = new WeakMap(), _NavView_handleShowProductPurhcaseTab = new WeakMap(), _NavView_instances = new WeakSet(), _NavView_renderHome = function _NavView_renderHome() {
+    __classPrivateFieldGet(this, _NavView_handleShowProductPurhcaseTab, "f").call(this);
+}, _NavView_handleUrlPath = function _NavView_handleUrlPath(path) {
+    const isSamePath = location.pathname === path;
+    if (isSamePath) {
+        history.replaceState({ path }, null, path);
+        return;
+    }
+    history.pushState({ path }, null, path);
+};
 
 
 /***/ }),
@@ -1341,32 +2196,154 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ProductManageView": () => (/* binding */ ProductManageView)
 /* harmony export */ });
-/* harmony import */ var _component_ProductInformationInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../component/ProductInformationInput */ "./src/component/ProductInformationInput.ts");
-/* harmony import */ var _component_ProductCatalogTable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../component/ProductCatalogTable */ "./src/component/ProductCatalogTable.ts");
-/* harmony import */ var _domain_ProductCatalog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../domain/ProductCatalog */ "./src/domain/ProductCatalog.ts");
-
+/* harmony import */ var _component_ProductCatalogTable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../component/ProductCatalogTable */ "./src/component/ProductCatalogTable.ts");
+/* harmony import */ var _component_ProductInformationInputForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../component/ProductInformationInputForm */ "./src/component/ProductInformationInputForm.ts");
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _ProductManageView_productCatalog, _ProductManageView_productInformationInputForm, _ProductManageView_productCatalogTable, _ProductManageView_productManageContainer, _ProductManageView_isRendered;
 
 
 class ProductManageView {
-    constructor() {
-        this.productCatalog = new _domain_ProductCatalog__WEBPACK_IMPORTED_MODULE_2__.ProductCatalog();
-        this.contentsContainer = document.querySelector('#contents-container');
+    constructor({ productCatalog }) {
+        _ProductManageView_productCatalog.set(this, void 0);
+        _ProductManageView_productInformationInputForm.set(this, void 0);
+        _ProductManageView_productCatalogTable.set(this, void 0);
+        _ProductManageView_productManageContainer.set(this, void 0);
+        _ProductManageView_isRendered.set(this, void 0);
+        __classPrivateFieldSet(this, _ProductManageView_isRendered, false, "f");
+        __classPrivateFieldSet(this, _ProductManageView_productManageContainer, document.querySelector('.product-manage-container'), "f");
+        __classPrivateFieldSet(this, _ProductManageView_productCatalog, productCatalog, "f");
+        __classPrivateFieldSet(this, _ProductManageView_productInformationInputForm, new _component_ProductInformationInputForm__WEBPACK_IMPORTED_MODULE_1__.ProductInformationInputForm({
+            target: __classPrivateFieldGet(this, _ProductManageView_productManageContainer, "f"),
+            productCatalog: __classPrivateFieldGet(this, _ProductManageView_productCatalog, "f"),
+        }), "f");
+        __classPrivateFieldSet(this, _ProductManageView_productCatalogTable, new _component_ProductCatalogTable__WEBPACK_IMPORTED_MODULE_0__.ProductCatalogTable({
+            target: __classPrivateFieldGet(this, _ProductManageView_productManageContainer, "f"),
+            productCatalog: __classPrivateFieldGet(this, _ProductManageView_productCatalog, "f"),
+        }), "f");
     }
-    init() {
-        this.contentsContainer.textContent = '';
-        this.props = {
-            target: this.contentsContainer,
-            productCatalog: this.productCatalog,
-        };
-        this.productInformationInput = new _component_ProductInformationInput__WEBPACK_IMPORTED_MODULE_0__.ProductInformationInput(this.props);
-        this.productCatalogTable = new _component_ProductCatalogTable__WEBPACK_IMPORTED_MODULE_1__.ProductCatalogTable(this.props);
+    getIsRendered() {
+        return __classPrivateFieldGet(this, _ProductManageView_isRendered, "f");
+    }
+    setIsRendered(status) {
+        __classPrivateFieldSet(this, _ProductManageView_isRendered, status, "f");
+    }
+    show() {
+        __classPrivateFieldGet(this, _ProductManageView_productManageContainer, "f").classList.remove('hide');
+    }
+    hide() {
+        __classPrivateFieldGet(this, _ProductManageView_productManageContainer, "f").classList.add('hide');
     }
     renderAll() {
-        this.contentsContainer.textContent = '';
-        this.productInformationInput.render();
-        this.productCatalogTable.render();
+        __classPrivateFieldGet(this, _ProductManageView_productInformationInputForm, "f").render();
+        __classPrivateFieldGet(this, _ProductManageView_productCatalogTable, "f").render();
     }
 }
+_ProductManageView_productCatalog = new WeakMap(), _ProductManageView_productInformationInputForm = new WeakMap(), _ProductManageView_productCatalogTable = new WeakMap(), _ProductManageView_productManageContainer = new WeakMap(), _ProductManageView_isRendered = new WeakMap();
+
+
+/***/ }),
+
+/***/ "./src/view/ProductPurchaseView.ts":
+/*!*****************************************!*\
+  !*** ./src/view/ProductPurchaseView.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ProductPurchaseView": () => (/* binding */ ProductPurchaseView)
+/* harmony export */ });
+/* harmony import */ var _component_PurchasableProductCatalogTable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../component/PurchasableProductCatalogTable */ "./src/component/PurchasableProductCatalogTable.ts");
+/* harmony import */ var _component_PurchaseMoneyInputForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../component/PurchaseMoneyInputForm */ "./src/component/PurchaseMoneyInputForm.ts");
+/* harmony import */ var _component_ReturnedCoinTable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../component/ReturnedCoinTable */ "./src/component/ReturnedCoinTable.ts");
+/* harmony import */ var _domain_PurchaseMoney__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../domain/PurchaseMoney */ "./src/domain/PurchaseMoney.ts");
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _ProductPurchaseView_productPurchaseContainer, _ProductPurchaseView_snackbar, _ProductPurchaseView_coinVault, _ProductPurchaseView_productCatalog, _ProductPurchaseView_purchaseMoney, _ProductPurchaseView_purchaseMoneyInputForm, _ProductPurchaseView_purchasableProductCatalogTable, _ProductPurchaseView_returnedCoinTable, _ProductPurchaseView_isRendered, _ProductPurchaseView_showSnackbar;
+
+
+
+
+class ProductPurchaseView {
+    constructor({ productCatalog, coinVault }) {
+        _ProductPurchaseView_productPurchaseContainer.set(this, void 0);
+        _ProductPurchaseView_snackbar.set(this, void 0);
+        _ProductPurchaseView_coinVault.set(this, void 0);
+        _ProductPurchaseView_productCatalog.set(this, void 0);
+        _ProductPurchaseView_purchaseMoney.set(this, void 0);
+        _ProductPurchaseView_purchaseMoneyInputForm.set(this, void 0);
+        _ProductPurchaseView_purchasableProductCatalogTable.set(this, void 0);
+        _ProductPurchaseView_returnedCoinTable.set(this, void 0);
+        _ProductPurchaseView_isRendered.set(this, void 0);
+        _ProductPurchaseView_showSnackbar.set(this, (e) => {
+            const { type, message } = e.detail;
+            const emoji = type === 'success' ? '✅' : '❌';
+            __classPrivateFieldGet(this, _ProductPurchaseView_snackbar, "f").textContent = `${emoji} ${message}`;
+            __classPrivateFieldGet(this, _ProductPurchaseView_snackbar, "f").classList.toggle('show');
+            setTimeout(() => {
+                __classPrivateFieldGet(this, _ProductPurchaseView_snackbar, "f").classList.toggle('show');
+            }, 1500);
+        });
+        __classPrivateFieldSet(this, _ProductPurchaseView_isRendered, false, "f");
+        __classPrivateFieldSet(this, _ProductPurchaseView_productPurchaseContainer, document.querySelector('.product-purchase-container'), "f");
+        __classPrivateFieldSet(this, _ProductPurchaseView_snackbar, document.querySelector('#snackbar'), "f");
+        __classPrivateFieldSet(this, _ProductPurchaseView_purchaseMoney, new _domain_PurchaseMoney__WEBPACK_IMPORTED_MODULE_3__.PurchaseMoney(), "f");
+        __classPrivateFieldSet(this, _ProductPurchaseView_productCatalog, productCatalog, "f");
+        __classPrivateFieldSet(this, _ProductPurchaseView_coinVault, coinVault, "f");
+        __classPrivateFieldSet(this, _ProductPurchaseView_purchaseMoneyInputForm, new _component_PurchaseMoneyInputForm__WEBPACK_IMPORTED_MODULE_1__.PurchaseMoneyInputForm({
+            target: __classPrivateFieldGet(this, _ProductPurchaseView_productPurchaseContainer, "f"),
+            purchaseMoney: __classPrivateFieldGet(this, _ProductPurchaseView_purchaseMoney, "f"),
+        }), "f");
+        __classPrivateFieldSet(this, _ProductPurchaseView_purchasableProductCatalogTable, new _component_PurchasableProductCatalogTable__WEBPACK_IMPORTED_MODULE_0__.PurchasableProductCatalogTable({
+            target: __classPrivateFieldGet(this, _ProductPurchaseView_productPurchaseContainer, "f"),
+            productCatalog: __classPrivateFieldGet(this, _ProductPurchaseView_productCatalog, "f"),
+            purchaseMoney: __classPrivateFieldGet(this, _ProductPurchaseView_purchaseMoney, "f"),
+        }), "f");
+        __classPrivateFieldSet(this, _ProductPurchaseView_returnedCoinTable, new _component_ReturnedCoinTable__WEBPACK_IMPORTED_MODULE_2__.ReturnedCoinTable({
+            target: __classPrivateFieldGet(this, _ProductPurchaseView_productPurchaseContainer, "f"),
+            coinVault: __classPrivateFieldGet(this, _ProductPurchaseView_coinVault, "f"),
+            purchaseMoney: __classPrivateFieldGet(this, _ProductPurchaseView_purchaseMoney, "f"),
+        }), "f");
+        __classPrivateFieldGet(this, _ProductPurchaseView_productPurchaseContainer, "f").addEventListener('showSnackbar', __classPrivateFieldGet(this, _ProductPurchaseView_showSnackbar, "f"));
+    }
+    getIsRendered() {
+        return __classPrivateFieldGet(this, _ProductPurchaseView_isRendered, "f");
+    }
+    setIsRendered(status) {
+        __classPrivateFieldSet(this, _ProductPurchaseView_isRendered, status, "f");
+    }
+    show() {
+        __classPrivateFieldGet(this, _ProductPurchaseView_productPurchaseContainer, "f").classList.remove('hide');
+    }
+    hide() {
+        __classPrivateFieldGet(this, _ProductPurchaseView_productPurchaseContainer, "f").classList.add('hide');
+    }
+    renderAll() {
+        __classPrivateFieldGet(this, _ProductPurchaseView_purchaseMoneyInputForm, "f").render();
+        __classPrivateFieldGet(this, _ProductPurchaseView_purchasableProductCatalogTable, "f").render();
+        __classPrivateFieldGet(this, _ProductPurchaseView_returnedCoinTable, "f").render();
+    }
+}
+_ProductPurchaseView_productPurchaseContainer = new WeakMap(), _ProductPurchaseView_snackbar = new WeakMap(), _ProductPurchaseView_coinVault = new WeakMap(), _ProductPurchaseView_productCatalog = new WeakMap(), _ProductPurchaseView_purchaseMoney = new WeakMap(), _ProductPurchaseView_purchaseMoneyInputForm = new WeakMap(), _ProductPurchaseView_purchasableProductCatalogTable = new WeakMap(), _ProductPurchaseView_returnedCoinTable = new WeakMap(), _ProductPurchaseView_isRendered = new WeakMap(), _ProductPurchaseView_showSnackbar = new WeakMap();
 
 
 /***/ })
@@ -1447,11 +2424,15 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/app.css */ "./src/css/app.css");
-/* harmony import */ var _view_NavView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./view/NavView */ "./src/view/NavView.ts");
+/* harmony import */ var _domain_Auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./domain/Auth */ "./src/domain/Auth.ts");
+/* harmony import */ var _view_NavView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./view/NavView */ "./src/view/NavView.ts");
+
+// 임시
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    new _view_NavView__WEBPACK_IMPORTED_MODULE_1__.NavView();
+    new _view_NavView__WEBPACK_IMPORTED_MODULE_2__.NavView();
+    new _domain_Auth__WEBPACK_IMPORTED_MODULE_1__.Auth();
 });
 
 })();
