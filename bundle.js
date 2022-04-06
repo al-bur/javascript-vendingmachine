@@ -704,10 +704,100 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/component/BalanceChargeInputForm.ts":
-/*!*************************************************!*\
-  !*** ./src/component/BalanceChargeInputForm.ts ***!
-  \*************************************************/
+/***/ "./src/component/Profile.ts":
+/*!**********************************!*\
+  !*** ./src/component/Profile.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Profile": () => (/* binding */ Profile)
+/* harmony export */ });
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _Profile_instances, _Profile_isRendered, _Profile_target, _Profile_selectContainer, _Profile_editUserInfoBtn, _Profile_logoutBtn, _Profile_thumbnailName, _Profile_auth, _Profile_setIsRendered, _Profile_template, _Profile_updateThumbnail, _Profile_selectDOM, _Profile_bindEvent, _Profile_handleToggleSelectContainer, _Profile_handleRequestEditUserInfoPage, _Profile_handleLogout;
+class Profile {
+    constructor({ target, auth }) {
+        _Profile_instances.add(this);
+        _Profile_isRendered.set(this, void 0);
+        _Profile_target.set(this, void 0);
+        _Profile_selectContainer.set(this, void 0);
+        _Profile_editUserInfoBtn.set(this, void 0);
+        _Profile_logoutBtn.set(this, void 0);
+        _Profile_thumbnailName.set(this, void 0);
+        _Profile_auth.set(this, void 0);
+        _Profile_handleToggleSelectContainer.set(this, () => {
+            __classPrivateFieldGet(this, _Profile_selectContainer, "f").classList.toggle('hide');
+        });
+        _Profile_handleRequestEditUserInfoPage.set(this, () => {
+            __classPrivateFieldGet(this, _Profile_target, "f").dispatchEvent(new CustomEvent('showEditUserInfoRequested'));
+            __classPrivateFieldGet(this, _Profile_selectContainer, "f").classList.toggle('hide');
+        });
+        _Profile_handleLogout.set(this, () => {
+            __classPrivateFieldGet(this, _Profile_auth, "f").logout();
+            __classPrivateFieldGet(this, _Profile_target, "f").dispatchEvent(new CustomEvent('logoutCompleted'));
+            __classPrivateFieldGet(this, _Profile_selectContainer, "f").classList.toggle('hide');
+        });
+        __classPrivateFieldSet(this, _Profile_target, target, "f");
+        __classPrivateFieldSet(this, _Profile_auth, auth, "f");
+        __classPrivateFieldSet(this, _Profile_isRendered, false, "f");
+    }
+    getIsRendered() {
+        return __classPrivateFieldGet(this, _Profile_isRendered, "f");
+    }
+    render() {
+        if (__classPrivateFieldGet(this, _Profile_isRendered, "f")) {
+            __classPrivateFieldGet(this, _Profile_instances, "m", _Profile_updateThumbnail).call(this);
+            return;
+        }
+        const { name } = JSON.parse(localStorage.getItem('user'));
+        __classPrivateFieldGet(this, _Profile_target, "f").insertAdjacentHTML('beforeend', __classPrivateFieldGet(this, _Profile_instances, "m", _Profile_template).call(this, name));
+        __classPrivateFieldGet(this, _Profile_instances, "m", _Profile_setIsRendered).call(this, true);
+        __classPrivateFieldGet(this, _Profile_instances, "m", _Profile_selectDOM).call(this);
+        __classPrivateFieldGet(this, _Profile_instances, "m", _Profile_bindEvent).call(this);
+    }
+}
+_Profile_isRendered = new WeakMap(), _Profile_target = new WeakMap(), _Profile_selectContainer = new WeakMap(), _Profile_editUserInfoBtn = new WeakMap(), _Profile_logoutBtn = new WeakMap(), _Profile_thumbnailName = new WeakMap(), _Profile_auth = new WeakMap(), _Profile_handleToggleSelectContainer = new WeakMap(), _Profile_handleRequestEditUserInfoPage = new WeakMap(), _Profile_handleLogout = new WeakMap(), _Profile_instances = new WeakSet(), _Profile_setIsRendered = function _Profile_setIsRendered(status) {
+    __classPrivateFieldSet(this, _Profile_isRendered, status, "f");
+}, _Profile_template = function _Profile_template(name) {
+    return `
+      <span class="name">${name.slice(0, 1)}</span>
+      <div class="select-container hide">
+        <button type="button" class="edit-user-info-button button">회원정보 수정</button>
+        <button type="button" class="logout-button button">로그아웃</button>
+      </div>
+    `;
+}, _Profile_updateThumbnail = function _Profile_updateThumbnail() {
+    const { name } = JSON.parse(localStorage.getItem('user'));
+    __classPrivateFieldGet(this, _Profile_thumbnailName, "f").textContent = `${name.slice(0, 1)}`;
+}, _Profile_selectDOM = function _Profile_selectDOM() {
+    __classPrivateFieldSet(this, _Profile_thumbnailName, document.querySelector('.name'), "f");
+    __classPrivateFieldSet(this, _Profile_selectContainer, document.querySelector('.select-container'), "f");
+    __classPrivateFieldSet(this, _Profile_editUserInfoBtn, document.querySelector('.edit-user-info-button'), "f");
+    __classPrivateFieldSet(this, _Profile_logoutBtn, document.querySelector('.logout-button'), "f");
+}, _Profile_bindEvent = function _Profile_bindEvent() {
+    __classPrivateFieldGet(this, _Profile_thumbnailName, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleToggleSelectContainer, "f"));
+    __classPrivateFieldGet(this, _Profile_editUserInfoBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleRequestEditUserInfoPage, "f"));
+    __classPrivateFieldGet(this, _Profile_logoutBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleLogout, "f"));
+};
+
+
+/***/ }),
+
+/***/ "./src/component/balanceCharge/BalanceChargeInputForm.ts":
+/*!***************************************************************!*\
+  !*** ./src/component/balanceCharge/BalanceChargeInputForm.ts ***!
+  \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -786,10 +876,10 @@ _BalanceChargeInputForm_target = new WeakMap(), _BalanceChargeInputForm_coinVaul
 
 /***/ }),
 
-/***/ "./src/component/CoinVaultTable.ts":
-/*!*****************************************!*\
-  !*** ./src/component/CoinVaultTable.ts ***!
-  \*****************************************/
+/***/ "./src/component/balanceCharge/CoinVaultTable.ts":
+/*!*******************************************************!*\
+  !*** ./src/component/balanceCharge/CoinVaultTable.ts ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -878,10 +968,10 @@ _CoinVaultTable_target = new WeakMap(), _CoinVaultTable_coinVault = new WeakMap(
 
 /***/ }),
 
-/***/ "./src/component/ProductCatalogTable.ts":
-/*!**********************************************!*\
-  !*** ./src/component/ProductCatalogTable.ts ***!
-  \**********************************************/
+/***/ "./src/component/productManage/ProductCatalogTable.ts":
+/*!************************************************************!*\
+  !*** ./src/component/productManage/ProductCatalogTable.ts ***!
+  \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1053,10 +1143,10 @@ _ProductCatalogTable_productCatalog = new WeakMap(), _ProductCatalogTable_target
 
 /***/ }),
 
-/***/ "./src/component/ProductInformationInputForm.ts":
-/*!******************************************************!*\
-  !*** ./src/component/ProductInformationInputForm.ts ***!
-  \******************************************************/
+/***/ "./src/component/productManage/ProductInformationInputForm.ts":
+/*!********************************************************************!*\
+  !*** ./src/component/productManage/ProductInformationInputForm.ts ***!
+  \********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1133,101 +1223,10 @@ _ProductInformationInputForm_productCatalog = new WeakMap(), _ProductInformation
 
 /***/ }),
 
-/***/ "./src/component/Profile.ts":
-/*!**********************************!*\
-  !*** ./src/component/Profile.ts ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Profile": () => (/* binding */ Profile)
-/* harmony export */ });
-var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
-    if (kind === "m") throw new TypeError("Private method is not writable");
-    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
-    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
-};
-var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
-    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
-    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
-};
-var _Profile_instances, _Profile_isRendered, _Profile_target, _Profile_selectContainer, _Profile_editUserInfoBtn, _Profile_logoutBtn, _Profile_thumbnailName, _Profile_auth, _Profile_setIsRendered, _Profile_template, _Profile_updateThumbnail, _Profile_selectDOM, _Profile_bindEvent, _Profile_handleToggleSelectContainer, _Profile_handleRequestEditUserInfoPage, _Profile_handleLogout;
-class Profile {
-    constructor({ target, auth }) {
-        _Profile_instances.add(this);
-        _Profile_isRendered.set(this, void 0);
-        _Profile_target.set(this, void 0);
-        _Profile_selectContainer.set(this, void 0);
-        _Profile_editUserInfoBtn.set(this, void 0);
-        _Profile_logoutBtn.set(this, void 0);
-        _Profile_thumbnailName.set(this, void 0);
-        _Profile_auth.set(this, void 0);
-        _Profile_handleToggleSelectContainer.set(this, () => {
-            __classPrivateFieldGet(this, _Profile_selectContainer, "f").classList.toggle('hide');
-        });
-        _Profile_handleRequestEditUserInfoPage.set(this, () => {
-            __classPrivateFieldGet(this, _Profile_target, "f").dispatchEvent(new CustomEvent('showEditUserInfoRequested'));
-            __classPrivateFieldGet(this, _Profile_selectContainer, "f").classList.toggle('hide');
-        });
-        _Profile_handleLogout.set(this, () => {
-            __classPrivateFieldGet(this, _Profile_auth, "f").logout();
-            __classPrivateFieldGet(this, _Profile_target, "f").dispatchEvent(new CustomEvent('logoutCompleted'));
-            __classPrivateFieldGet(this, _Profile_selectContainer, "f").classList.toggle('hide');
-        });
-        __classPrivateFieldSet(this, _Profile_target, target, "f");
-        __classPrivateFieldSet(this, _Profile_auth, auth, "f");
-        __classPrivateFieldSet(this, _Profile_isRendered, false, "f");
-    }
-    getIsRendered() {
-        return __classPrivateFieldGet(this, _Profile_isRendered, "f");
-    }
-    render() {
-        if (__classPrivateFieldGet(this, _Profile_isRendered, "f")) {
-            __classPrivateFieldGet(this, _Profile_instances, "m", _Profile_updateThumbnail).call(this);
-            return;
-        }
-        const { name } = JSON.parse(localStorage.getItem('user'));
-        console.log(name);
-        __classPrivateFieldGet(this, _Profile_target, "f").insertAdjacentHTML('beforeend', __classPrivateFieldGet(this, _Profile_instances, "m", _Profile_template).call(this, name));
-        __classPrivateFieldGet(this, _Profile_instances, "m", _Profile_setIsRendered).call(this, true);
-        __classPrivateFieldGet(this, _Profile_instances, "m", _Profile_selectDOM).call(this);
-        __classPrivateFieldGet(this, _Profile_instances, "m", _Profile_bindEvent).call(this);
-    }
-}
-_Profile_isRendered = new WeakMap(), _Profile_target = new WeakMap(), _Profile_selectContainer = new WeakMap(), _Profile_editUserInfoBtn = new WeakMap(), _Profile_logoutBtn = new WeakMap(), _Profile_thumbnailName = new WeakMap(), _Profile_auth = new WeakMap(), _Profile_handleToggleSelectContainer = new WeakMap(), _Profile_handleRequestEditUserInfoPage = new WeakMap(), _Profile_handleLogout = new WeakMap(), _Profile_instances = new WeakSet(), _Profile_setIsRendered = function _Profile_setIsRendered(status) {
-    __classPrivateFieldSet(this, _Profile_isRendered, status, "f");
-}, _Profile_template = function _Profile_template(name) {
-    return `
-      <span class="name">${name.slice(0, 1)}</span>
-      <div class="select-container hide">
-        <button type="button" class="edit-user-info-button button">회원정보 수정</button>
-        <button type="button" class="logout-button button">로그아웃</button>
-      </div>
-    `;
-}, _Profile_updateThumbnail = function _Profile_updateThumbnail() {
-    const { name } = JSON.parse(localStorage.getItem('user'));
-    __classPrivateFieldGet(this, _Profile_thumbnailName, "f").textContent = `${name.slice(0, 1)}`;
-}, _Profile_selectDOM = function _Profile_selectDOM() {
-    __classPrivateFieldSet(this, _Profile_thumbnailName, document.querySelector('.name'), "f");
-    __classPrivateFieldSet(this, _Profile_selectContainer, document.querySelector('.select-container'), "f");
-    __classPrivateFieldSet(this, _Profile_editUserInfoBtn, document.querySelector('.edit-user-info-button'), "f");
-    __classPrivateFieldSet(this, _Profile_logoutBtn, document.querySelector('.logout-button'), "f");
-}, _Profile_bindEvent = function _Profile_bindEvent() {
-    __classPrivateFieldGet(this, _Profile_thumbnailName, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleToggleSelectContainer, "f"));
-    __classPrivateFieldGet(this, _Profile_editUserInfoBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleRequestEditUserInfoPage, "f"));
-    __classPrivateFieldGet(this, _Profile_logoutBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleLogout, "f"));
-};
-
-
-/***/ }),
-
-/***/ "./src/component/PurchasableProductCatalogTable.ts":
-/*!*********************************************************!*\
-  !*** ./src/component/PurchasableProductCatalogTable.ts ***!
-  \*********************************************************/
+/***/ "./src/component/productPurchase/PurchasableProductCatalogTable.ts":
+/*!*************************************************************************!*\
+  !*** ./src/component/productPurchase/PurchasableProductCatalogTable.ts ***!
+  \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1299,6 +1298,8 @@ class PurchasableProductCatalogTable {
             priceSpan.textContent = price;
             quantitySpan.textContent = quantity;
             purchaseButton.dataset.productId = name;
+            purchaseButton.disabled = quantity === 0 ? true : false;
+            purchaseButton.textContent = quantity === 0 ? '품절' : '구매';
         });
         __classPrivateFieldSet(this, _PurchasableProductCatalogTable_target, target, "f");
         __classPrivateFieldSet(this, _PurchasableProductCatalogTable_productCatalog, productCatalog, "f");
@@ -1365,10 +1366,10 @@ _PurchasableProductCatalogTable_target = new WeakMap(), _PurchasableProductCatal
 
 /***/ }),
 
-/***/ "./src/component/PurchaseMoneyInputForm.ts":
-/*!*************************************************!*\
-  !*** ./src/component/PurchaseMoneyInputForm.ts ***!
-  \*************************************************/
+/***/ "./src/component/productPurchase/PurchaseMoneyInputForm.ts":
+/*!*****************************************************************!*\
+  !*** ./src/component/productPurchase/PurchaseMoneyInputForm.ts ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1451,10 +1452,10 @@ _PurchaseMoneyInputForm_target = new WeakMap(), _PurchaseMoneyInputForm_purchase
 
 /***/ }),
 
-/***/ "./src/component/ReturnedCoinTable.ts":
-/*!********************************************!*\
-  !*** ./src/component/ReturnedCoinTable.ts ***!
-  \********************************************/
+/***/ "./src/component/productPurchase/ReturnedCoinTable.ts":
+/*!************************************************************!*\
+  !*** ./src/component/productPurchase/ReturnedCoinTable.ts ***!
+  \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1595,8 +1596,8 @@ class Auth {
             if (!response.ok) {
                 throw new Error('아이디와 비밀번호를 확인해주세요~');
             }
-            const json = yield response.json();
-            return json;
+            const userInfo = yield response.json();
+            return userInfo;
         });
     }
     signup(signupInfo) {
@@ -2106,8 +2107,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "BalanceChargeView": () => (/* binding */ BalanceChargeView)
 /* harmony export */ });
-/* harmony import */ var _component_BalanceChargeInputForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../component/BalanceChargeInputForm */ "./src/component/BalanceChargeInputForm.ts");
-/* harmony import */ var _component_CoinVaultTable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../component/CoinVaultTable */ "./src/component/CoinVaultTable.ts");
+/* harmony import */ var _component_balanceCharge_BalanceChargeInputForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../component/balanceCharge/BalanceChargeInputForm */ "./src/component/balanceCharge/BalanceChargeInputForm.ts");
+/* harmony import */ var _component_balanceCharge_CoinVaultTable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../component/balanceCharge/CoinVaultTable */ "./src/component/balanceCharge/CoinVaultTable.ts");
 var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
     if (kind === "m") throw new TypeError("Private method is not writable");
     if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
@@ -2133,11 +2134,11 @@ class BalanceChargeView {
         __classPrivateFieldSet(this, _BalanceChargeView_isRendered, false, "f");
         __classPrivateFieldSet(this, _BalanceChargeView_balanceChargeContainer, document.querySelector('.balance-charge-container'), "f");
         __classPrivateFieldSet(this, _BalanceChargeView_coinVault, coinVault, "f");
-        __classPrivateFieldSet(this, _BalanceChargeView_balanceChargeInputForm, new _component_BalanceChargeInputForm__WEBPACK_IMPORTED_MODULE_0__.BalanceChargeInputForm({
+        __classPrivateFieldSet(this, _BalanceChargeView_balanceChargeInputForm, new _component_balanceCharge_BalanceChargeInputForm__WEBPACK_IMPORTED_MODULE_0__.BalanceChargeInputForm({
             target: __classPrivateFieldGet(this, _BalanceChargeView_balanceChargeContainer, "f"),
             coinVault: __classPrivateFieldGet(this, _BalanceChargeView_coinVault, "f"),
         }), "f");
-        __classPrivateFieldSet(this, _BalanceChargeView_coinVaultTable, new _component_CoinVaultTable__WEBPACK_IMPORTED_MODULE_1__.CoinVaultTable({
+        __classPrivateFieldSet(this, _BalanceChargeView_coinVaultTable, new _component_balanceCharge_CoinVaultTable__WEBPACK_IMPORTED_MODULE_1__.CoinVaultTable({
             target: __classPrivateFieldGet(this, _BalanceChargeView_balanceChargeContainer, "f"),
             coinVault: __classPrivateFieldGet(this, _BalanceChargeView_coinVault, "f"),
         }), "f");
@@ -2247,7 +2248,7 @@ _LoginView_target = new WeakMap(), _LoginView_loginForm = new WeakMap(), _LoginV
     __classPrivateFieldGet(this, _LoginView_signupLink, "f").addEventListener('click', __classPrivateFieldGet(this, _LoginView_handleRequestSignupPage, "f"));
 }, _LoginView_setUserInfo = function _LoginView_setUserInfo(userInfo) {
     const { accessToken, user } = userInfo;
-    localStorage.setItem('accessToken', JSON.stringify(accessToken));
+    localStorage.setItem('accessToken', accessToken);
     localStorage.setItem('user', JSON.stringify(user));
 };
 
@@ -2286,7 +2287,7 @@ var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || 
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
-var _NavView_instances, _NavView_nav, _NavView_thumbnail, _NavView_productManageNavBtn, _NavView_balanceChargeNavBtn, _NavView_productPurchaseNavBtn, _NavView_loginBtn, _NavView_contentsContainer, _NavView_authSection, _NavView_featureSection, _NavView_productManageView, _NavView_balanceChargeView, _NavView_productPurchaseView, _NavView_loginView, _NavView_signupView, _NavView_profile, _NavView_userInfoEditView, _NavView_coinVault, _NavView_productCatalog, _NavView_auth, _NavView_handlePopstate, _NavView_handleShowProductManageTab, _NavView_handleShowBalanceChargeTab, _NavView_handleShowProductPurhcaseTab, _NavView_handleShowLoginPage, _NavView_handleShowSignupPage, _NavView_handleShowEditUserInfoPage, _NavView_handleShowLoginCompletedPage, _NavView_handleShowLogoutCompletedPage, _NavView_renderHome, _NavView_handleUrlPath;
+var _NavView_instances, _NavView_nav, _NavView_thumbnail, _NavView_productManageNavBtn, _NavView_balanceChargeNavBtn, _NavView_productPurchaseNavBtn, _NavView_loginBtn, _NavView_authSection, _NavView_featureSection, _NavView_productManageView, _NavView_balanceChargeView, _NavView_productPurchaseView, _NavView_loginView, _NavView_signupView, _NavView_profile, _NavView_userInfoEditView, _NavView_coinVault, _NavView_productCatalog, _NavView_auth, _NavView_handlePopstate, _NavView_handleShowProductManageTab, _NavView_handleShowBalanceChargeTab, _NavView_handleShowProductPurhcaseTab, _NavView_handleShowLoginPage, _NavView_handleShowSignupPage, _NavView_handleShowEditUserInfoPage, _NavView_renderHome, _NavView_handleUrlPath;
 
 
 
@@ -2298,10 +2299,6 @@ var _NavView_instances, _NavView_nav, _NavView_thumbnail, _NavView_productManage
 
 
 
-// 임시
-// import { SignupView } from './SignupView';
-// import { UserInfoEditView } from './userInfoEditView';
-// 임시 종료
 class NavView {
     constructor() {
         _NavView_instances.add(this);
@@ -2311,7 +2308,6 @@ class NavView {
         _NavView_balanceChargeNavBtn.set(this, void 0);
         _NavView_productPurchaseNavBtn.set(this, void 0);
         _NavView_loginBtn.set(this, void 0);
-        _NavView_contentsContainer.set(this, void 0);
         _NavView_authSection.set(this, void 0);
         _NavView_featureSection.set(this, void 0);
         _NavView_productManageView.set(this, void 0);
@@ -2333,12 +2329,56 @@ class NavView {
                 __classPrivateFieldGet(this, _NavView_productManageView, "f").show();
                 __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").hide();
                 __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").hide();
+                __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.remove('hide');
+                __classPrivateFieldGet(this, _NavView_authSection, "f").classList.add('hide');
                 return;
             }
             if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.BALANCE_CHAREGE) {
                 __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").show();
                 __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").hide();
                 __classPrivateFieldGet(this, _NavView_productManageView, "f").hide();
+                __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.remove('hide');
+                __classPrivateFieldGet(this, _NavView_authSection, "f").classList.add('hide');
+                return;
+            }
+            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_PURCHASE) {
+                const accessToken = localStorage.getItem('accessToken');
+                __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").hide();
+                __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").show();
+                __classPrivateFieldGet(this, _NavView_productManageView, "f").hide();
+                __classPrivateFieldGet(this, _NavView_authSection, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.remove('hide');
+                if (accessToken) {
+                    __classPrivateFieldGet(this, _NavView_thumbnail, "f").classList.remove('hide');
+                    __classPrivateFieldGet(this, _NavView_profile, "f").render();
+                    __classPrivateFieldGet(this, _NavView_nav, "f").classList.remove('hide');
+                    return;
+                }
+                __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.remove('hide');
+                return;
+            }
+            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.LOGIN) {
+                __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _NavView_authSection, "f").classList.remove('hide');
+                __classPrivateFieldGet(this, _NavView_authSection, "f").textContent = '';
+                __classPrivateFieldGet(this, _NavView_loginView, "f").render();
+                return;
+            }
+            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.SINGUP) {
+                __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _NavView_authSection, "f").classList.remove('hide');
+                __classPrivateFieldGet(this, _NavView_authSection, "f").textContent = '';
+                __classPrivateFieldGet(this, _NavView_signupView, "f").render();
+                return;
+            }
+            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.EDIT_USER_INFO) {
+                __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _NavView_thumbnail, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _NavView_authSection, "f").classList.remove('hide');
+                __classPrivateFieldGet(this, _NavView_authSection, "f").textContent = '';
+                __classPrivateFieldGet(this, _NavView_userInfoEditView, "f").render();
                 return;
             }
         });
@@ -2399,29 +2439,25 @@ class NavView {
             const path = _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.EDIT_USER_INFO;
             __classPrivateFieldGet(this, _NavView_instances, "m", _NavView_handleUrlPath).call(this, path);
         });
-        _NavView_handleShowLoginCompletedPage.set(this, () => {
-            __classPrivateFieldGet(this, _NavView_authSection, "f").classList.add('hide');
-            __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.add('hide');
-            __classPrivateFieldGet(this, _NavView_profile, "f").render();
-            __classPrivateFieldGet(this, _NavView_thumbnail, "f").classList.remove('hide');
-            __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.remove('hide');
-            __classPrivateFieldGet(this, _NavView_nav, "f").classList.remove('hide');
-        });
-        _NavView_handleShowLogoutCompletedPage.set(this, () => {
-            __classPrivateFieldGet(this, _NavView_authSection, "f").classList.add('hide');
-            __classPrivateFieldGet(this, _NavView_nav, "f").classList.add('hide');
-            __classPrivateFieldGet(this, _NavView_thumbnail, "f").classList.add('hide');
-            __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.remove('hide');
-            __classPrivateFieldGet(this, _NavView_handleShowProductPurhcaseTab, "f").call(this);
-        });
         _NavView_renderHome.set(this, () => {
-            const accessToken = JSON.parse(localStorage.getItem('accessToken'));
-            if (!!accessToken) {
+            // 공통
+            __classPrivateFieldGet(this, _NavView_authSection, "f").classList.add('hide');
+            __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.remove('hide');
+            const accessToken = localStorage.getItem('accessToken');
+            if (accessToken) {
                 __classPrivateFieldGet(this, _NavView_profile, "f").render();
-                __classPrivateFieldGet(this, _NavView_handleShowLoginCompletedPage, "f").call(this);
+                __classPrivateFieldGet(this, _NavView_thumbnail, "f").classList.remove('hide');
+                __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _NavView_nav, "f").classList.remove('hide');
+            }
+            else {
+                __classPrivateFieldGet(this, _NavView_thumbnail, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.remove('hide');
+                __classPrivateFieldGet(this, _NavView_nav, "f").classList.add('hide');
             }
             __classPrivateFieldGet(this, _NavView_handleShowProductPurhcaseTab, "f").call(this);
         });
+        // DOM 선택
         __classPrivateFieldSet(this, _NavView_nav, document.querySelector('nav'), "f");
         __classPrivateFieldSet(this, _NavView_thumbnail, document.querySelector('.thumbnail'), "f");
         __classPrivateFieldSet(this, _NavView_productManageNavBtn, document.querySelector('#product-manage-nav-button'), "f");
@@ -2430,9 +2466,11 @@ class NavView {
         __classPrivateFieldSet(this, _NavView_loginBtn, document.querySelector('#login-button'), "f");
         __classPrivateFieldSet(this, _NavView_authSection, document.querySelector('.auth-section'), "f");
         __classPrivateFieldSet(this, _NavView_featureSection, document.querySelector('.feature-section'), "f");
+        // Domain 인스턴스 생성
         __classPrivateFieldSet(this, _NavView_coinVault, new _domain_CoinVault__WEBPACK_IMPORTED_MODULE_4__.CoinVault(), "f");
         __classPrivateFieldSet(this, _NavView_productCatalog, new _domain_ProductCatalog__WEBPACK_IMPORTED_MODULE_5__.ProductCatalog(), "f");
         __classPrivateFieldSet(this, _NavView_auth, new _domain_Auth__WEBPACK_IMPORTED_MODULE_8__.Auth(), "f");
+        // View, Component 인스턴스 생성
         __classPrivateFieldSet(this, _NavView_productManageView, new _ProductManageView__WEBPACK_IMPORTED_MODULE_0__.ProductManageView({
             productCatalog: __classPrivateFieldGet(this, _NavView_productCatalog, "f"),
         }), "f");
@@ -2447,22 +2485,24 @@ class NavView {
         __classPrivateFieldSet(this, _NavView_signupView, new _SignupView__WEBPACK_IMPORTED_MODULE_7__.SignupView({ target: __classPrivateFieldGet(this, _NavView_authSection, "f"), auth: __classPrivateFieldGet(this, _NavView_auth, "f") }), "f");
         __classPrivateFieldSet(this, _NavView_profile, new _component_Profile__WEBPACK_IMPORTED_MODULE_9__.Profile({ target: __classPrivateFieldGet(this, _NavView_thumbnail, "f"), auth: __classPrivateFieldGet(this, _NavView_auth, "f") }), "f");
         __classPrivateFieldSet(this, _NavView_userInfoEditView, new _UserInfoEditView__WEBPACK_IMPORTED_MODULE_10__.UserInfoEditView({ target: __classPrivateFieldGet(this, _NavView_authSection, "f"), auth: __classPrivateFieldGet(this, _NavView_auth, "f") }), "f");
+        // 이벤트 핸들러
         __classPrivateFieldGet(this, _NavView_productManageNavBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _NavView_handleShowProductManageTab, "f"));
         __classPrivateFieldGet(this, _NavView_balanceChargeNavBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _NavView_handleShowBalanceChargeTab, "f"));
         __classPrivateFieldGet(this, _NavView_productPurchaseNavBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _NavView_handleShowProductPurhcaseTab, "f"));
         __classPrivateFieldGet(this, _NavView_loginBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _NavView_handleShowLoginPage, "f"));
         __classPrivateFieldGet(this, _NavView_authSection, "f").addEventListener('signupPageRequested', __classPrivateFieldGet(this, _NavView_handleShowSignupPage, "f"));
-        __classPrivateFieldGet(this, _NavView_authSection, "f").addEventListener('loginCompleted', __classPrivateFieldGet(this, _NavView_handleShowLoginCompletedPage, "f"));
-        __classPrivateFieldGet(this, _NavView_authSection, "f").addEventListener('editUserInfoCompleted', __classPrivateFieldGet(this, _NavView_handleShowLoginCompletedPage, "f"));
+        __classPrivateFieldGet(this, _NavView_authSection, "f").addEventListener('loginCompleted', __classPrivateFieldGet(this, _NavView_renderHome, "f"));
+        __classPrivateFieldGet(this, _NavView_authSection, "f").addEventListener('editUserInfoCompleted', __classPrivateFieldGet(this, _NavView_renderHome, "f"));
         __classPrivateFieldGet(this, _NavView_thumbnail, "f").addEventListener('showEditUserInfoRequested', __classPrivateFieldGet(this, _NavView_handleShowEditUserInfoPage, "f"));
-        __classPrivateFieldGet(this, _NavView_thumbnail, "f").addEventListener('logoutCompleted', __classPrivateFieldGet(this, _NavView_handleShowLogoutCompletedPage, "f"));
+        __classPrivateFieldGet(this, _NavView_thumbnail, "f").addEventListener('logoutCompleted', __classPrivateFieldGet(this, _NavView_renderHome, "f"));
         window.addEventListener('popstate', (savedData) => {
             __classPrivateFieldGet(this, _NavView_handlePopstate, "f").call(this, savedData);
         });
+        // 홈 화면 렌더링
         __classPrivateFieldGet(this, _NavView_renderHome, "f").call(this);
     }
 }
-_NavView_nav = new WeakMap(), _NavView_thumbnail = new WeakMap(), _NavView_productManageNavBtn = new WeakMap(), _NavView_balanceChargeNavBtn = new WeakMap(), _NavView_productPurchaseNavBtn = new WeakMap(), _NavView_loginBtn = new WeakMap(), _NavView_contentsContainer = new WeakMap(), _NavView_authSection = new WeakMap(), _NavView_featureSection = new WeakMap(), _NavView_productManageView = new WeakMap(), _NavView_balanceChargeView = new WeakMap(), _NavView_productPurchaseView = new WeakMap(), _NavView_loginView = new WeakMap(), _NavView_signupView = new WeakMap(), _NavView_profile = new WeakMap(), _NavView_userInfoEditView = new WeakMap(), _NavView_coinVault = new WeakMap(), _NavView_productCatalog = new WeakMap(), _NavView_auth = new WeakMap(), _NavView_handlePopstate = new WeakMap(), _NavView_handleShowProductManageTab = new WeakMap(), _NavView_handleShowBalanceChargeTab = new WeakMap(), _NavView_handleShowProductPurhcaseTab = new WeakMap(), _NavView_handleShowLoginPage = new WeakMap(), _NavView_handleShowSignupPage = new WeakMap(), _NavView_handleShowEditUserInfoPage = new WeakMap(), _NavView_handleShowLoginCompletedPage = new WeakMap(), _NavView_handleShowLogoutCompletedPage = new WeakMap(), _NavView_renderHome = new WeakMap(), _NavView_instances = new WeakSet(), _NavView_handleUrlPath = function _NavView_handleUrlPath(path) {
+_NavView_nav = new WeakMap(), _NavView_thumbnail = new WeakMap(), _NavView_productManageNavBtn = new WeakMap(), _NavView_balanceChargeNavBtn = new WeakMap(), _NavView_productPurchaseNavBtn = new WeakMap(), _NavView_loginBtn = new WeakMap(), _NavView_authSection = new WeakMap(), _NavView_featureSection = new WeakMap(), _NavView_productManageView = new WeakMap(), _NavView_balanceChargeView = new WeakMap(), _NavView_productPurchaseView = new WeakMap(), _NavView_loginView = new WeakMap(), _NavView_signupView = new WeakMap(), _NavView_profile = new WeakMap(), _NavView_userInfoEditView = new WeakMap(), _NavView_coinVault = new WeakMap(), _NavView_productCatalog = new WeakMap(), _NavView_auth = new WeakMap(), _NavView_handlePopstate = new WeakMap(), _NavView_handleShowProductManageTab = new WeakMap(), _NavView_handleShowBalanceChargeTab = new WeakMap(), _NavView_handleShowProductPurhcaseTab = new WeakMap(), _NavView_handleShowLoginPage = new WeakMap(), _NavView_handleShowSignupPage = new WeakMap(), _NavView_handleShowEditUserInfoPage = new WeakMap(), _NavView_renderHome = new WeakMap(), _NavView_instances = new WeakSet(), _NavView_handleUrlPath = function _NavView_handleUrlPath(path) {
     const isSamePath = location.pathname === path;
     if (isSamePath) {
         history.replaceState({ path }, null, path);
@@ -2484,8 +2524,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ProductManageView": () => (/* binding */ ProductManageView)
 /* harmony export */ });
-/* harmony import */ var _component_ProductCatalogTable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../component/ProductCatalogTable */ "./src/component/ProductCatalogTable.ts");
-/* harmony import */ var _component_ProductInformationInputForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../component/ProductInformationInputForm */ "./src/component/ProductInformationInputForm.ts");
+/* harmony import */ var _component_productManage_ProductCatalogTable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../component/productManage/ProductCatalogTable */ "./src/component/productManage/ProductCatalogTable.ts");
+/* harmony import */ var _component_productManage_ProductInformationInputForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../component/productManage/ProductInformationInputForm */ "./src/component/productManage/ProductInformationInputForm.ts");
 var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
     if (kind === "m") throw new TypeError("Private method is not writable");
     if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
@@ -2511,11 +2551,11 @@ class ProductManageView {
         __classPrivateFieldSet(this, _ProductManageView_isRendered, false, "f");
         __classPrivateFieldSet(this, _ProductManageView_productManageContainer, document.querySelector('.product-manage-container'), "f");
         __classPrivateFieldSet(this, _ProductManageView_productCatalog, productCatalog, "f");
-        __classPrivateFieldSet(this, _ProductManageView_productInformationInputForm, new _component_ProductInformationInputForm__WEBPACK_IMPORTED_MODULE_1__.ProductInformationInputForm({
+        __classPrivateFieldSet(this, _ProductManageView_productInformationInputForm, new _component_productManage_ProductInformationInputForm__WEBPACK_IMPORTED_MODULE_1__.ProductInformationInputForm({
             target: __classPrivateFieldGet(this, _ProductManageView_productManageContainer, "f"),
             productCatalog: __classPrivateFieldGet(this, _ProductManageView_productCatalog, "f"),
         }), "f");
-        __classPrivateFieldSet(this, _ProductManageView_productCatalogTable, new _component_ProductCatalogTable__WEBPACK_IMPORTED_MODULE_0__.ProductCatalogTable({
+        __classPrivateFieldSet(this, _ProductManageView_productCatalogTable, new _component_productManage_ProductCatalogTable__WEBPACK_IMPORTED_MODULE_0__.ProductCatalogTable({
             target: __classPrivateFieldGet(this, _ProductManageView_productManageContainer, "f"),
             productCatalog: __classPrivateFieldGet(this, _ProductManageView_productCatalog, "f"),
         }), "f");
@@ -2552,9 +2592,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ProductPurchaseView": () => (/* binding */ ProductPurchaseView)
 /* harmony export */ });
-/* harmony import */ var _component_PurchasableProductCatalogTable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../component/PurchasableProductCatalogTable */ "./src/component/PurchasableProductCatalogTable.ts");
-/* harmony import */ var _component_PurchaseMoneyInputForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../component/PurchaseMoneyInputForm */ "./src/component/PurchaseMoneyInputForm.ts");
-/* harmony import */ var _component_ReturnedCoinTable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../component/ReturnedCoinTable */ "./src/component/ReturnedCoinTable.ts");
+/* harmony import */ var _component_productPurchase_PurchasableProductCatalogTable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../component/productPurchase/PurchasableProductCatalogTable */ "./src/component/productPurchase/PurchasableProductCatalogTable.ts");
+/* harmony import */ var _component_productPurchase_PurchaseMoneyInputForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../component/productPurchase/PurchaseMoneyInputForm */ "./src/component/productPurchase/PurchaseMoneyInputForm.ts");
+/* harmony import */ var _component_productPurchase_ReturnedCoinTable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../component/productPurchase/ReturnedCoinTable */ "./src/component/productPurchase/ReturnedCoinTable.ts");
 /* harmony import */ var _domain_PurchaseMoney__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../domain/PurchaseMoney */ "./src/domain/PurchaseMoney.ts");
 var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
     if (kind === "m") throw new TypeError("Private method is not writable");
@@ -2599,16 +2639,16 @@ class ProductPurchaseView {
         __classPrivateFieldSet(this, _ProductPurchaseView_purchaseMoney, new _domain_PurchaseMoney__WEBPACK_IMPORTED_MODULE_3__.PurchaseMoney(), "f");
         __classPrivateFieldSet(this, _ProductPurchaseView_productCatalog, productCatalog, "f");
         __classPrivateFieldSet(this, _ProductPurchaseView_coinVault, coinVault, "f");
-        __classPrivateFieldSet(this, _ProductPurchaseView_purchaseMoneyInputForm, new _component_PurchaseMoneyInputForm__WEBPACK_IMPORTED_MODULE_1__.PurchaseMoneyInputForm({
+        __classPrivateFieldSet(this, _ProductPurchaseView_purchaseMoneyInputForm, new _component_productPurchase_PurchaseMoneyInputForm__WEBPACK_IMPORTED_MODULE_1__.PurchaseMoneyInputForm({
             target: __classPrivateFieldGet(this, _ProductPurchaseView_productPurchaseContainer, "f"),
             purchaseMoney: __classPrivateFieldGet(this, _ProductPurchaseView_purchaseMoney, "f"),
         }), "f");
-        __classPrivateFieldSet(this, _ProductPurchaseView_purchasableProductCatalogTable, new _component_PurchasableProductCatalogTable__WEBPACK_IMPORTED_MODULE_0__.PurchasableProductCatalogTable({
+        __classPrivateFieldSet(this, _ProductPurchaseView_purchasableProductCatalogTable, new _component_productPurchase_PurchasableProductCatalogTable__WEBPACK_IMPORTED_MODULE_0__.PurchasableProductCatalogTable({
             target: __classPrivateFieldGet(this, _ProductPurchaseView_productPurchaseContainer, "f"),
             productCatalog: __classPrivateFieldGet(this, _ProductPurchaseView_productCatalog, "f"),
             purchaseMoney: __classPrivateFieldGet(this, _ProductPurchaseView_purchaseMoney, "f"),
         }), "f");
-        __classPrivateFieldSet(this, _ProductPurchaseView_returnedCoinTable, new _component_ReturnedCoinTable__WEBPACK_IMPORTED_MODULE_2__.ReturnedCoinTable({
+        __classPrivateFieldSet(this, _ProductPurchaseView_returnedCoinTable, new _component_productPurchase_ReturnedCoinTable__WEBPACK_IMPORTED_MODULE_2__.ReturnedCoinTable({
             target: __classPrivateFieldGet(this, _ProductPurchaseView_productPurchaseContainer, "f"),
             coinVault: __classPrivateFieldGet(this, _ProductPurchaseView_coinVault, "f"),
             purchaseMoney: __classPrivateFieldGet(this, _ProductPurchaseView_purchaseMoney, "f"),
@@ -2733,7 +2773,7 @@ _SignupView_target = new WeakMap(), _SignupView_signupForm = new WeakMap(), _Sig
     __classPrivateFieldGet(this, _SignupView_signupForm, "f").addEventListener('submit', __classPrivateFieldGet(this, _SignupView_handleSignup, "f"));
 }, _SignupView_setUserInfo = function _SignupView_setUserInfo(userInfo) {
     const { accessToken, user } = userInfo;
-    localStorage.setItem('accessToken', JSON.stringify(accessToken));
+    localStorage.setItem('accessToken', accessToken);
     localStorage.setItem('user', JSON.stringify(user));
 };
 
