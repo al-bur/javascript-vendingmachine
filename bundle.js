@@ -2066,7 +2066,7 @@ const URL_PATH = {
     HOME: '/',
     BALANCE_CHAREGE: '/balanceCharge',
     LOGIN: '/login',
-    SINGUP: '/signup',
+    SIGNUP: '/signup',
     EDIT_USER_INFO: '/editUserInfo',
     PRODUCT_MANAGE: '/productManage',
     PRODUCT_PURCHASE: '/productPurchase',
@@ -2255,265 +2255,6 @@ _LoginView_target = new WeakMap(), _LoginView_loginForm = new WeakMap(), _LoginV
 
 /***/ }),
 
-/***/ "./src/view/NavView.ts":
-/*!*****************************!*\
-  !*** ./src/view/NavView.ts ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "NavView": () => (/* binding */ NavView)
-/* harmony export */ });
-/* harmony import */ var _ProductManageView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductManageView */ "./src/view/ProductManageView.ts");
-/* harmony import */ var _BalanceChargeView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BalanceChargeView */ "./src/view/BalanceChargeView.ts");
-/* harmony import */ var _ProductPurchaseView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductPurchaseView */ "./src/view/ProductPurchaseView.ts");
-/* harmony import */ var _LoginView__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./LoginView */ "./src/view/LoginView.ts");
-/* harmony import */ var _domain_CoinVault__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../domain/CoinVault */ "./src/domain/CoinVault.ts");
-/* harmony import */ var _domain_ProductCatalog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../domain/ProductCatalog */ "./src/domain/ProductCatalog.ts");
-/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
-/* harmony import */ var _SignupView__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./SignupView */ "./src/view/SignupView.ts");
-/* harmony import */ var _domain_Auth__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../domain/Auth */ "./src/domain/Auth.ts");
-/* harmony import */ var _component_Profile__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../component/Profile */ "./src/component/Profile.ts");
-/* harmony import */ var _UserInfoEditView__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./UserInfoEditView */ "./src/view/UserInfoEditView.ts");
-var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
-    if (kind === "m") throw new TypeError("Private method is not writable");
-    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
-    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
-};
-var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
-    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
-    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
-};
-var _NavView_instances, _NavView_nav, _NavView_thumbnail, _NavView_productManageNavBtn, _NavView_balanceChargeNavBtn, _NavView_productPurchaseNavBtn, _NavView_loginBtn, _NavView_authSection, _NavView_featureSection, _NavView_productManageView, _NavView_balanceChargeView, _NavView_productPurchaseView, _NavView_loginView, _NavView_signupView, _NavView_profile, _NavView_userInfoEditView, _NavView_coinVault, _NavView_productCatalog, _NavView_auth, _NavView_handlePopstate, _NavView_handleShowProductManageTab, _NavView_handleShowBalanceChargeTab, _NavView_handleShowProductPurhcaseTab, _NavView_handleShowLoginPage, _NavView_handleShowSignupPage, _NavView_handleShowEditUserInfoPage, _NavView_renderHome, _NavView_handleUrlPath;
-
-
-
-
-
-
-
-
-
-
-
-class NavView {
-    constructor() {
-        _NavView_instances.add(this);
-        _NavView_nav.set(this, void 0);
-        _NavView_thumbnail.set(this, void 0);
-        _NavView_productManageNavBtn.set(this, void 0);
-        _NavView_balanceChargeNavBtn.set(this, void 0);
-        _NavView_productPurchaseNavBtn.set(this, void 0);
-        _NavView_loginBtn.set(this, void 0);
-        _NavView_authSection.set(this, void 0);
-        _NavView_featureSection.set(this, void 0);
-        _NavView_productManageView.set(this, void 0);
-        _NavView_balanceChargeView.set(this, void 0);
-        _NavView_productPurchaseView.set(this, void 0);
-        _NavView_loginView.set(this, void 0);
-        _NavView_signupView.set(this, void 0);
-        _NavView_profile.set(this, void 0);
-        _NavView_userInfoEditView.set(this, void 0);
-        _NavView_coinVault.set(this, void 0);
-        _NavView_productCatalog.set(this, void 0);
-        _NavView_auth.set(this, void 0);
-        _NavView_handlePopstate.set(this, (savedData) => {
-            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.HOME) {
-                __classPrivateFieldGet(this, _NavView_renderHome, "f").call(this);
-                return;
-            }
-            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_MANAGE) {
-                __classPrivateFieldGet(this, _NavView_productManageView, "f").show();
-                __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").hide();
-                __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").hide();
-                __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.remove('hide');
-                __classPrivateFieldGet(this, _NavView_authSection, "f").classList.add('hide');
-                return;
-            }
-            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.BALANCE_CHAREGE) {
-                __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").show();
-                __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").hide();
-                __classPrivateFieldGet(this, _NavView_productManageView, "f").hide();
-                __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.remove('hide');
-                __classPrivateFieldGet(this, _NavView_authSection, "f").classList.add('hide');
-                return;
-            }
-            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_PURCHASE) {
-                const accessToken = localStorage.getItem('accessToken');
-                __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").hide();
-                __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").show();
-                __classPrivateFieldGet(this, _NavView_productManageView, "f").hide();
-                __classPrivateFieldGet(this, _NavView_authSection, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.remove('hide');
-                if (accessToken) {
-                    __classPrivateFieldGet(this, _NavView_thumbnail, "f").classList.remove('hide');
-                    __classPrivateFieldGet(this, _NavView_profile, "f").render();
-                    __classPrivateFieldGet(this, _NavView_nav, "f").classList.remove('hide');
-                    return;
-                }
-                __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.remove('hide');
-                return;
-            }
-            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.LOGIN) {
-                __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _NavView_authSection, "f").classList.remove('hide');
-                __classPrivateFieldGet(this, _NavView_authSection, "f").textContent = '';
-                __classPrivateFieldGet(this, _NavView_loginView, "f").render();
-                return;
-            }
-            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.SINGUP) {
-                __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _NavView_authSection, "f").classList.remove('hide');
-                __classPrivateFieldGet(this, _NavView_authSection, "f").textContent = '';
-                __classPrivateFieldGet(this, _NavView_signupView, "f").render();
-                return;
-            }
-            if (savedData.state.path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.EDIT_USER_INFO) {
-                __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _NavView_thumbnail, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _NavView_authSection, "f").classList.remove('hide');
-                __classPrivateFieldGet(this, _NavView_authSection, "f").textContent = '';
-                __classPrivateFieldGet(this, _NavView_userInfoEditView, "f").render();
-                return;
-            }
-        });
-        _NavView_handleShowProductManageTab.set(this, () => {
-            if (!__classPrivateFieldGet(this, _NavView_productManageView, "f").getIsRendered()) {
-                __classPrivateFieldGet(this, _NavView_productManageView, "f").renderAll();
-            }
-            __classPrivateFieldGet(this, _NavView_productManageView, "f").show();
-            __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").hide();
-            __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").hide();
-            const path = _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_MANAGE;
-            __classPrivateFieldGet(this, _NavView_instances, "m", _NavView_handleUrlPath).call(this, path);
-        });
-        _NavView_handleShowBalanceChargeTab.set(this, () => {
-            if (!__classPrivateFieldGet(this, _NavView_balanceChargeView, "f").getIsRendered()) {
-                __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").renderAll();
-            }
-            __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").show();
-            __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").hide();
-            __classPrivateFieldGet(this, _NavView_productManageView, "f").hide();
-            const path = _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.BALANCE_CHAREGE;
-            __classPrivateFieldGet(this, _NavView_instances, "m", _NavView_handleUrlPath).call(this, path);
-        });
-        _NavView_handleShowProductPurhcaseTab.set(this, () => {
-            if (!__classPrivateFieldGet(this, _NavView_productPurchaseView, "f").getIsRendered()) {
-                __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").renderAll();
-            }
-            __classPrivateFieldGet(this, _NavView_productPurchaseView, "f").show();
-            __classPrivateFieldGet(this, _NavView_balanceChargeView, "f").hide();
-            __classPrivateFieldGet(this, _NavView_productManageView, "f").hide();
-            const path = _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_PURCHASE;
-            __classPrivateFieldGet(this, _NavView_instances, "m", _NavView_handleUrlPath).call(this, path);
-        });
-        _NavView_handleShowLoginPage.set(this, () => {
-            __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.add('hide');
-            __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.add('hide');
-            __classPrivateFieldGet(this, _NavView_authSection, "f").classList.remove('hide');
-            __classPrivateFieldGet(this, _NavView_authSection, "f").textContent = '';
-            __classPrivateFieldGet(this, _NavView_loginView, "f").render();
-            const path = _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.LOGIN;
-            __classPrivateFieldGet(this, _NavView_instances, "m", _NavView_handleUrlPath).call(this, path);
-        });
-        _NavView_handleShowSignupPage.set(this, () => {
-            __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.add('hide');
-            __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.add('hide');
-            __classPrivateFieldGet(this, _NavView_authSection, "f").classList.remove('hide');
-            __classPrivateFieldGet(this, _NavView_authSection, "f").textContent = '';
-            __classPrivateFieldGet(this, _NavView_signupView, "f").render();
-            const path = _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.SINGUP;
-            __classPrivateFieldGet(this, _NavView_instances, "m", _NavView_handleUrlPath).call(this, path);
-        });
-        _NavView_handleShowEditUserInfoPage.set(this, () => {
-            __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.add('hide');
-            __classPrivateFieldGet(this, _NavView_thumbnail, "f").classList.add('hide');
-            __classPrivateFieldGet(this, _NavView_authSection, "f").classList.remove('hide');
-            __classPrivateFieldGet(this, _NavView_authSection, "f").textContent = '';
-            __classPrivateFieldGet(this, _NavView_userInfoEditView, "f").render();
-            const path = _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.EDIT_USER_INFO;
-            __classPrivateFieldGet(this, _NavView_instances, "m", _NavView_handleUrlPath).call(this, path);
-        });
-        _NavView_renderHome.set(this, () => {
-            // 공통
-            __classPrivateFieldGet(this, _NavView_authSection, "f").classList.add('hide');
-            __classPrivateFieldGet(this, _NavView_featureSection, "f").classList.remove('hide');
-            const accessToken = localStorage.getItem('accessToken');
-            if (accessToken) {
-                __classPrivateFieldGet(this, _NavView_profile, "f").render();
-                __classPrivateFieldGet(this, _NavView_thumbnail, "f").classList.remove('hide');
-                __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _NavView_nav, "f").classList.remove('hide');
-            }
-            else {
-                __classPrivateFieldGet(this, _NavView_thumbnail, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _NavView_loginBtn, "f").classList.remove('hide');
-                __classPrivateFieldGet(this, _NavView_nav, "f").classList.add('hide');
-            }
-            __classPrivateFieldGet(this, _NavView_handleShowProductPurhcaseTab, "f").call(this);
-        });
-        // DOM 선택
-        __classPrivateFieldSet(this, _NavView_nav, document.querySelector('nav'), "f");
-        __classPrivateFieldSet(this, _NavView_thumbnail, document.querySelector('.thumbnail'), "f");
-        __classPrivateFieldSet(this, _NavView_productManageNavBtn, document.querySelector('#product-manage-nav-button'), "f");
-        __classPrivateFieldSet(this, _NavView_balanceChargeNavBtn, document.querySelector('#charge-balance-nav-button'), "f");
-        __classPrivateFieldSet(this, _NavView_productPurchaseNavBtn, document.querySelector('#product-purchase-nav-button'), "f");
-        __classPrivateFieldSet(this, _NavView_loginBtn, document.querySelector('#login-button'), "f");
-        __classPrivateFieldSet(this, _NavView_authSection, document.querySelector('.auth-section'), "f");
-        __classPrivateFieldSet(this, _NavView_featureSection, document.querySelector('.feature-section'), "f");
-        // Domain 인스턴스 생성
-        __classPrivateFieldSet(this, _NavView_coinVault, new _domain_CoinVault__WEBPACK_IMPORTED_MODULE_4__.CoinVault(), "f");
-        __classPrivateFieldSet(this, _NavView_productCatalog, new _domain_ProductCatalog__WEBPACK_IMPORTED_MODULE_5__.ProductCatalog(), "f");
-        __classPrivateFieldSet(this, _NavView_auth, new _domain_Auth__WEBPACK_IMPORTED_MODULE_8__.Auth(), "f");
-        // View, Component 인스턴스 생성
-        __classPrivateFieldSet(this, _NavView_productManageView, new _ProductManageView__WEBPACK_IMPORTED_MODULE_0__.ProductManageView({
-            productCatalog: __classPrivateFieldGet(this, _NavView_productCatalog, "f"),
-        }), "f");
-        __classPrivateFieldSet(this, _NavView_balanceChargeView, new _BalanceChargeView__WEBPACK_IMPORTED_MODULE_1__.BalanceChargeView({
-            coinVault: __classPrivateFieldGet(this, _NavView_coinVault, "f"),
-        }), "f");
-        __classPrivateFieldSet(this, _NavView_productPurchaseView, new _ProductPurchaseView__WEBPACK_IMPORTED_MODULE_2__.ProductPurchaseView({
-            productCatalog: __classPrivateFieldGet(this, _NavView_productCatalog, "f"),
-            coinVault: __classPrivateFieldGet(this, _NavView_coinVault, "f"),
-        }), "f");
-        __classPrivateFieldSet(this, _NavView_loginView, new _LoginView__WEBPACK_IMPORTED_MODULE_3__.LoginView({ target: __classPrivateFieldGet(this, _NavView_authSection, "f"), auth: __classPrivateFieldGet(this, _NavView_auth, "f") }), "f");
-        __classPrivateFieldSet(this, _NavView_signupView, new _SignupView__WEBPACK_IMPORTED_MODULE_7__.SignupView({ target: __classPrivateFieldGet(this, _NavView_authSection, "f"), auth: __classPrivateFieldGet(this, _NavView_auth, "f") }), "f");
-        __classPrivateFieldSet(this, _NavView_profile, new _component_Profile__WEBPACK_IMPORTED_MODULE_9__.Profile({ target: __classPrivateFieldGet(this, _NavView_thumbnail, "f"), auth: __classPrivateFieldGet(this, _NavView_auth, "f") }), "f");
-        __classPrivateFieldSet(this, _NavView_userInfoEditView, new _UserInfoEditView__WEBPACK_IMPORTED_MODULE_10__.UserInfoEditView({ target: __classPrivateFieldGet(this, _NavView_authSection, "f"), auth: __classPrivateFieldGet(this, _NavView_auth, "f") }), "f");
-        // 이벤트 핸들러
-        __classPrivateFieldGet(this, _NavView_productManageNavBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _NavView_handleShowProductManageTab, "f"));
-        __classPrivateFieldGet(this, _NavView_balanceChargeNavBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _NavView_handleShowBalanceChargeTab, "f"));
-        __classPrivateFieldGet(this, _NavView_productPurchaseNavBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _NavView_handleShowProductPurhcaseTab, "f"));
-        __classPrivateFieldGet(this, _NavView_loginBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _NavView_handleShowLoginPage, "f"));
-        __classPrivateFieldGet(this, _NavView_authSection, "f").addEventListener('signupPageRequested', __classPrivateFieldGet(this, _NavView_handleShowSignupPage, "f"));
-        __classPrivateFieldGet(this, _NavView_authSection, "f").addEventListener('loginCompleted', __classPrivateFieldGet(this, _NavView_renderHome, "f"));
-        __classPrivateFieldGet(this, _NavView_authSection, "f").addEventListener('editUserInfoCompleted', __classPrivateFieldGet(this, _NavView_renderHome, "f"));
-        __classPrivateFieldGet(this, _NavView_thumbnail, "f").addEventListener('showEditUserInfoRequested', __classPrivateFieldGet(this, _NavView_handleShowEditUserInfoPage, "f"));
-        __classPrivateFieldGet(this, _NavView_thumbnail, "f").addEventListener('logoutCompleted', __classPrivateFieldGet(this, _NavView_renderHome, "f"));
-        window.addEventListener('popstate', (savedData) => {
-            __classPrivateFieldGet(this, _NavView_handlePopstate, "f").call(this, savedData);
-        });
-        // 홈 화면 렌더링
-        __classPrivateFieldGet(this, _NavView_renderHome, "f").call(this);
-    }
-}
-_NavView_nav = new WeakMap(), _NavView_thumbnail = new WeakMap(), _NavView_productManageNavBtn = new WeakMap(), _NavView_balanceChargeNavBtn = new WeakMap(), _NavView_productPurchaseNavBtn = new WeakMap(), _NavView_loginBtn = new WeakMap(), _NavView_authSection = new WeakMap(), _NavView_featureSection = new WeakMap(), _NavView_productManageView = new WeakMap(), _NavView_balanceChargeView = new WeakMap(), _NavView_productPurchaseView = new WeakMap(), _NavView_loginView = new WeakMap(), _NavView_signupView = new WeakMap(), _NavView_profile = new WeakMap(), _NavView_userInfoEditView = new WeakMap(), _NavView_coinVault = new WeakMap(), _NavView_productCatalog = new WeakMap(), _NavView_auth = new WeakMap(), _NavView_handlePopstate = new WeakMap(), _NavView_handleShowProductManageTab = new WeakMap(), _NavView_handleShowBalanceChargeTab = new WeakMap(), _NavView_handleShowProductPurhcaseTab = new WeakMap(), _NavView_handleShowLoginPage = new WeakMap(), _NavView_handleShowSignupPage = new WeakMap(), _NavView_handleShowEditUserInfoPage = new WeakMap(), _NavView_renderHome = new WeakMap(), _NavView_instances = new WeakSet(), _NavView_handleUrlPath = function _NavView_handleUrlPath(path) {
-    const isSamePath = location.pathname === path;
-    if (isSamePath) {
-        history.replaceState({ path }, null, path);
-        return;
-    }
-    history.pushState({ path }, null, path);
-};
-
-
-/***/ }),
-
 /***/ "./src/view/ProductManageView.ts":
 /*!***************************************!*\
   !*** ./src/view/ProductManageView.ts ***!
@@ -2673,6 +2414,271 @@ class ProductPurchaseView {
 }
 _ProductPurchaseView_productPurchaseContainer = new WeakMap(), _ProductPurchaseView_snackbar = new WeakMap(), _ProductPurchaseView_coinVault = new WeakMap(), _ProductPurchaseView_productCatalog = new WeakMap(), _ProductPurchaseView_purchaseMoney = new WeakMap(), _ProductPurchaseView_purchaseMoneyInputForm = new WeakMap(), _ProductPurchaseView_purchasableProductCatalogTable = new WeakMap(), _ProductPurchaseView_returnedCoinTable = new WeakMap(), _ProductPurchaseView_isRendered = new WeakMap(), _ProductPurchaseView_showSnackbar = new WeakMap(), _ProductPurchaseView_instances = new WeakSet(), _ProductPurchaseView_setIsRendered = function _ProductPurchaseView_setIsRendered(status) {
     __classPrivateFieldSet(this, _ProductPurchaseView_isRendered, status, "f");
+};
+
+
+/***/ }),
+
+/***/ "./src/view/Router.ts":
+/*!****************************!*\
+  !*** ./src/view/Router.ts ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Router": () => (/* binding */ Router)
+/* harmony export */ });
+/* harmony import */ var _ProductManageView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductManageView */ "./src/view/ProductManageView.ts");
+/* harmony import */ var _BalanceChargeView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BalanceChargeView */ "./src/view/BalanceChargeView.ts");
+/* harmony import */ var _ProductPurchaseView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductPurchaseView */ "./src/view/ProductPurchaseView.ts");
+/* harmony import */ var _LoginView__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./LoginView */ "./src/view/LoginView.ts");
+/* harmony import */ var _domain_CoinVault__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../domain/CoinVault */ "./src/domain/CoinVault.ts");
+/* harmony import */ var _domain_ProductCatalog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../domain/ProductCatalog */ "./src/domain/ProductCatalog.ts");
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
+/* harmony import */ var _SignupView__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./SignupView */ "./src/view/SignupView.ts");
+/* harmony import */ var _domain_Auth__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../domain/Auth */ "./src/domain/Auth.ts");
+/* harmony import */ var _component_Profile__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../component/Profile */ "./src/component/Profile.ts");
+/* harmony import */ var _UserInfoEditView__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./UserInfoEditView */ "./src/view/UserInfoEditView.ts");
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _Router_instances, _Router_nav, _Router_thumbnail, _Router_productManageNavBtn, _Router_balanceChargeNavBtn, _Router_productPurchaseNavBtn, _Router_loginBtn, _Router_authSection, _Router_featureSection, _Router_productManageView, _Router_balanceChargeView, _Router_productPurchaseView, _Router_loginView, _Router_signupView, _Router_profile, _Router_userInfoEditView, _Router_coinVault, _Router_productCatalog, _Router_auth, _Router_handlePopstate, _Router_handleShowProductManageTab, _Router_handleShowBalanceChargeTab, _Router_handleShowProductPurhcaseTab, _Router_handleShowLoginPage, _Router_handleShowSignupPage, _Router_handleShowEditUserInfoPage, _Router_renderHome, _Router_handleHistoryState;
+
+
+
+
+
+
+
+
+
+
+
+class Router {
+    constructor() {
+        _Router_instances.add(this);
+        _Router_nav.set(this, void 0);
+        _Router_thumbnail.set(this, void 0);
+        _Router_productManageNavBtn.set(this, void 0);
+        _Router_balanceChargeNavBtn.set(this, void 0);
+        _Router_productPurchaseNavBtn.set(this, void 0);
+        _Router_loginBtn.set(this, void 0);
+        _Router_authSection.set(this, void 0);
+        _Router_featureSection.set(this, void 0);
+        _Router_productManageView.set(this, void 0);
+        _Router_balanceChargeView.set(this, void 0);
+        _Router_productPurchaseView.set(this, void 0);
+        _Router_loginView.set(this, void 0);
+        _Router_signupView.set(this, void 0);
+        _Router_profile.set(this, void 0);
+        _Router_userInfoEditView.set(this, void 0);
+        _Router_coinVault.set(this, void 0);
+        _Router_productCatalog.set(this, void 0);
+        _Router_auth.set(this, void 0);
+        _Router_handlePopstate.set(this, (e) => {
+            const { path } = e.state;
+            const accessToken = localStorage.getItem('accessToken');
+            if (path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.HOME) {
+                __classPrivateFieldGet(this, _Router_renderHome, "f").call(this);
+                return;
+            }
+            if (path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_MANAGE) {
+                if (!accessToken)
+                    return __classPrivateFieldGet(this, _Router_renderHome, "f").call(this);
+                __classPrivateFieldGet(this, _Router_productPurchaseView, "f").hide();
+                __classPrivateFieldGet(this, _Router_authSection, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _Router_balanceChargeView, "f").hide();
+                __classPrivateFieldGet(this, _Router_productManageView, "f").show();
+                __classPrivateFieldGet(this, _Router_thumbnail, "f").classList.remove('hide');
+                __classPrivateFieldGet(this, _Router_featureSection, "f").classList.remove('hide');
+                return;
+            }
+            if (path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.BALANCE_CHAREGE) {
+                if (!accessToken)
+                    return __classPrivateFieldGet(this, _Router_renderHome, "f").call(this);
+                __classPrivateFieldGet(this, _Router_productPurchaseView, "f").hide();
+                __classPrivateFieldGet(this, _Router_productManageView, "f").hide();
+                __classPrivateFieldGet(this, _Router_authSection, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _Router_thumbnail, "f").classList.remove('hide');
+                __classPrivateFieldGet(this, _Router_balanceChargeView, "f").show();
+                __classPrivateFieldGet(this, _Router_featureSection, "f").classList.remove('hide');
+                return;
+            }
+            if (path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_PURCHASE) {
+                __classPrivateFieldGet(this, _Router_balanceChargeView, "f").hide();
+                __classPrivateFieldGet(this, _Router_productManageView, "f").hide();
+                __classPrivateFieldGet(this, _Router_authSection, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _Router_productPurchaseView, "f").show();
+                __classPrivateFieldGet(this, _Router_featureSection, "f").classList.remove('hide');
+                if (accessToken) {
+                    __classPrivateFieldGet(this, _Router_thumbnail, "f").classList.remove('hide');
+                    __classPrivateFieldGet(this, _Router_profile, "f").render();
+                    __classPrivateFieldGet(this, _Router_nav, "f").classList.remove('hide');
+                    return;
+                }
+                __classPrivateFieldGet(this, _Router_loginBtn, "f").classList.remove('hide');
+                return;
+            }
+            if (path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.LOGIN) {
+                __classPrivateFieldGet(this, _Router_featureSection, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _Router_loginBtn, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _Router_authSection, "f").classList.remove('hide');
+                __classPrivateFieldGet(this, _Router_authSection, "f").textContent = '';
+                __classPrivateFieldGet(this, _Router_loginView, "f").render();
+                return;
+            }
+            if (path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.SIGNUP) {
+                __classPrivateFieldGet(this, _Router_featureSection, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _Router_loginBtn, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _Router_authSection, "f").classList.remove('hide');
+                __classPrivateFieldGet(this, _Router_authSection, "f").textContent = '';
+                __classPrivateFieldGet(this, _Router_signupView, "f").render();
+                return;
+            }
+            if (path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.EDIT_USER_INFO) {
+                __classPrivateFieldGet(this, _Router_featureSection, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _Router_thumbnail, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _Router_authSection, "f").classList.remove('hide');
+                __classPrivateFieldGet(this, _Router_authSection, "f").textContent = '';
+                __classPrivateFieldGet(this, _Router_userInfoEditView, "f").render();
+                return;
+            }
+        });
+        _Router_handleShowProductManageTab.set(this, () => {
+            if (!__classPrivateFieldGet(this, _Router_productManageView, "f").getIsRendered()) {
+                __classPrivateFieldGet(this, _Router_productManageView, "f").renderAll();
+            }
+            __classPrivateFieldGet(this, _Router_balanceChargeView, "f").hide();
+            __classPrivateFieldGet(this, _Router_productPurchaseView, "f").hide();
+            __classPrivateFieldGet(this, _Router_productManageView, "f").show();
+            __classPrivateFieldGet(this, _Router_instances, "m", _Router_handleHistoryState).call(this, _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_MANAGE);
+        });
+        _Router_handleShowBalanceChargeTab.set(this, () => {
+            if (!__classPrivateFieldGet(this, _Router_balanceChargeView, "f").getIsRendered()) {
+                __classPrivateFieldGet(this, _Router_balanceChargeView, "f").renderAll();
+            }
+            __classPrivateFieldGet(this, _Router_productPurchaseView, "f").hide();
+            __classPrivateFieldGet(this, _Router_productManageView, "f").hide();
+            __classPrivateFieldGet(this, _Router_balanceChargeView, "f").show();
+            __classPrivateFieldGet(this, _Router_instances, "m", _Router_handleHistoryState).call(this, _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.BALANCE_CHAREGE);
+        });
+        _Router_handleShowProductPurhcaseTab.set(this, () => {
+            if (!__classPrivateFieldGet(this, _Router_productPurchaseView, "f").getIsRendered()) {
+                __classPrivateFieldGet(this, _Router_productPurchaseView, "f").renderAll();
+            }
+            __classPrivateFieldGet(this, _Router_balanceChargeView, "f").hide();
+            __classPrivateFieldGet(this, _Router_productManageView, "f").hide();
+            __classPrivateFieldGet(this, _Router_productPurchaseView, "f").show();
+            __classPrivateFieldGet(this, _Router_instances, "m", _Router_handleHistoryState).call(this, _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_PURCHASE);
+        });
+        _Router_handleShowLoginPage.set(this, () => {
+            __classPrivateFieldGet(this, _Router_featureSection, "f").classList.add('hide');
+            __classPrivateFieldGet(this, _Router_loginBtn, "f").classList.add('hide');
+            __classPrivateFieldGet(this, _Router_authSection, "f").classList.remove('hide');
+            __classPrivateFieldGet(this, _Router_authSection, "f").textContent = '';
+            __classPrivateFieldGet(this, _Router_loginView, "f").render();
+            __classPrivateFieldGet(this, _Router_instances, "m", _Router_handleHistoryState).call(this, _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.LOGIN);
+        });
+        _Router_handleShowSignupPage.set(this, () => {
+            __classPrivateFieldGet(this, _Router_featureSection, "f").classList.add('hide');
+            __classPrivateFieldGet(this, _Router_loginBtn, "f").classList.add('hide');
+            __classPrivateFieldGet(this, _Router_authSection, "f").classList.remove('hide');
+            __classPrivateFieldGet(this, _Router_authSection, "f").textContent = '';
+            __classPrivateFieldGet(this, _Router_signupView, "f").render();
+            __classPrivateFieldGet(this, _Router_instances, "m", _Router_handleHistoryState).call(this, _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.SIGNUP);
+        });
+        _Router_handleShowEditUserInfoPage.set(this, () => {
+            __classPrivateFieldGet(this, _Router_featureSection, "f").classList.add('hide');
+            __classPrivateFieldGet(this, _Router_thumbnail, "f").classList.add('hide');
+            __classPrivateFieldGet(this, _Router_authSection, "f").classList.remove('hide');
+            __classPrivateFieldGet(this, _Router_authSection, "f").textContent = '';
+            __classPrivateFieldGet(this, _Router_userInfoEditView, "f").render();
+            __classPrivateFieldGet(this, _Router_instances, "m", _Router_handleHistoryState).call(this, _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.EDIT_USER_INFO);
+        });
+        _Router_renderHome.set(this, () => {
+            __classPrivateFieldGet(this, _Router_authSection, "f").classList.add('hide');
+            __classPrivateFieldGet(this, _Router_featureSection, "f").classList.remove('hide');
+            const accessToken = localStorage.getItem('accessToken');
+            if (accessToken) {
+                __classPrivateFieldGet(this, _Router_profile, "f").render();
+                __classPrivateFieldGet(this, _Router_thumbnail, "f").classList.remove('hide');
+                __classPrivateFieldGet(this, _Router_loginBtn, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _Router_nav, "f").classList.remove('hide');
+            }
+            else {
+                __classPrivateFieldGet(this, _Router_thumbnail, "f").classList.add('hide');
+                __classPrivateFieldGet(this, _Router_loginBtn, "f").classList.remove('hide');
+                __classPrivateFieldGet(this, _Router_nav, "f").classList.add('hide');
+            }
+            __classPrivateFieldGet(this, _Router_handleShowProductPurhcaseTab, "f").call(this);
+        });
+        // DOM 선택
+        __classPrivateFieldSet(this, _Router_nav, document.querySelector('nav'), "f");
+        __classPrivateFieldSet(this, _Router_thumbnail, document.querySelector('.thumbnail'), "f");
+        __classPrivateFieldSet(this, _Router_productManageNavBtn, document.querySelector('#product-manage-nav-button'), "f");
+        __classPrivateFieldSet(this, _Router_balanceChargeNavBtn, document.querySelector('#charge-balance-nav-button'), "f");
+        __classPrivateFieldSet(this, _Router_productPurchaseNavBtn, document.querySelector('#product-purchase-nav-button'), "f");
+        __classPrivateFieldSet(this, _Router_loginBtn, document.querySelector('#login-button'), "f");
+        __classPrivateFieldSet(this, _Router_authSection, document.querySelector('.auth-section'), "f");
+        __classPrivateFieldSet(this, _Router_featureSection, document.querySelector('.feature-section'), "f");
+        // Domain 인스턴스 생성
+        __classPrivateFieldSet(this, _Router_coinVault, new _domain_CoinVault__WEBPACK_IMPORTED_MODULE_4__.CoinVault(), "f");
+        __classPrivateFieldSet(this, _Router_productCatalog, new _domain_ProductCatalog__WEBPACK_IMPORTED_MODULE_5__.ProductCatalog(), "f");
+        __classPrivateFieldSet(this, _Router_auth, new _domain_Auth__WEBPACK_IMPORTED_MODULE_8__.Auth(), "f");
+        // View, Component 인스턴스 생성
+        __classPrivateFieldSet(this, _Router_productManageView, new _ProductManageView__WEBPACK_IMPORTED_MODULE_0__.ProductManageView({
+            productCatalog: __classPrivateFieldGet(this, _Router_productCatalog, "f"),
+        }), "f");
+        __classPrivateFieldSet(this, _Router_balanceChargeView, new _BalanceChargeView__WEBPACK_IMPORTED_MODULE_1__.BalanceChargeView({
+            coinVault: __classPrivateFieldGet(this, _Router_coinVault, "f"),
+        }), "f");
+        __classPrivateFieldSet(this, _Router_productPurchaseView, new _ProductPurchaseView__WEBPACK_IMPORTED_MODULE_2__.ProductPurchaseView({
+            productCatalog: __classPrivateFieldGet(this, _Router_productCatalog, "f"),
+            coinVault: __classPrivateFieldGet(this, _Router_coinVault, "f"),
+        }), "f");
+        __classPrivateFieldSet(this, _Router_loginView, new _LoginView__WEBPACK_IMPORTED_MODULE_3__.LoginView({ target: __classPrivateFieldGet(this, _Router_authSection, "f"), auth: __classPrivateFieldGet(this, _Router_auth, "f") }), "f");
+        __classPrivateFieldSet(this, _Router_signupView, new _SignupView__WEBPACK_IMPORTED_MODULE_7__.SignupView({ target: __classPrivateFieldGet(this, _Router_authSection, "f"), auth: __classPrivateFieldGet(this, _Router_auth, "f") }), "f");
+        __classPrivateFieldSet(this, _Router_profile, new _component_Profile__WEBPACK_IMPORTED_MODULE_9__.Profile({ target: __classPrivateFieldGet(this, _Router_thumbnail, "f"), auth: __classPrivateFieldGet(this, _Router_auth, "f") }), "f");
+        __classPrivateFieldSet(this, _Router_userInfoEditView, new _UserInfoEditView__WEBPACK_IMPORTED_MODULE_10__.UserInfoEditView({ target: __classPrivateFieldGet(this, _Router_authSection, "f"), auth: __classPrivateFieldGet(this, _Router_auth, "f") }), "f");
+        // 이벤트 핸들러
+        __classPrivateFieldGet(this, _Router_productManageNavBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _Router_handleShowProductManageTab, "f"));
+        __classPrivateFieldGet(this, _Router_balanceChargeNavBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _Router_handleShowBalanceChargeTab, "f"));
+        __classPrivateFieldGet(this, _Router_productPurchaseNavBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _Router_handleShowProductPurhcaseTab, "f"));
+        __classPrivateFieldGet(this, _Router_loginBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _Router_handleShowLoginPage, "f"));
+        __classPrivateFieldGet(this, _Router_authSection, "f").addEventListener('signupPageRequested', __classPrivateFieldGet(this, _Router_handleShowSignupPage, "f"));
+        __classPrivateFieldGet(this, _Router_authSection, "f").addEventListener('loginCompleted', __classPrivateFieldGet(this, _Router_renderHome, "f"));
+        __classPrivateFieldGet(this, _Router_authSection, "f").addEventListener('editUserInfoCompleted', __classPrivateFieldGet(this, _Router_renderHome, "f"));
+        __classPrivateFieldGet(this, _Router_thumbnail, "f").addEventListener('showEditUserInfoRequested', __classPrivateFieldGet(this, _Router_handleShowEditUserInfoPage, "f"));
+        __classPrivateFieldGet(this, _Router_thumbnail, "f").addEventListener('logoutCompleted', __classPrivateFieldGet(this, _Router_renderHome, "f"));
+        window.addEventListener('popstate', __classPrivateFieldGet(this, _Router_handlePopstate, "f"));
+        // 홈 화면 렌더링
+        __classPrivateFieldGet(this, _Router_renderHome, "f").call(this);
+    }
+}
+_Router_nav = new WeakMap(), _Router_thumbnail = new WeakMap(), _Router_productManageNavBtn = new WeakMap(), _Router_balanceChargeNavBtn = new WeakMap(), _Router_productPurchaseNavBtn = new WeakMap(), _Router_loginBtn = new WeakMap(), _Router_authSection = new WeakMap(), _Router_featureSection = new WeakMap(), _Router_productManageView = new WeakMap(), _Router_balanceChargeView = new WeakMap(), _Router_productPurchaseView = new WeakMap(), _Router_loginView = new WeakMap(), _Router_signupView = new WeakMap(), _Router_profile = new WeakMap(), _Router_userInfoEditView = new WeakMap(), _Router_coinVault = new WeakMap(), _Router_productCatalog = new WeakMap(), _Router_auth = new WeakMap(), _Router_handlePopstate = new WeakMap(), _Router_handleShowProductManageTab = new WeakMap(), _Router_handleShowBalanceChargeTab = new WeakMap(), _Router_handleShowProductPurhcaseTab = new WeakMap(), _Router_handleShowLoginPage = new WeakMap(), _Router_handleShowSignupPage = new WeakMap(), _Router_handleShowEditUserInfoPage = new WeakMap(), _Router_renderHome = new WeakMap(), _Router_instances = new WeakSet(), _Router_handleHistoryState = function _Router_handleHistoryState(path) {
+    const isSamePath = location.pathname === path;
+    if (isSamePath) {
+        history.replaceState({ path }, null, path);
+        return;
+    }
+    history.pushState({ path }, null, path);
+};
+const routes = (path) => {
+    switch (path) {
+        case '/login':
+            console.log('login');
+        case '/productPurchase':
+            console.log('productPurchase');
+    }
 };
 
 
@@ -2950,15 +2956,11 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/app.css */ "./src/css/app.css");
-/* harmony import */ var _domain_Auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./domain/Auth */ "./src/domain/Auth.ts");
-/* harmony import */ var _view_NavView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./view/NavView */ "./src/view/NavView.ts");
-
-// 임시
+/* harmony import */ var _view_Router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./view/Router */ "./src/view/Router.ts");
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    new _view_NavView__WEBPACK_IMPORTED_MODULE_2__.NavView();
-    new _domain_Auth__WEBPACK_IMPORTED_MODULE_1__.Auth();
+    new _view_Router__WEBPACK_IMPORTED_MODULE_1__.Router();
 });
 
 })();
