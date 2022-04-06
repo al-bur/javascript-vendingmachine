@@ -2026,7 +2026,7 @@ const AUTH_CONDITION = {
     MIN_USER_PASSWORD_LENGTH: 8,
     MAX_USER_PASSWORD_LENGTH: 16,
 };
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://albur-vm-json-server-auth.herokuapp.com';
 const CHEAPEST_COIN = 10;
 const COIN_CONDITION = {
     UNIT_PRICE: 10,
