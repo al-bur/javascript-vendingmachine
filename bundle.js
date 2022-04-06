@@ -857,7 +857,7 @@ _BalanceChargeInputForm_target = new WeakMap(), _BalanceChargeInputForm_coinVaul
       <div>
         <form id="charge-balance-input-form">
           <label id="charge-balance-input-label" for="charge-balance-input">자판기가 보유할 금액을 입력해주세요</label>
-          <input id="charge-balance-input" class="input" type="text" placeholder="금액" />
+          <input id="charge-balance-input" class="input" type="number" step="10" min="10" max="100000" placeholder="금액" />
           <button id="charge-balance-submit-btn" class="submit-button button" type="submit">충전</button>
         </form>
         <div id="current-balance-container">현재보유금액 : <span id="current-balance">${balance}</span>원</div>
@@ -1205,8 +1205,8 @@ _ProductInformationInputForm_productCatalog = new WeakMap(), _ProductInformation
       <form id="product-information-input-form">
         <label id="product-input-label" for="product-information-input">추가할 상품 정보를 입력해주세요</label>
         <input id="product-name-input" class="input" type="text" placeholder="상품명" />
-        <input id="product-price-input" class="input" type="number" placeholder="가격" />
-        <input id="product-quantity-input" class="input" type="number" placeholder="수량" />
+        <input id="product-price-input" class="input" type="number" step="10" min="10" max="10000" placeholder="가격" />
+        <input id="product-quantity-input" class="input" type="number" max="20" placeholder="수량" />
         <button id="product-information-submit-btn" class="submit-button button" type="submit">추가</button>
       </form>
     `;
