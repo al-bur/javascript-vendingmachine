@@ -741,12 +741,12 @@ class Profile {
         });
         _Profile_handleRequestEditUserInfoPage.set(this, () => {
             __classPrivateFieldGet(this, _Profile_target, "f").dispatchEvent(new CustomEvent('showEditUserInfoRequested'));
-            __classPrivateFieldGet(this, _Profile_selectContainer, "f").classList.toggle('hide');
+            __classPrivateFieldGet(this, _Profile_handleToggleSelectContainer, "f").call(this);
         });
         _Profile_handleLogout.set(this, () => {
             __classPrivateFieldGet(this, _Profile_auth, "f").logout();
             __classPrivateFieldGet(this, _Profile_target, "f").dispatchEvent(new CustomEvent('logoutCompleted'));
-            __classPrivateFieldGet(this, _Profile_selectContainer, "f").classList.toggle('hide');
+            __classPrivateFieldGet(this, _Profile_handleToggleSelectContainer, "f").call(this);
         });
         __classPrivateFieldSet(this, _Profile_target, target, "f");
         __classPrivateFieldSet(this, _Profile_auth, auth, "f");
