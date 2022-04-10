@@ -1577,6 +1577,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Auth": () => (/* binding */ Auth)
 /* harmony export */ });
 /* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
+/* harmony import */ var _utils_validator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/validator */ "./src/utils/validator.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -1586,6 +1587,7 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+
 
 class Auth {
     constructor() {
@@ -1597,9 +1599,12 @@ class Auth {
                 },
                 body: JSON.stringify(loginInfo),
             });
-            if (!response.ok) {
-                throw new Error('아이디와 비밀번호를 확인해주세요~');
-            }
+            (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
+                {
+                    checker: () => !response.ok,
+                    errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INCORRECT_USER_ID_AND_PASSWORD,
+                },
+            ]);
             const userInfo = yield response.json();
             return userInfo;
         });
@@ -1613,8 +1618,12 @@ class Auth {
                 },
                 body: JSON.stringify(signupInfo),
             });
-            if (response.status === 400)
-                throw new Error('같은 이메일이 존재합니다');
+            (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
+                {
+                    checker: () => response.status === 400,
+                    errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.SAME_EMAIL_EXIST,
+                },
+            ]);
         });
     }
     edit(editedUserInfo) {
@@ -1629,9 +1638,12 @@ class Auth {
                 },
                 body: JSON.stringify(editedUserInfo),
             });
-            if (!response.ok) {
-                throw new Error('아이디와 비밀번호를 확인해주세요~');
-            }
+            (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
+                {
+                    checker: () => !response.ok,
+                    errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INCORRECT_USER_ID_AND_PASSWORD,
+                },
+            ]);
         });
     }
     logout() {
@@ -1639,18 +1651,28 @@ class Auth {
         localStorage.removeItem('user');
     }
     isValidatedName(name) {
-        if (name.length < _utils_constants__WEBPACK_IMPORTED_MODULE_0__.AUTH_CONDITION.MIN_USER_NAME_LENGTH ||
-            name.length > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.AUTH_CONDITION.MAX_USER_NAME_LENGTH)
-            throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INVALID_USER_NAME_LENGTH);
+        (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
+            {
+                checker: () => name.length < _utils_constants__WEBPACK_IMPORTED_MODULE_0__.AUTH_CONDITION.MIN_USER_NAME_LENGTH ||
+                    name.length > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.AUTH_CONDITION.MAX_USER_NAME_LENGTH,
+                errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INVALID_USER_NAME_LENGTH,
+            },
+        ]);
         return true;
     }
     isValidatedPassword(password, passwordConfirmation) {
         // 8~16자, 최소 영어, 숫자, 특수문자 포함
         const passwordRegExp = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/;
-        if (!passwordRegExp.test(password))
-            throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INVALID_USER_PASSWORD);
-        if (password !== passwordConfirmation)
-            throw Error('비밀번호가 같지 않습니다.');
+        (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
+            {
+                checker: () => !passwordRegExp.test(password),
+                errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INVALID_USER_PASSWORD,
+            },
+            {
+                checker: () => password !== passwordConfirmation,
+                errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_SAME_PASSWORD,
+            },
+        ]);
         return true;
     }
 }
@@ -1669,7 +1691,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "CoinVault": () => (/* binding */ CoinVault)
 /* harmony export */ });
 /* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
-/* harmony import */ var _utils_domain_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/domain.utils */ "./src/utils/domain.utils.ts");
+/* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/utils */ "./src/utils/utils.ts");
+/* harmony import */ var _utils_validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/validator */ "./src/utils/validator.ts");
 var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
     if (kind === "m") throw new TypeError("Private method is not writable");
     if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
@@ -1681,7 +1704,8 @@ var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || 
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
-var _CoinVault_instances, _CoinVault_coins, _CoinVault_addCoins, _CoinVault_validateMoney, _CoinVault_isValidatedReturnCoins, _CoinVault_substractCoins;
+var _CoinVault_instances, _CoinVault_coins, _CoinVault_addCoins, _CoinVault_isValidatedMoney, _CoinVault_isValidatedReturnCoins, _CoinVault_substractCoins;
+
 
 
 class CoinVault {
@@ -1702,8 +1726,9 @@ class CoinVault {
         return Object.entries(__classPrivateFieldGet(this, _CoinVault_coins, "f")).reduce((previous, [key, value]) => previous + _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COINS_UNIT_TABLE[key] * value, 0);
     }
     chargeMoney(money) {
-        __classPrivateFieldGet(this, _CoinVault_instances, "m", _CoinVault_validateMoney).call(this, money);
-        __classPrivateFieldGet(this, _CoinVault_instances, "m", _CoinVault_addCoins).call(this, this.generateRandomCoins(money));
+        if (__classPrivateFieldGet(this, _CoinVault_instances, "m", _CoinVault_isValidatedMoney).call(this, money)) {
+            __classPrivateFieldGet(this, _CoinVault_instances, "m", _CoinVault_addCoins).call(this, this.generateRandomCoins(money));
+        }
     }
     generateRandomCoins(money) {
         let balance = money;
@@ -1714,7 +1739,7 @@ class CoinVault {
                 generatedCoins[key] = maxQuotient;
                 return;
             }
-            const randomQuantity = (0,_utils_domain_utils__WEBPACK_IMPORTED_MODULE_1__.getRandomNumZeroToMax)(maxQuotient);
+            const randomQuantity = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_1__.getRandomNumZeroToMax)(maxQuotient);
             balance -= price * randomQuantity;
             generatedCoins[key] = randomQuantity;
         });
@@ -1743,19 +1768,29 @@ _CoinVault_coins = new WeakMap(), _CoinVault_instances = new WeakSet(), _CoinVau
         coinsQuantity[key] += value;
     });
     this.setCoins(coinsQuantity);
-    // this.#coins = coinsQuantity;
-}, _CoinVault_validateMoney = function _CoinVault_validateMoney(money) {
-    if (money + this.getBalance() > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_VAULT_CONDITION.MAX_BALANCE) {
-        throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_BALANCE_LIMIT);
-    }
-    if (money % _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_CONDITION.UNIT_PRICE !== 0) {
-        throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_DIVIDED_BY_COIN_UNIT);
-    }
+}, _CoinVault_isValidatedMoney = function _CoinVault_isValidatedMoney(money) {
+    (0,_utils_validator__WEBPACK_IMPORTED_MODULE_2__.validator)([
+        {
+            checker: () => money + this.getBalance() > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_VAULT_CONDITION.MAX_BALANCE,
+            errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_BALANCE_LIMIT,
+        },
+        {
+            checker: () => money % _utils_constants__WEBPACK_IMPORTED_MODULE_0__.COIN_CONDITION.UNIT_PRICE !== 0,
+            errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_DIVIDED_BY_COIN_UNIT,
+        },
+    ]);
+    return true;
 }, _CoinVault_isValidatedReturnCoins = function _CoinVault_isValidatedReturnCoins(purchaseMoney) {
-    if (purchaseMoney === 0)
-        throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NO_PURCHASE_MONEY);
-    if (this.getBalance() === 0)
-        throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NO_COINS);
+    (0,_utils_validator__WEBPACK_IMPORTED_MODULE_2__.validator)([
+        {
+            checker: () => purchaseMoney === 0,
+            errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NO_PURCHASE_MONEY,
+        },
+        {
+            checker: () => this.getBalance() === 0,
+            errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NO_COINS,
+        },
+    ]);
     return true;
 }, _CoinVault_substractCoins = function _CoinVault_substractCoins(returnedCoins) {
     const currentCoins = Object.assign({}, __classPrivateFieldGet(this, _CoinVault_coins, "f"));
@@ -1779,6 +1814,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Product": () => (/* binding */ Product)
 /* harmony export */ });
 /* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
+/* harmony import */ var _utils_validator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/validator */ "./src/utils/validator.ts");
 var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
     if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
@@ -1791,6 +1827,7 @@ var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || 
     return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
 };
 var _Product_instances, _Product_name, _Product_price, _Product_quantity, _Product_isValidatedName, _Product_isValidatedPrice, _Product_isValidatedQuantity;
+
 
 class Product {
     constructor({ name, price, quantity }) {
@@ -1835,22 +1872,32 @@ class Product {
     }
 }
 _Product_name = new WeakMap(), _Product_price = new WeakMap(), _Product_quantity = new WeakMap(), _Product_instances = new WeakSet(), _Product_isValidatedName = function _Product_isValidatedName(name) {
-    if (name.length > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_NAME_LENGTH) {
-        throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_PRODUCT_NAME_LENGTH_LIMIT);
-    }
+    (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
+        {
+            checker: () => name.length > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_NAME_LENGTH,
+            errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_PRODUCT_NAME_LENGTH_LIMIT,
+        },
+    ]);
     return true;
 }, _Product_isValidatedPrice = function _Product_isValidatedPrice(price) {
-    if (price < _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MIN_PRICE || price > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_PRICE) {
-        throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_WITHIN_PRODUCT_PRICE_RANGE);
-    }
-    if (price % _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.UNIT_PRICE !== 0) {
-        throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_DIVIDED_BY_PRODUCT_PRICE_UNIT);
-    }
+    (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
+        {
+            checker: () => price < _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MIN_PRICE || price > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_PRICE,
+            errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_WITHIN_PRODUCT_PRICE_RANGE,
+        },
+        {
+            checker: () => price % _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.UNIT_PRICE !== 0,
+            errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_DIVIDED_BY_PRODUCT_PRICE_UNIT,
+        },
+    ]);
     return true;
 }, _Product_isValidatedQuantity = function _Product_isValidatedQuantity(quantity) {
-    if (quantity > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_QUANTITY) {
-        throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_PRODUCT_QUANTITY_LIMIT);
-    }
+    (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
+        {
+            checker: () => quantity > _utils_constants__WEBPACK_IMPORTED_MODULE_0__.PRODUCT_CONDITION.MAX_QUANTITY,
+            errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_PRODUCT_QUANTITY_LIMIT,
+        },
+    ]);
     return true;
 };
 
@@ -1868,7 +1915,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ProductCatalog": () => (/* binding */ ProductCatalog)
 /* harmony export */ });
 /* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
-/* harmony import */ var _Product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Product */ "./src/domain/Product.ts");
+/* harmony import */ var _utils_validator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/validator */ "./src/utils/validator.ts");
+/* harmony import */ var _Product__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Product */ "./src/domain/Product.ts");
 var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
     if (kind === "m") throw new TypeError("Private method is not writable");
     if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
@@ -1883,13 +1931,14 @@ var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || 
 var _ProductCatalog_instances, _ProductCatalog_productList, _ProductCatalog_deepCopy, _ProductCatalog_isValidatedPurchase;
 
 
+
 class ProductCatalog {
     constructor() {
         var _a;
         _ProductCatalog_instances.add(this);
         _ProductCatalog_productList.set(this, void 0);
         const storedProductList = (_a = JSON.parse(localStorage.getItem('productList'))) !== null && _a !== void 0 ? _a : [];
-        __classPrivateFieldSet(this, _ProductCatalog_productList, storedProductList.map((product) => new _Product__WEBPACK_IMPORTED_MODULE_1__.Product(product)), "f");
+        __classPrivateFieldSet(this, _ProductCatalog_productList, storedProductList.map((product) => new _Product__WEBPACK_IMPORTED_MODULE_2__.Product(product)), "f");
     }
     getProductList() {
         return __classPrivateFieldGet(this, _ProductCatalog_productList, "f");
@@ -1903,11 +1952,15 @@ class ProductCatalog {
         if (this.isSameProductExist(name))
             return;
         const deepCopiedProductList = __classPrivateFieldGet(this, _ProductCatalog_instances, "m", _ProductCatalog_deepCopy).call(this, __classPrivateFieldGet(this, _ProductCatalog_productList, "f"));
-        this.setProductList([...deepCopiedProductList, new _Product__WEBPACK_IMPORTED_MODULE_1__.Product(product)]);
+        this.setProductList([...deepCopiedProductList, new _Product__WEBPACK_IMPORTED_MODULE_2__.Product(product)]);
     }
     isSameProductExist(name) {
-        if (this.findProduct(name))
-            throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.DUPLICATE_PRODUCT_NAME_EXIST);
+        (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
+            {
+                checker: () => this.findProduct(name),
+                errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.DUPLICATE_PRODUCT_NAME_EXIST,
+            },
+        ]);
         return false;
     }
     findProduct(name, targetList = __classPrivateFieldGet(this, _ProductCatalog_productList, "f")) {
@@ -1939,11 +1992,15 @@ class ProductCatalog {
     }
 }
 _ProductCatalog_productList = new WeakMap(), _ProductCatalog_instances = new WeakSet(), _ProductCatalog_deepCopy = function _ProductCatalog_deepCopy(productList) {
-    return productList.map((product) => new _Product__WEBPACK_IMPORTED_MODULE_1__.Product(product.getAllProperties()));
+    return productList.map((product) => new _Product__WEBPACK_IMPORTED_MODULE_2__.Product(product.getAllProperties()));
 }, _ProductCatalog_isValidatedPurchase = function _ProductCatalog_isValidatedPurchase(name, purchaseMoney) {
     const price = this.findProduct(name).getPrice();
-    if (purchaseMoney < price)
-        throw new Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.MORE_PURCHASE_MONEY_NEEDED);
+    (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
+        {
+            checker: () => purchaseMoney < price,
+            errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.MORE_PURCHASE_MONEY_NEEDED,
+        },
+    ]);
     return true;
 };
 
@@ -1961,6 +2018,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "PurchaseMoney": () => (/* binding */ PurchaseMoney)
 /* harmony export */ });
 /* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/constants */ "./src/utils/constants.ts");
+/* harmony import */ var _utils_validator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/validator */ "./src/utils/validator.ts");
 var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
     if (kind === "m") throw new TypeError("Private method is not writable");
     if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
@@ -1973,6 +2031,7 @@ var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || 
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _PurchaseMoney_instances, _PurchaseMoney_value, _PurchaseMoney_isValidatedMoney;
+
 
 class PurchaseMoney {
     constructor() {
@@ -1995,10 +2054,16 @@ class PurchaseMoney {
     }
 }
 _PurchaseMoney_value = new WeakMap(), _PurchaseMoney_instances = new WeakSet(), _PurchaseMoney_isValidatedMoney = function _PurchaseMoney_isValidatedMoney(money) {
-    if (money % 10 != 0)
-        throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INVALID_PURCHASE_MONEY);
-    if (money + __classPrivateFieldGet(this, _PurchaseMoney_value, "f") > 10000)
-        throw Error(_utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_PURCHASE_MONEY_LIMIT);
+    (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
+        {
+            checker: () => money % 10 != 0,
+            errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INVALID_PURCHASE_MONEY,
+        },
+        {
+            checker: () => money + __classPrivateFieldGet(this, _PurchaseMoney_value, "f") > 10000,
+            errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OVER_PURCHASE_MONEY_LIMIT,
+        },
+    ]);
     return true;
 };
 
@@ -2051,20 +2116,23 @@ const COIN_VAULT_CONDITION = {
     MAX_BALANCE: 100000,
 };
 const ERROR_MESSAGE = {
+    DUPLICATE_PRODUCT_NAME_EXIST: '중복된 상품명입니다',
     NOT_DIVIDED_BY_COIN_UNIT: '상평통보는 안 받습니다. 10원단위로 넣어주세요!',
     NOT_DIVIDED_BY_PRODUCT_PRICE_UNIT: '10원단위로 가격을 입력해주세요~',
     MORE_PURCHASE_MONEY_NEEDED: '상품을 구매할 금액이 부족합니다. 더 투입해주세요~',
     INVALID_PURCHASE_MONEY: '10원단위로 나누어 떨어지는 금액만 투입 가능합니다~',
     INVALID_USER_NAME_LENGTH: '이름은 2~6글자까지 가능합니다~',
     INVALID_USER_PASSWORD: '비밀번호는 8~16자 영어, 숫자, 특수문자로 구성되있어야 합니다~',
+    INCORRECT_USER_ID_AND_PASSWORD: '아이디와 비밀번호를 확인해주세요~',
     NO_COINS: '현재 자판기에 잔돈이 부족하여 반환이 불가능합니다. 관리자에게 문의해주세요~',
     NO_PURCHASE_MONEY: '투입하신 금액이 없습니다.',
+    NOT_SAME_PASSWORD: '비밀번호가 같지 않습니다.',
     NOT_WITHIN_PRODUCT_PRICE_RANGE: '100원 이상, 10,000원 이하의 가격을 입력주세요~',
     OVER_BALANCE_LIMIT: '돈통이 가득찼어요! 100,000원 까지만 보관 가능합니다.',
     OVER_PRODUCT_NAME_LENGTH_LIMIT: '10글자 미만의 상품명을 넣어주세요~',
     OVER_PRODUCT_QUANTITY_LIMIT: '수량은 최대 20개까지만 가능합니다~',
     OVER_PURCHASE_MONEY_LIMIT: '10,000원까지만 투입 가능합니다',
-    DUPLICATE_PRODUCT_NAME_EXIST: '중복된 상품명입니다',
+    SAME_EMAIL_EXIST: '같은 이메일이 존재합니다',
 };
 const URL_PATH = {
     HOME: '/',
@@ -2086,10 +2154,10 @@ const PRODUCT_CONDITION = {
 
 /***/ }),
 
-/***/ "./src/utils/domain.utils.ts":
-/*!***********************************!*\
-  !*** ./src/utils/domain.utils.ts ***!
-  \***********************************/
+/***/ "./src/utils/utils.ts":
+/*!****************************!*\
+  !*** ./src/utils/utils.ts ***!
+  \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2097,6 +2165,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "getRandomNumZeroToMax": () => (/* binding */ getRandomNumZeroToMax)
 /* harmony export */ });
 const getRandomNumZeroToMax = (max) => Math.floor(Math.random() * max);
+
+
+/***/ }),
+
+/***/ "./src/utils/validator.ts":
+/*!********************************!*\
+  !*** ./src/utils/validator.ts ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "validator": () => (/* binding */ validator)
+/* harmony export */ });
+const validator = (conditions) => {
+    conditions.forEach(({ checker, errorMessage }) => {
+        if (checker())
+            throw new Error(errorMessage);
+    });
+};
 
 
 /***/ }),
