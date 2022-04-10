@@ -1587,63 +1587,52 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _Auth_instances, _Auth_fetcher;
 
 
 class Auth {
     constructor() {
-        this.login = (loginInfo) => __awaiter(this, void 0, void 0, function* () {
-            const response = yield fetch(`${_utils_constants__WEBPACK_IMPORTED_MODULE_0__.API_URL}/login`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(loginInfo),
-            });
-            (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
-                {
-                    checker: () => !response.ok,
-                    errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INCORRECT_USER_ID_AND_PASSWORD,
-                },
-            ]);
-            const userInfo = yield response.json();
-            return userInfo;
-        });
+        _Auth_instances.add(this);
     }
     signup(signupInfo) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield fetch(`${_utils_constants__WEBPACK_IMPORTED_MODULE_0__.API_URL}/signup`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(signupInfo),
-            });
-            (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
-                {
-                    checker: () => response.status === 400,
-                    errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.SAME_EMAIL_EXIST,
-                },
-            ]);
+        return __classPrivateFieldGet(this, _Auth_instances, "m", _Auth_fetcher).call(this, {
+            method: 'POST',
+            path: '/signup',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            bodyData: signupInfo,
+            errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.SAME_EMAIL_EXIST,
+        });
+    }
+    login(loginInfo) {
+        return __classPrivateFieldGet(this, _Auth_instances, "m", _Auth_fetcher).call(this, {
+            method: 'POST',
+            path: '/login',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            bodyData: loginInfo,
+            errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INCORRECT_USER_ID_AND_PASSWORD,
         });
     }
     edit(editedUserInfo) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const accessToken = localStorage.getItem('accessToken');
-            const { id } = JSON.parse(localStorage.getItem('user'));
-            const response = yield fetch(`${_utils_constants__WEBPACK_IMPORTED_MODULE_0__.API_URL}/users/${id}`, {
-                method: 'PATCH',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${accessToken}`,
-                },
-                body: JSON.stringify(editedUserInfo),
-            });
-            (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
-                {
-                    checker: () => !response.ok,
-                    errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INCORRECT_USER_ID_AND_PASSWORD,
-                },
-            ]);
+        const accessToken = localStorage.getItem('accessToken');
+        const { id } = JSON.parse(localStorage.getItem('user'));
+        return __classPrivateFieldGet(this, _Auth_instances, "m", _Auth_fetcher).call(this, {
+            method: 'PATCH',
+            path: `/users/${id}`,
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${accessToken}`,
+            },
+            bodyData: editedUserInfo,
+            errorMessage: _utils_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INCORRECT_USER_ID_AND_PASSWORD,
         });
     }
     logout() {
@@ -1676,6 +1665,22 @@ class Auth {
         return true;
     }
 }
+_Auth_instances = new WeakSet(), _Auth_fetcher = function _Auth_fetcher({ method, path, headers, bodyData, errorMessage }) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const response = yield fetch(`${_utils_constants__WEBPACK_IMPORTED_MODULE_0__.API_URL + path}`, {
+            method,
+            headers,
+            body: JSON.stringify(bodyData),
+        });
+        (0,_utils_validator__WEBPACK_IMPORTED_MODULE_1__.validator)([
+            {
+                checker: () => !response.ok,
+                errorMessage,
+            },
+        ]);
+        return response.json();
+    });
+};
 
 
 /***/ }),
