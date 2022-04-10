@@ -786,7 +786,7 @@ _Profile_isRendered = new WeakMap(), _Profile_target = new WeakMap(), _Profile_s
     __classPrivateFieldSet(this, _Profile_editUserInfoBtn, document.querySelector('.edit-user-info-button'), "f");
     __classPrivateFieldSet(this, _Profile_logoutBtn, document.querySelector('.logout-button'), "f");
 }, _Profile_bindEvent = function _Profile_bindEvent() {
-    __classPrivateFieldGet(this, _Profile_thumbnailName, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleToggleSelectContainer, "f"));
+    __classPrivateFieldGet(this, _Profile_target, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleToggleSelectContainer, "f"));
     __classPrivateFieldGet(this, _Profile_editUserInfoBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleRequestEditUserInfoPage, "f"));
     __classPrivateFieldGet(this, _Profile_logoutBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleLogout, "f"));
 };
