@@ -2588,6 +2588,16 @@ class Router {
             __classPrivateFieldGet(this, _Router_routes, "f").call(this, path, accessToken);
         });
         _Router_routes.set(this, (path, accessToken = null) => {
+            const featureTabs = {
+                [_utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_MANAGE]: __classPrivateFieldGet(this, _Router_productManageView, "f"),
+                [_utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.BALANCE_CHARGE]: __classPrivateFieldGet(this, _Router_balanceChargeView, "f"),
+                [_utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_PURCHASE]: __classPrivateFieldGet(this, _Router_productPurchaseView, "f"),
+            };
+            const authPages = {
+                [_utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.LOGIN]: __classPrivateFieldGet(this, _Router_loginView, "f"),
+                [_utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.EDIT_USER_INFO]: __classPrivateFieldGet(this, _Router_userInfoEditView, "f"),
+                [_utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.SIGNUP]: __classPrivateFieldGet(this, _Router_signupView, "f"),
+            };
             switch (path) {
                 case _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_MANAGE:
                 case _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.BALANCE_CHARGE:
@@ -2597,11 +2607,6 @@ class Router {
                         __classPrivateFieldGet(this, _Router_handleShowHome, "f").call(this);
                         break;
                     }
-                    const featureTabs = {
-                        [_utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_MANAGE]: __classPrivateFieldGet(this, _Router_productManageView, "f"),
-                        [_utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.BALANCE_CHARGE]: __classPrivateFieldGet(this, _Router_balanceChargeView, "f"),
-                        [_utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_PURCHASE]: __classPrivateFieldGet(this, _Router_productPurchaseView, "f"),
-                    };
                     __classPrivateFieldGet(this, _Router_instances, "m", _Router_showAndHideTabs).call(this, featureTabs, path);
                     if (!featureTabs[path].getIsRendered()) {
                         featureTabs[path].renderAll();
@@ -2616,16 +2621,11 @@ class Router {
                 case _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.LOGIN:
                 case _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.EDIT_USER_INFO:
                 case _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.SIGNUP:
-                    const authViews = {
-                        [_utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.LOGIN]: __classPrivateFieldGet(this, _Router_loginView, "f"),
-                        [_utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.EDIT_USER_INFO]: __classPrivateFieldGet(this, _Router_userInfoEditView, "f"),
-                        [_utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.SIGNUP]: __classPrivateFieldGet(this, _Router_signupView, "f"),
-                    };
                     __classPrivateFieldGet(this, _Router_featureSection, "f").classList.add('hide');
                     __classPrivateFieldGet(this, _Router_loginBtn, "f").classList.add('hide');
                     __classPrivateFieldGet(this, _Router_authSection, "f").classList.remove('hide');
                     __classPrivateFieldGet(this, _Router_authSection, "f").textContent = '';
-                    authViews[path].render();
+                    authPages[path].render();
                     break;
                 default:
                     break;
