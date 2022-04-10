@@ -2551,69 +2551,6 @@ class Router {
                 default:
                     __classPrivateFieldGet(this, _Router_renderHome, "f").call(this);
             }
-            // if (path === URL_PATH.HOME) {
-            //   this.#renderHome();
-            //   return;
-            // }
-            // if (path === URL_PATH.PRODUCT_MANAGE) {
-            //   if (!accessToken) return this.#renderHome();
-            //   this.#productPurchaseView.hide();
-            //   this.#authSection.classList.add('hide');
-            //   this.#balanceChargeView.hide();
-            //   this.#productManageView.show();
-            //   this.#thumbnail.classList.remove('hide');
-            //   this.#featureSection.classList.remove('hide');
-            //   return;
-            // }
-            // if (path === URL_PATH.BALANCE_CHAREGE) {
-            //   if (!accessToken) return this.#renderHome();
-            //   this.#productPurchaseView.hide();
-            //   this.#productManageView.hide();
-            //   this.#authSection.classList.add('hide');
-            //   this.#thumbnail.classList.remove('hide');
-            //   this.#balanceChargeView.show();
-            //   this.#featureSection.classList.remove('hide');
-            //   return;
-            // }
-            // if (path === URL_PATH.PRODUCT_PURCHASE) {
-            //   this.#balanceChargeView.hide();
-            //   this.#productManageView.hide();
-            //   this.#authSection.classList.add('hide');
-            //   this.#productPurchaseView.show();
-            //   this.#featureSection.classList.remove('hide');
-            //   if (accessToken) {
-            //     this.#thumbnail.classList.remove('hide');
-            //     this.#profile.render();
-            //     this.#nav.classList.remove('hide');
-            //     return;
-            //   }
-            //   this.#loginBtn.classList.remove('hide');
-            //   return;
-            // }
-            // if (path === URL_PATH.LOGIN) {
-            //   this.#featureSection.classList.add('hide');
-            //   this.#loginBtn.classList.add('hide');
-            //   this.#authSection.classList.remove('hide');
-            //   this.#authSection.textContent = '';
-            //   this.#loginView.render();
-            //   return;
-            // }
-            // if (path === URL_PATH.SIGNUP) {
-            //   this.#featureSection.classList.add('hide');
-            //   this.#loginBtn.classList.add('hide');
-            //   this.#authSection.classList.remove('hide');
-            //   this.#authSection.textContent = '';
-            //   this.#signupView.render();
-            //   return;
-            // }
-            // if (path === URL_PATH.EDIT_USER_INFO) {
-            //   this.#featureSection.classList.add('hide');
-            //   this.#thumbnail.classList.add('hide');
-            //   this.#authSection.classList.remove('hide');
-            //   this.#authSection.textContent = '';
-            //   this.#userInfoEditView.render();
-            //   return;
-            // }
         });
         _Router_handleShowProductManageTab.set(this, () => {
             if (!__classPrivateFieldGet(this, _Router_productManageView, "f").getIsRendered()) {
