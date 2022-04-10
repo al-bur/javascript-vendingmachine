@@ -725,7 +725,7 @@ var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || 
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
-var _Profile_instances, _Profile_isRendered, _Profile_target, _Profile_selectContainer, _Profile_editUserInfoBtn, _Profile_logoutBtn, _Profile_thumbnailName, _Profile_auth, _Profile_setIsRendered, _Profile_template, _Profile_updateThumbnail, _Profile_selectDOM, _Profile_bindEvent, _Profile_handleToggleSelectContainer, _Profile_handleRequestEditUserInfoPage, _Profile_handleLogout;
+var _Profile_instances, _Profile_isRendered, _Profile_target, _Profile_selectContainer, _Profile_editUserInfoBtn, _Profile_logoutBtn, _Profile_thumbnailName, _Profile_auth, _Profile_setIsRendered, _Profile_template, _Profile_updateThumbnail, _Profile_selectDOM, _Profile_bindEvent, _Profile_handleToggleSelectContainer, _Profile_handleRequestEditUserInfoPage, _Profile_handleLogout, _Profile_toggleSelectContainer;
 class Profile {
     constructor({ target, auth }) {
         _Profile_instances.add(this);
@@ -736,17 +736,19 @@ class Profile {
         _Profile_logoutBtn.set(this, void 0);
         _Profile_thumbnailName.set(this, void 0);
         _Profile_auth.set(this, void 0);
-        _Profile_handleToggleSelectContainer.set(this, () => {
-            __classPrivateFieldGet(this, _Profile_selectContainer, "f").classList.toggle('hide');
+        _Profile_handleToggleSelectContainer.set(this, (e) => {
+            if (e.target === __classPrivateFieldGet(this, _Profile_target, "f") || e.target === __classPrivateFieldGet(this, _Profile_thumbnailName, "f")) {
+                __classPrivateFieldGet(this, _Profile_instances, "m", _Profile_toggleSelectContainer).call(this);
+            }
         });
         _Profile_handleRequestEditUserInfoPage.set(this, () => {
             __classPrivateFieldGet(this, _Profile_target, "f").dispatchEvent(new CustomEvent('showEditUserInfoRequested'));
-            __classPrivateFieldGet(this, _Profile_handleToggleSelectContainer, "f").call(this);
+            __classPrivateFieldGet(this, _Profile_instances, "m", _Profile_toggleSelectContainer).call(this);
         });
         _Profile_handleLogout.set(this, () => {
             __classPrivateFieldGet(this, _Profile_auth, "f").logout();
             __classPrivateFieldGet(this, _Profile_target, "f").dispatchEvent(new CustomEvent('logoutCompleted'));
-            __classPrivateFieldGet(this, _Profile_handleToggleSelectContainer, "f").call(this);
+            __classPrivateFieldGet(this, _Profile_instances, "m", _Profile_toggleSelectContainer).call(this);
         });
         __classPrivateFieldSet(this, _Profile_target, target, "f");
         __classPrivateFieldSet(this, _Profile_auth, auth, "f");
@@ -789,6 +791,8 @@ _Profile_isRendered = new WeakMap(), _Profile_target = new WeakMap(), _Profile_s
     __classPrivateFieldGet(this, _Profile_target, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleToggleSelectContainer, "f"));
     __classPrivateFieldGet(this, _Profile_editUserInfoBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleRequestEditUserInfoPage, "f"));
     __classPrivateFieldGet(this, _Profile_logoutBtn, "f").addEventListener('click', __classPrivateFieldGet(this, _Profile_handleLogout, "f"));
+}, _Profile_toggleSelectContainer = function _Profile_toggleSelectContainer() {
+    __classPrivateFieldGet(this, _Profile_selectContainer, "f").classList.toggle('hide');
 };
 
 
@@ -2488,71 +2492,128 @@ class Router {
         _Router_handlePopstate.set(this, (e) => {
             const { path } = e.state;
             const accessToken = localStorage.getItem('accessToken');
-            if (path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.HOME) {
-                __classPrivateFieldGet(this, _Router_renderHome, "f").call(this);
-                return;
-            }
-            if (path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_MANAGE) {
-                if (!accessToken)
-                    return __classPrivateFieldGet(this, _Router_renderHome, "f").call(this);
-                __classPrivateFieldGet(this, _Router_productPurchaseView, "f").hide();
-                __classPrivateFieldGet(this, _Router_authSection, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _Router_balanceChargeView, "f").hide();
-                __classPrivateFieldGet(this, _Router_productManageView, "f").show();
-                __classPrivateFieldGet(this, _Router_thumbnail, "f").classList.remove('hide');
-                __classPrivateFieldGet(this, _Router_featureSection, "f").classList.remove('hide');
-                return;
-            }
-            if (path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.BALANCE_CHAREGE) {
-                if (!accessToken)
-                    return __classPrivateFieldGet(this, _Router_renderHome, "f").call(this);
-                __classPrivateFieldGet(this, _Router_productPurchaseView, "f").hide();
-                __classPrivateFieldGet(this, _Router_productManageView, "f").hide();
-                __classPrivateFieldGet(this, _Router_authSection, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _Router_thumbnail, "f").classList.remove('hide');
-                __classPrivateFieldGet(this, _Router_balanceChargeView, "f").show();
-                __classPrivateFieldGet(this, _Router_featureSection, "f").classList.remove('hide');
-                return;
-            }
-            if (path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_PURCHASE) {
-                __classPrivateFieldGet(this, _Router_balanceChargeView, "f").hide();
-                __classPrivateFieldGet(this, _Router_productManageView, "f").hide();
-                __classPrivateFieldGet(this, _Router_authSection, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _Router_productPurchaseView, "f").show();
-                __classPrivateFieldGet(this, _Router_featureSection, "f").classList.remove('hide');
-                if (accessToken) {
+            switch (path) {
+                case _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_MANAGE:
+                    if (!accessToken)
+                        return __classPrivateFieldGet(this, _Router_renderHome, "f").call(this);
+                    __classPrivateFieldGet(this, _Router_productPurchaseView, "f").hide();
+                    __classPrivateFieldGet(this, _Router_authSection, "f").classList.add('hide');
+                    __classPrivateFieldGet(this, _Router_balanceChargeView, "f").hide();
+                    __classPrivateFieldGet(this, _Router_productManageView, "f").show();
                     __classPrivateFieldGet(this, _Router_thumbnail, "f").classList.remove('hide');
-                    __classPrivateFieldGet(this, _Router_profile, "f").render();
-                    __classPrivateFieldGet(this, _Router_nav, "f").classList.remove('hide');
-                    return;
-                }
-                __classPrivateFieldGet(this, _Router_loginBtn, "f").classList.remove('hide');
-                return;
+                    __classPrivateFieldGet(this, _Router_featureSection, "f").classList.remove('hide');
+                    break;
+                case _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.BALANCE_CHAREGE:
+                    if (!accessToken)
+                        return __classPrivateFieldGet(this, _Router_renderHome, "f").call(this);
+                    __classPrivateFieldGet(this, _Router_productPurchaseView, "f").hide();
+                    __classPrivateFieldGet(this, _Router_productManageView, "f").hide();
+                    __classPrivateFieldGet(this, _Router_authSection, "f").classList.add('hide');
+                    __classPrivateFieldGet(this, _Router_thumbnail, "f").classList.remove('hide');
+                    __classPrivateFieldGet(this, _Router_balanceChargeView, "f").show();
+                    __classPrivateFieldGet(this, _Router_featureSection, "f").classList.remove('hide');
+                    break;
+                case _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.PRODUCT_PURCHASE:
+                    __classPrivateFieldGet(this, _Router_balanceChargeView, "f").hide();
+                    __classPrivateFieldGet(this, _Router_productManageView, "f").hide();
+                    __classPrivateFieldGet(this, _Router_authSection, "f").classList.add('hide');
+                    __classPrivateFieldGet(this, _Router_productPurchaseView, "f").show();
+                    __classPrivateFieldGet(this, _Router_featureSection, "f").classList.remove('hide');
+                    if (accessToken) {
+                        __classPrivateFieldGet(this, _Router_thumbnail, "f").classList.remove('hide');
+                        __classPrivateFieldGet(this, _Router_profile, "f").render();
+                        __classPrivateFieldGet(this, _Router_nav, "f").classList.remove('hide');
+                        break;
+                    }
+                    __classPrivateFieldGet(this, _Router_loginBtn, "f").classList.remove('hide');
+                    break;
+                case _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.LOGIN:
+                    __classPrivateFieldGet(this, _Router_featureSection, "f").classList.add('hide');
+                    __classPrivateFieldGet(this, _Router_loginBtn, "f").classList.add('hide');
+                    __classPrivateFieldGet(this, _Router_authSection, "f").classList.remove('hide');
+                    __classPrivateFieldGet(this, _Router_authSection, "f").textContent = '';
+                    __classPrivateFieldGet(this, _Router_loginView, "f").render();
+                    break;
+                case _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.SIGNUP:
+                    __classPrivateFieldGet(this, _Router_featureSection, "f").classList.add('hide');
+                    __classPrivateFieldGet(this, _Router_loginBtn, "f").classList.add('hide');
+                    __classPrivateFieldGet(this, _Router_authSection, "f").classList.remove('hide');
+                    __classPrivateFieldGet(this, _Router_authSection, "f").textContent = '';
+                    __classPrivateFieldGet(this, _Router_signupView, "f").render();
+                    break;
+                case _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.EDIT_USER_INFO:
+                    __classPrivateFieldGet(this, _Router_featureSection, "f").classList.add('hide');
+                    __classPrivateFieldGet(this, _Router_thumbnail, "f").classList.add('hide');
+                    __classPrivateFieldGet(this, _Router_authSection, "f").classList.remove('hide');
+                    __classPrivateFieldGet(this, _Router_authSection, "f").textContent = '';
+                    __classPrivateFieldGet(this, _Router_userInfoEditView, "f").render();
+                    break;
+                default:
+                    __classPrivateFieldGet(this, _Router_renderHome, "f").call(this);
             }
-            if (path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.LOGIN) {
-                __classPrivateFieldGet(this, _Router_featureSection, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _Router_loginBtn, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _Router_authSection, "f").classList.remove('hide');
-                __classPrivateFieldGet(this, _Router_authSection, "f").textContent = '';
-                __classPrivateFieldGet(this, _Router_loginView, "f").render();
-                return;
-            }
-            if (path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.SIGNUP) {
-                __classPrivateFieldGet(this, _Router_featureSection, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _Router_loginBtn, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _Router_authSection, "f").classList.remove('hide');
-                __classPrivateFieldGet(this, _Router_authSection, "f").textContent = '';
-                __classPrivateFieldGet(this, _Router_signupView, "f").render();
-                return;
-            }
-            if (path === _utils_constants__WEBPACK_IMPORTED_MODULE_6__.URL_PATH.EDIT_USER_INFO) {
-                __classPrivateFieldGet(this, _Router_featureSection, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _Router_thumbnail, "f").classList.add('hide');
-                __classPrivateFieldGet(this, _Router_authSection, "f").classList.remove('hide');
-                __classPrivateFieldGet(this, _Router_authSection, "f").textContent = '';
-                __classPrivateFieldGet(this, _Router_userInfoEditView, "f").render();
-                return;
-            }
+            // if (path === URL_PATH.HOME) {
+            //   this.#renderHome();
+            //   return;
+            // }
+            // if (path === URL_PATH.PRODUCT_MANAGE) {
+            //   if (!accessToken) return this.#renderHome();
+            //   this.#productPurchaseView.hide();
+            //   this.#authSection.classList.add('hide');
+            //   this.#balanceChargeView.hide();
+            //   this.#productManageView.show();
+            //   this.#thumbnail.classList.remove('hide');
+            //   this.#featureSection.classList.remove('hide');
+            //   return;
+            // }
+            // if (path === URL_PATH.BALANCE_CHAREGE) {
+            //   if (!accessToken) return this.#renderHome();
+            //   this.#productPurchaseView.hide();
+            //   this.#productManageView.hide();
+            //   this.#authSection.classList.add('hide');
+            //   this.#thumbnail.classList.remove('hide');
+            //   this.#balanceChargeView.show();
+            //   this.#featureSection.classList.remove('hide');
+            //   return;
+            // }
+            // if (path === URL_PATH.PRODUCT_PURCHASE) {
+            //   this.#balanceChargeView.hide();
+            //   this.#productManageView.hide();
+            //   this.#authSection.classList.add('hide');
+            //   this.#productPurchaseView.show();
+            //   this.#featureSection.classList.remove('hide');
+            //   if (accessToken) {
+            //     this.#thumbnail.classList.remove('hide');
+            //     this.#profile.render();
+            //     this.#nav.classList.remove('hide');
+            //     return;
+            //   }
+            //   this.#loginBtn.classList.remove('hide');
+            //   return;
+            // }
+            // if (path === URL_PATH.LOGIN) {
+            //   this.#featureSection.classList.add('hide');
+            //   this.#loginBtn.classList.add('hide');
+            //   this.#authSection.classList.remove('hide');
+            //   this.#authSection.textContent = '';
+            //   this.#loginView.render();
+            //   return;
+            // }
+            // if (path === URL_PATH.SIGNUP) {
+            //   this.#featureSection.classList.add('hide');
+            //   this.#loginBtn.classList.add('hide');
+            //   this.#authSection.classList.remove('hide');
+            //   this.#authSection.textContent = '';
+            //   this.#signupView.render();
+            //   return;
+            // }
+            // if (path === URL_PATH.EDIT_USER_INFO) {
+            //   this.#featureSection.classList.add('hide');
+            //   this.#thumbnail.classList.add('hide');
+            //   this.#authSection.classList.remove('hide');
+            //   this.#authSection.textContent = '';
+            //   this.#userInfoEditView.render();
+            //   return;
+            // }
         });
         _Router_handleShowProductManageTab.set(this, () => {
             if (!__classPrivateFieldGet(this, _Router_productManageView, "f").getIsRendered()) {
@@ -2673,14 +2734,14 @@ _Router_nav = new WeakMap(), _Router_thumbnail = new WeakMap(), _Router_productM
     }
     history.pushState({ path }, null, path);
 };
-const routes = (path) => {
-    switch (path) {
-        case '/login':
-            console.log('login');
-        case '/productPurchase':
-            console.log('productPurchase');
-    }
-};
+// const routes = (path) => {
+//   switch (path) {
+//     case '/login':
+//       console.log('login');
+//     case '/productPurchase':
+//       console.log('productPurchase');
+//   }
+// };
 
 
 /***/ }),
