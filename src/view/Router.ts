@@ -77,9 +77,7 @@ export class Router {
     window.addEventListener('popstate', this.#handlePopstate);
 
     // 홈 화면 렌더링 or 새로고침 렌더링
-    const path =
-      location.pathname === URL_PATH.HOME ? URL_PATH.PRODUCT_PURCHASE : location.pathname;
-    this.#handleHistoryState(path);
+    this.#handleHistoryState(URL_PATH.PRODUCT_PURCHASE);
   }
 
   #handlePopstate = (e) => {
