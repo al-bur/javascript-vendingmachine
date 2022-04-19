@@ -1,0 +1,55 @@
+@import './root.css';
+@import './auth.css';
+@import './nav.css';
+@import './productManage.css';
+@import './balanceCharge.css';
+@import './productPurchase.css';
+
+.button {
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.submit-button {
+  background-color: var(--cyan-light);
+  color: var(--white);
+  height: 37px;
+}
+
+.submit-button:hover {
+  background-color: var(--cyan);
+}
+
+.tab-button {
+  background-color: var(--gray-light);
+  color: var(--black);
+  width: 120px;
+  height: 37px;
+}
+
+.button:hover {
+  background-color: var(--gray);
+}
+
+.table-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.input {
+  border: solid 1.5px;
+  border-radius: 10px;
+  border-color: var(--gray);
+  height: 30px;
+  padding-left: 8px;
+}
